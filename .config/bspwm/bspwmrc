@@ -1,0 +1,38 @@
+#! /bin/sh
+
+########################################
+#
+#   ____ ____  ______        ____  __ 
+#  | __ ) ___||  _ \ \      / /  \/  |
+#  |  _ \___ \| |_) \ \ /\ / /| |\/| |
+#  | |_) |__) |  __/ \ V  V / | |  | |
+#  |____/____/|_|     \_/\_/  |_|  |_|
+#
+#
+########################################
+
+compton -b &
+$HOME/.config/polybar/launch.sh &
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV
+
+bspc config border_width         2
+bspc config window_gap           12 
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Tilix desktop=^1 follow=on focus=on
+bspc rule -a tilix desktop=^1 follow=on focus=on
+bspc rule -a TelegramDesktop desktop=^2 follow=on focus=on
+bspc rule -a telegram-desktop desktop=^2 follow=on focus=on
+bspc rule -a discord desktop=^2 follow=on focus=on
+bspc rule -a firefox desktop=^3 follow=on focus=on
+bspc rule -a Pcmanfm desktop=^4 follow=on focus=on layer=below 
+bspc rule -a pcmanfm desktop=^4 follow=on focus=on layer=below 
+bspc rule -a Gimp desktop=^4 follow=on focus=on state=fullscreen layer=below 
+bspc rule -a gimp desktop=^4 follow=on focus=on state=fullscreen layer=below 
+bscp rule -a polybar manage=off
+
