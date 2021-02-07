@@ -8,20 +8,18 @@ My distro was built in Arch Linux using Linux zen kernel, if you have another ke
 
 ## Summary
 
-| Kernel                  | Linux zen          |
-| ----------------------- | ------------------ |
-| Window Manager          | BSPWM              |
-| ----------------------- | ------------------ |
-| Hotkey daemon           | sxhkd              |
-| ----------------------- | ------------------ |
-| Status bars             | Polybar            |
-| ----------------------- | ------------------ |
-| Window Composer         | Compton            |
-| ----------------------- | ------------------ |
-| Terminal                | Tilix              |
-| ----------------------- | ------------------ |
-| Shell                   | zsh 5.8            |
-| ----------------------- | ------------------ |
-| Session Manager         | LightDM            |
-| ----------------------- | ------------------ |
-| LightDM Theme           | Glorious           |
+| Tecnology       | What I use |
+| --------------- | ---------- |
+| Kernel          | Linux zen  |
+| Window Manager  | BSPWM      |
+| Hotkey daemon   | sxhkd      |
+| Status bars     | Polybar    |
+| Window Composer | Compton    |
+| Terminal        | Tilix      |
+| Shell           | zsh 5.8    |
+| Session Manager | LightDM    |
+| LightDM Theme   | Glorious   |
+
+## How the desktop Looks like
+
+![Desktop](examples/desktop_1.png)
