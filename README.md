@@ -23,4 +23,5 @@ My distro was built in Arch Linux using Linux zen kernel, if you have another ke
 ## How the desktop Looks like
 
 ![Desktop](examples/desktop_3.png)
+![Apps](examples/desktop_2.png)
 ![Nvim](examples/desktop_1.png)
