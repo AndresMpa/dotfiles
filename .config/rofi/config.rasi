@@ -10,10 +10,6 @@ configuration {
 	line-margin: 4;
 	line-padding: 2;
 	font: "mono 18";
-
-/* If you want to make changes I left the full sheet of rofi configurations */
-/* the uncommented options at the beginning are a basic configuration for rofi */
-
 /*	columns: 1;*/
 /*	bw: 1;*/
 /*	location: 0;*/

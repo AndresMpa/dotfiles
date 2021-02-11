@@ -21,16 +21,12 @@
 
 
 [colors]
-
-; if you prefer transparency uncomment the next lines
-
 ;background = ${xrdb:color0:#00000000}
 ;foreground = ${xrdb:color15:#123448}
 
-; if you uncommented the previus comment those lines
-
 background = ${xrdb:color0:#123448}
 foreground = ${xrdb:color15:#fff}
+alert = ${xrdb:color8:#ffffff}
 
 ;;;  ____  _____ _____ _____ ___ _   _  ____ ____  
 ;;; / ___|| ____|_   _|_   _|_ _| \ | |/ ___/ ___| 
@@ -53,14 +49,17 @@ margin-bottom = 0
 ; vim:ft=dosinic
 
 [bar/arch_bar]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
 height = 45
+width = 100%
 radius = 0.0
 fixed-center = false
+;monitor = ${env:MONITOR:HDMI-1}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
+
+line-size = 10
+line-color = #f00
 
 border-size = 0
 border-color = #00000000
@@ -91,13 +90,17 @@ dpi = 100
 enable-ipc=true
 wm-restack = bspwm
 override-redirect = false
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:40:...%
 label-color1 = ${colors.foreground} 
 label-background = ${colors.background} 
 label-padding = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/bspwm]
 type = internal/bspwm
@@ -117,17 +120,17 @@ label-occupied-padding = 1
 label-empty = 
 label-empty-padding = 1
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 [module/time]
 type = internal/date
-interval = 10
+interval = 60
+date = %%{F#fff} %A, %B %d, %Y %{F-} %%{F#fff} %I:%M %p %{F-}
 format-padding = 3
-
-time = "%H:%M"
-date = "%A %d %b"
-
-label = %date%, %time%
 label-padding = 2
+label = %date%
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -141,27 +144,47 @@ ramp-volume-0 = "  "
 ramp-volume-1 = "  "
 ramp-volume-2 = "  "
 
-
 format-muted-padding = 0
 label-muted = "   0%"
 label-muted-background = ${colors.background}
 label-muted-foreground = ${xrdb:color6:#fff}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format =  <label>
-format-warn = <ramp> <label-warn>
+format = <label>
+format-warn = <label-warn>
 
 label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-color1 = ${colors.secondary}
+label-warn = H %temperature-c%
+label-warn-underline = ${colors.alert}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/battery]
+type = internal/battery
+full-at = 100 
+battery = BAT0
+adapter = ADP0
+label-font = 1
+time-format = %H:%M
+
+; Full
+format-full = <label-full>
+label-full = AC %percentage%%
+
+; Charging
+label-charging = AC %percentage%%, (%time%)
+label-charging-underline = ${colors.alert}
+
+; Discharging
+format-discharging = <label-discharging>
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/powermenu]
 type = custom/menu
@@ -189,65 +212,6 @@ menu-1-0 = 
 menu-1-0-exec = reboot
 
 menu-2-0 = 
-menu-2-0-exec = shutdowm now
+menu-2-0-exec = shutdown now
 
-[module/battery]
-type = internal/battery
-full-at = 100
-time-format = %H:%M
-battery = BAT0
-adapter = ADP0
-format-charging = <animation-charging> <label-charging>
-;label-charging = %percentage%% (%time%)
-label-charging = %percentage%%
-format-discharging = <ramp-capacity> <label-discharging>
-;label-discharging = %percentage%% (%time%)
-label-discharging = %percentage%%
-format-full = <label-full>
-;label-charging-underline = ${colors.tertiary}
-;label-discharging-underline = ${colors.tertiary}
-
-
-format-charging-underline = ${colors.foreground}
-format-discharging-underline = ${colors.foreground}
-format-full-prefix = " "
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-ramp-capacity-0-foreground = ${colors.foreground}
-ramp-capacity-foreground   = ${colors.foreground}
-bar-capacity-width = 10
-
-animation-charging-0 = ""
-animation-charging-1 = ""
-animation-charging-2 = ""
-animation-charging-3 = ""
-animation-charging-4 = ""
-
-animation-charging-framerate = 750
-
-label-font = 1
-
-; ramp-capacity-0-underline = ${colors.tertiary}
-; ramp-capacity-1-underline = ${colors.tertiary}
-; ramp-capacity-2-underline = ${colors.tertiary}
-; ramp-capacity-3-underline = ${colors.tertiary}
-; ramp-capacity-4-underline = ${colors.tertiary}
-;
-; animation-charging-0-underline = ${colors.tertiary}
-; animation-charging-1-underline = ${colors.tertiary}
-; animation-charging-2-underline = ${colors.tertiary}
-; animation-charging-3-underline = ${colors.tertiary}
-; animation-charging-4-underline = ${colors.tertiary}
-
-; Uncomment these for anmated discharging battery underline
-; ramp-capacity-0-underline = ${colors.primary}
-; ramp-capacity-1-underline = ${colors.primary}
-; ramp-capacity-2-underline = ${colors.tertiary}
-; ramp-capacity-3-underline = ${colors.tertiary}
-; ramp-capacity-4-underline = ${colors.tertiary}
-
-
+label-discharging = CHR %percentage%%

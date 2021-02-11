@@ -1,92 +1,79 @@
 
 ##############################################################
-#                  ______  ___   _ _  ______  
-#                 / ___\ \/ / | | | |/ /  _ \ 
-#                 \___ \\  /| |_| | ' /| | | |
-#                  ___) /  \|  _  | . \| |_| |
-#                 |____/_/\_\_| |_|_|\_\____/ 
-#                 
+# ______  ___   _ _  ______  
+#/ ___\ \/ / | | | |/ /  _ \ 
+#\___ \\  /| |_| | ' /| | | |
+ #___) /  \|  _  | . \| |_| |
+#|____/_/\_\_| |_|_|\_\____/ 
 ##############################################################
 
-####################### Cheat sheep ##########################
-
-# alt + <letter>  -> Display apps
-
-# super + <letter> -> System options
-
-# Nodes control
-
-# super + ctrl +
-#			\ {h, j, k, l} -> position
-#     \ {1 - 9} -> Ratio
-#     \ scape -> Cancel for focused node
-#			\ shift scape -> Cancel for desktop
-
-# Nodes behaviour
-
-# super + alt + {h, j, k, l} -> Rezise
-
-# super + alt + shift + {h, j, k, l} -> Compact
-
-# super + {left, down, up, right} -> Move the node 
-
-##############################################################
-####################### 		ALT		 ###########################
-##############################################################
-
-# Terminal emulator
-alt + t
-	tilix
+    #_    _   _____ 
+   #/ \  | | |_   _|
+  #/ _ \ | |   | |  
+ #/ ___ \| |___| |  
+#/_/   \_\_____|_|
 
 # Program launcher
 alt + s
 	rofi -show drun
 
-# Navigator
+# Terminal emulator
+alt + t
+	tilix
 
+# Files
+alt + f
+	pcmanfm
+
+# Images
+alt + g
+	gimp
+
+# Navigator
 alt + p
 	tor-browser	
 	
 alt + w
 	firefox	
 
-# Files
-
-alt + f
-	pcmanfm
-
-# Images
-
-alt + g
-	gimp
-
 # Comunication
-
 alt + d
 	discord
 
 alt + m
 	telegram-desktop
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
- 
+# _  _________   ______   ___    _    ____  ____  
+#| |/ / ____\ \ / / __ ) / _ \  / \  |  _ \|  _ \ 
+#| ' /|  _|  \ V /|  _ \| | | |/ _ \ | |_) | | | |
+#| . \| |___  | | | |_) | |_| / ___ \|  _ <| |_| |
+#|_|\_\_____| |_| |____/ \___/_/   \_\_| \_\____/ 
+
+# Pulseaudio
+
+XF86AudioMute
+	sleep 0.2; \
+	amixer set Master toggle
+
+XF86AudioLowerVolume
+	sleep 0.2; \
+	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo -1%
+
+XF86AudioRaiseVolume
+	sleep 0.2; \
+	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo +1%
+
+# Screenshots
+
 Print
 	sleep 0.2; \
 	import -window root ~/Escritorio/$(date '+%Y%m%d-%H%M%S').png
 
-#
-# bspwm hotkeys
-#
-
-# quit/restart bspwm
-super + alt + {q, r}
-	bspc {quit, wm -r}
-
-# close and kill
-super + {_, shift + }w
-	bspc node -{c, k}
+ #____  _   _ ____  _____ ____  
+#/ ___|| | | |  _ \| ____|  _ \ 
+#\___ \| | | | |_) |  _| | |_) |
+ #___) | |_| |  __/| |___|  _ < 
+#|____/ \___/|_|   |_____|_| \_\
 
 # alternate between the tiled and monocle layout
 super + m
@@ -105,11 +92,11 @@ super + g
 #
 
 # set the window state
-super + {t, shift + t, s, f}
-	bspc node -t {tiled, pseudo_tiled, floating, fullscreen}
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m, x, y, z}
+super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 #
@@ -117,7 +104,7 @@ super + ctrl + {m, x, y, z}
 #
 
 # focus the node in the given direction
-super + {_, shift + }{h,j,k,l}
+super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
@@ -175,9 +162,52 @@ super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h, j, k, l}
-	bspc node -z {right -20 0, top 0 20, bottom 0 -20, left 20 0}
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left, Down, Up, Right}
-	bspc node -v {-20 0, 0 20, 0 -20, 20 0}
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# ____  _____ ____  _             _   
+#|  _ \| ____/ ___|| |_ __ _ _ __| |_ 
+#| |_) |  _| \___ \| __/ _` | '__| __|
+#|  _ <| |___ ___) | || (_| | |  | |_ 
+#|_| \_\_____|____/ \__\__,_|_|   \__|
+                                     
+ #____  _   _ ____                                   _ 
+#/ ___|| | | | __ ) _ __   ___  _ __ _ __ ___   __ _| |
+#\___ \| | | |  _ \| '_ \ / _ \| '__| '_ ` _ \ / _` | |
+ #___) | |_| | |_) | | | | (_) | |  | | | | | | (_| | |
+#|____/ \___/|____/|_| |_|\___/|_|  |_| |_| |_|\__,_|_|
+
+
+#
+# sxhkd hotkey
+#
+
+# make sxhkd reload its configuration files:
+super + ctrl + shift + alt + r
+	pkill -USR1 -x sxhkd
+
+#
+# ethernet hotkey
+#
+super + ctrl + shift + alt + e
+	echo "'Restarting ethernet' command still in process"
+
+#
+# bspwm hotkeys
+#
+
+# close and kill node
+super + ctrl + shift + {_, alt + }w
+	bspc node -{c, k}
+# TIP:
+# this should be "s" but that should be
+# anoying so just fuck up
+
+# quit/restart bspwm
+super + ctrl + shift + alt + {u, b}
+	bspc {quit, wm -r}
+
