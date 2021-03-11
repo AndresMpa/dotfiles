@@ -21,10 +21,10 @@
 
 
 [colors]
-;background = ${xrdb:color0:#00000000}
+background = ${xrdb:color0:#00000000}
 ;foreground = ${xrdb:color15:#123448}
 
-background = ${xrdb:color0:#123448}
+;background = ${xrdb:color0:#123448}
 foreground = ${xrdb:color15:#fff}
 alert = ${xrdb:color8:#ffffff}
 
