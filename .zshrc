@@ -1,9 +1,3 @@
-##############################################################################
-#
-#                          Paste this to your .zshrc
-#
-##############################################################################
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -85,6 +79,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  pip
   npm
   heroku
   history
@@ -116,6 +111,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias pjt="cd /home/andresmp/Escritorio/my_proyects"
+alias sm="cd /home/andresmp/Escritorio/semestre_VII"
+
 alias cfzsh="nvim /home/andresmp/.zshrc"
 alias cfv="nvim /home/andresmp/.config/nvim/init.vim"
 alias cfsxk="nvim /home/andresmp/.config/sxhkd/sxhkdrc"
@@ -128,3 +126,5 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -25,23 +25,30 @@ bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+# _____                   _             _ 
+#|_   _|__ _ __ _ __ ___ (_)_ __   __ _| |
+  #| |/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
+  #| |  __/ |  | | | | | | | | | | (_| | |
+  #|_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_|
+
+# Workspace for terminal
+bspc rule -a Tilix desktop=^1 follow=on focus=on
+bspc rule -a tilix desktop=^1 follow=on focus=on
+
 #__        __         _                                  
 #\ \      / /__  _ __| | _____ _ __   __ _  ___ ___  ___ 
  #\ \ /\ / / _ \| '__| |/ / __| '_ \ / _` |/ __/ _ \/ __|
   #\ V  V / (_) | |  |   <\__ \ |_) | (_| | (_|  __/\__ \
    #\_/\_/ \___/|_|  |_|\_\___/ .__/ \__,_|\___\___||___/
-                             #|_|                        
+                             #|_|
 
-
-# Workspace for terminal
-bspc rule -a Tilix desktop=^1 follow=on focus=on
-bspc rule -a tilix desktop=^1 follow=on focus=on
 # Workspace for writing
+bspc rule -a Virtualbox desktop=^2 follow=on focus=on
+bspc rule -a virtualbox desktop=^2 follow=on focus=on
+bspc rule -a LibreOffice desktop=^2 follow=on focus=on
+bspc rule -a libreoffice desktop=^2 follow=on focus=on
 bspc rule -a Pcmanfm desktop=^2 follow=on focus=on layer=below 
 bspc rule -a pcmanfm desktop=^2 follow=on focus=on layer=below 
-bspc rule -a freeoffice-textmaker desktop=^2 follow=on focus=on
-bspc rule -a freeoffice-planmaker desktop=^2 follow=on focus=on
-bspc rule -a freeoffice-presentations desktop=^2 follow=on focus=on
 bspc rule -a Gimp desktop=^2 follow=on focus=on state=fullscreen layer=below 
 bspc rule -a gimp desktop=^2 follow=on focus=on state=fullscreen layer=below 
 
@@ -63,8 +70,8 @@ bspc rule -a tor-browser desktop=^3 follow=on focus=on
 
 
 # Space for messages and conferences
-bspc rule -a Teams desktop=^4 follow=on focus=on
 bspc rule -a teams desktop=^4 follow=on focus=on
+bspc rule -a Teams desktop=^4 follow=on focus=on
 bspc rule -a discord desktop=^4 follow=on focus=on
 bspc rule -a TelegramDesktop desktop=^4 follow=on focus=on
 bspc rule -a telegram-desktop desktop=^4 follow=on focus=on
