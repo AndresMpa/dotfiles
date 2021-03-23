@@ -203,15 +203,9 @@ label-separator = |
 
 ; reboot
 menu-0-0 = 
-menu-0-0-exec = menu-open-1
+menu-0-0-exec = reboot
 ; poweroff
 menu-0-1 = 
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = 
-menu-1-0-exec = reboot
-
-menu-2-0 = 
-menu-2-0-exec = shutdown now
-
+menu-0-1-exec = shutdown now
+ 
 label-discharging = CHR %percentage%%
