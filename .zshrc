@@ -113,6 +113,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias pjt="cd /home/andresmp/Escritorio/my_proyects"
 alias sm="cd /home/andresmp/Escritorio/semestre_VII"
+alias compi="cd /home/andresmp/Escritorio/semestre_VII/compiladores"
+alias blanda="cd /home/andresmp/Escritorio/semestre_VII/Computacion_blanda"
+alias back="cd /home/andresmp/Escritorio/semestre_VII/lab_software/backend-lab-software"
+alias front="cd /home/andresmp/Escritorio/semestre_VII/lab_software/frontend-lab-software"
 
 alias cfzsh="nvim /home/andresmp/.zshrc"
 alias cfv="nvim /home/andresmp/.config/nvim/init.vim"

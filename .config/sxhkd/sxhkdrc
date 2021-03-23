@@ -71,15 +71,19 @@ XF86AudioMute
 
 XF86AudioLowerVolume
 	sleep 0.2; \
-	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo -1%
+	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo -5%
 
 XF86AudioRaiseVolume
 	sleep 0.2; \
-	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo +1%
+	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo +5%
 
 # Screenshots
 
 Print
+	sleep 0.2; \
+	flameshot gui
+
+ctrl + Print
 	sleep 0.2; \
 	import -window root ~/Escritorio/$(date '+%Y%m%d-%H%M%S').png
 
