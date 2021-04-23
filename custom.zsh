@@ -11,6 +11,7 @@
 
 alias v=nvim
 alias wifi='sudo wifi-menu'
+alias comu_parcial='cat /home/andresmp/Escritorio/semestre_VII/comunicaciones/parcial_1/notas.txt'
 
 info="
 ________________________________________________
@@ -18,6 +19,8 @@ ________________________________________________
 \n\tUse figlet to make custom text
 \n\tUse lolcat to custom the outputs
 \n\tUse cf + tab to see the configuration files
+\n\tUse xenv to check combinations of keys
+\n\tUse redshift to setup blue filter
 _________________________________________________
 "
 
