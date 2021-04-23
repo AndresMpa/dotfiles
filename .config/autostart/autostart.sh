@@ -9,5 +9,5 @@ xset s off
 # Set up keymaps
 setxkbmap -layout latam
 
-# Blue light filter
-redshift -l 4.570868:-74.297333
+# Let polybar control backlight 
+sudo chmod +777 /sys/class/backlight/amdgpu_bl0/brightness

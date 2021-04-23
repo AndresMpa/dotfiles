@@ -12,42 +12,70 @@
   #/ _ \ | |   | |  
  #/ ___ \| |___| |  
 #/_/   \_\_____|_|
+##############################################################
 
-# Program launcher
+#
+# Launcher
+#
+
 alt + s
 	rofi -show drun
 
-# Terminal emulator
+#
+# Terminal
+#
+
 alt + t
 	tilix
 
+#
 # Files
+#
+
 alt + f
 	pcmanfm
 
-# Office
+#
+# Libre Office
+#
 
 alt + h
-	freeoffice-textmaker
+	libreoffice --writer
 
 alt + j
-	freeoffice-presentations
+	libreoffice --calc
 
 alt + k
-	freeoffice-planmaker
+	libreoffice --draw
 
-# Images
+#
+# Images (Use feh to see on terminal)
+#
+
 alt + g
 	gimp
 
+#
+# Postman Agent
+#
+
+alt + p	
+	~/.config/PostmanAgent/Postman_Agent/Postman_Agent
+
+#
 # Navigator
+#
+
 alt + q
 	tor-browser	
 	
 alt + w
 	firefox	
+  
+#
+# Communications
+#
 
-# Comunication
 alt + b
 	teams
 
@@ -62,8 +90,25 @@ alt + m
 #| ' /|  _|  \ V /|  _ \| | | |/ _ \ | |_) | | | |
 #| . \| |___  | | | |_) | |_| / ___ \|  _ <| |_| |
 #|_|\_\_____| |_| |____/ \___/_/   \_\_| \_\____/ 
+##############################################################
 
+#
+# Brightness
+#
+
+XF86MonBrightnessDown
+	sleep 0.2; \
+	xbacklight -dec 20 \
+	source scripts/brightnessDown.sh
+
+XF86MonBrightnessUp	
+	sleep 0.2; \
+	xbacklight -inc 20
+	source scripts/brightnessUp.sh
+
+#
 # Pulseaudio
+#
 
 XF86AudioMute
 	sleep 0.2; \
@@ -77,7 +122,9 @@ XF86AudioRaiseVolume
 	sleep 0.2; \
 	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo +5%
 
+#
 # Screenshots
+#   
 
 Print
 	sleep 0.2; \
@@ -92,21 +139,33 @@ ctrl + Print
  #\ \ /\ / /| | '_ \ / _` |/ _ \ \ /\ / /  / __/ _ \| '_ \| __| '__/ _ \| |
   #\ V  V / | | | | | (_| | (_) \ V  V /  | (_| (_) | | | | |_| | | (_) | |
    #\_/\_/  |_|_| |_|\__,_|\___/ \_/\_/    \___\___/|_| |_|\__|_|  \___/|_|
-  
+##############################################################
 
+#
 # alternate between the tiled and monocle layout
+# 
+
 super + m
 	bspc desktop -l next
 
+#
 # send the newest marked node to the newest preselected node
+#
+
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
+#
 # swap the current node and the biggest window
+#
+
 super + g
 	bspc node -s biggest.window
 
+#
 # Close current window
+#
+
 super + w
 	bspc node -c
 
@@ -138,6 +197,7 @@ super + {Left,Down,Up,Right}
 #| |_| | |_) | | (_| (_| | |_| | (_) | | | |
  #\__,_|_.__/|_|\___\__,_|\__|_|\___/|_| |_|
 #                                           
+##############################################################
 
 #
 # preselect
@@ -164,7 +224,7 @@ super + ctrl + shift + space
 #| |_ / _ \ / __| | | / __|  / __/ _ \| '_ \| __| '__/ _ \| |
 #|  _| (_) | (__| |_| \__ \ | (_| (_) | | | | |_| | | (_) | |
 #|_|  \___/ \___|\__,_|___/  \___\___/|_| |_|\__|_|  \___/|_|
-
+##############################################################
 
 #
 # state/flags
@@ -224,7 +284,7 @@ super + {_,shift + }{1-9,0}
 #\___ \| | | |  _ \| '_ \ / _ \| '__| '_ ` _ \ / _` | |
  #___) | |_| | |_) | | | | (_) | |  | | | | | | (_| | |
 #|____/ \___/|____/|_| |_|\___/|_|  |_| |_| |_|\__,_|_|
-
+##############################################################
 
 #
 # sxhkd hotkey
