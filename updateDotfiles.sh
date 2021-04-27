@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Removing old files
 rm -rf custom.zsh .xinitrc .zshrc &&
 #Copying the current files that I am using
