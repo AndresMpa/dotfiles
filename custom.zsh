@@ -11,7 +11,6 @@
 
 alias v=nvim
 alias wifi='sudo wifi-menu'
-alias comu_parcial='cat /home/andresmp/Escritorio/semestre_VII/comunicaciones/parcial_1/notas.txt'
 
 info="
 ________________________________________________
@@ -24,4 +23,4 @@ ________________________________________________
 _________________________________________________
 "
 
-alias help='echo -e $info'
+alias help='echo -ne $info'

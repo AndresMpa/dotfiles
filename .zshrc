@@ -17,6 +17,11 @@ export ZSH="/home/andresmp/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Disable % simmbol when open a new terminal
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -81,8 +86,6 @@ plugins=(
   git
   pip
   npm
-  heroku
-  history
   archlinux
   web-search
 )
@@ -97,11 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='mvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -119,6 +122,7 @@ alias back="cd /home/andresmp/Escritorio/semestre_VII/lab_software/backend-lab-s
 alias front="cd /home/andresmp/Escritorio/semestre_VII/lab_software/frontend-lab-software"
 
 alias cfzsh="nvim /home/andresmp/.zshrc"
+alias editor="cd /home/andresmp/.config/nvim"
 alias cfv="nvim /home/andresmp/.config/nvim/init.vim"
 alias cfsxk="nvim /home/andresmp/.config/sxhkd/sxhkdrc"
 alias cfbwm="nvim /home/andresmp/.config/bspwm/bspwmrc"
