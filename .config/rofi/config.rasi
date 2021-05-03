@@ -1,16 +1,23 @@
 configuration {
-	theme: "solarized";
-	font: "hack 10";
-	show-icons: true;
+	/*Settings*/
+	modi: "window,drun,ssh,combi";
+	combi-modi: "window,drun,ssh";
+
+	/*Iconography*/
 	icon-theme: "Papirus";
-	modi: "window,run,ssh";
-	width: 75;
-	lines: 8;
+	theme: "solarized";
+	show-icons: true;
+	font: "hack 18";
+	
+	/*Layout*/
 	m: "-8";
+	lines: 20;
+	width: 95;
+	columns: 4;
 	line-margin: 4;
 	line-padding: 2;
-	font: "mono 18";
-/*	columns: 1;*/
+
+/*  font: "mono 18";*/
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -152,3 +159,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+@import "/usr/share/rofi/themes/solarized.rasi"
