@@ -128,11 +128,9 @@ card = amdgpu_bl0
 enable-scroll = true
 format = <label>
 label = %percentage%%
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -213,7 +211,7 @@ format-padding = 0
 
 label-open = 
 label-close = 
-label-separator = |
+label-separator = 
 
 ; reboot
 menu-0-0 = 
