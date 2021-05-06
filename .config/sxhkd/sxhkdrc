@@ -298,7 +298,7 @@ super + ctrl + shift + alt + r
 # ethernet hotkey
 #
 super + ctrl + shift + alt + e
-	echo "'Restarting ethernet' command still in process"
+	~/.config/autostart/wifi.sh
 
 #
 # bspwm hotkeys
