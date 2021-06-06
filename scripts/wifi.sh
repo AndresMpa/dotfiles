@@ -17,4 +17,4 @@ nm-applet /dev/null 2> /dev/null &
 
 # kill nm-applet here to not see the icon
 # this optimize the process on your PC
-killall nm-applet
+#killall nm-applet
