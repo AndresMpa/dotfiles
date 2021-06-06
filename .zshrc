@@ -3,7 +3,7 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 
 clear
-
+neofetch
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -84,11 +84,14 @@ CASE_SENSITIVE="true"
 plugins=(
 	git
 	zsh-completions
-  zsh-autocomplete
 	colored-man-pages
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+# This is really cool but it make zsh work a slow so I will use it
+# whne I get a better Pc
+#zsh-autocomplete
+
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -98,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
- export LANG=es_CO.UTF-8
+export LANG=es_CO.UTF-8
  
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -129,4 +132,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias v=nvim
-alias wifi=$HOME/scripts/wifi.sh
+alias wifi=$HOME/.config/scripts/wifi.sh
+alias hdmi=$HOME/.config/scripts/hdmi.sh
+alias screenshot=$HOME/.config/scripts/screenshot.sh
