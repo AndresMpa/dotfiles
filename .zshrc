@@ -83,6 +83,7 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	npm
 	zsh-completions
 	colored-man-pages
 	zsh-autosuggestions
@@ -134,4 +135,3 @@ fi
 alias v=nvim
 alias wifi=$HOME/.config/scripts/wifi.sh
 alias hdmi=$HOME/.config/scripts/hdmi.sh
-alias screenshot=$HOME/.config/scripts/screenshot.sh
