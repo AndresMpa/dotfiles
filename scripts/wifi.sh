@@ -12,6 +12,9 @@
 # GUI to connect to wired or wireless reds
 #nmtui-connect
 
+# Use this command to get access to ethernet
+#nmcli connection up id eno1
+
 # kill nm-applet here to see the icon
 # this a process that is a nunnecessary
 # process on your PC so you can comment

@@ -3,7 +3,7 @@ configuration {
     display-run: "   ";
     icon-theme: "Fluent";
     show-icons:true;
-    modi: "combi,run,ssh,file-browser";
+    modi: "combi";
     combi-modi: "window,drun";
 }
  
