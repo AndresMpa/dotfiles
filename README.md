@@ -2,7 +2,13 @@
 
 ## Tips
 
-My distro was built in Arch Linux using Linux zen kernel, if you have another kernel you can use this file but check my /autoscripts dir wich have some scripts I needed to make this thing works, also I have a "minimalistic" desktop so, if you want to move on it you have to use the keyboard, mine uses "ñ" so the layout is "latam" you may have to change it
+My distro was built in Arch Linux using Linux zen kernel, if you have another kernel you can use these files, but check my ./.config/bspwmrc file wich have some scripts at the bottom you may not need to make yours work, also I have a "minimalistic" desktop so, if you want to move on it you have to use the keyboard, mine uses "ñ" so the layout is "latam" you may have to change it at bspwmrc file
+
+Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom and I'm loading a new color schema, if you are using tilix you can check previous versions of this repository, you may find something useful
+
+## To do:
+
+-[] Switching between color schemas. -[] Improve documentetion
 
 ---
 
@@ -35,14 +41,8 @@ My distro was built in Arch Linux using Linux zen kernel, if you have another ke
 
 ### Last update
 
-Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom and I'm loading a new color schema
-
 ![Desktop](examples/desktop_8.png)
 
 ![Now it uses picom](examples/desktop_7.png)
 
 ![New schema](examples/desktop_6.png)
-
-##To do:
-
--[ ] Switching between color schemas. -[ ] Improve documentetion
