@@ -1,0 +1,429 @@
+font:
+  normal:
+    family: Noto Mono for Powerline
+  size: 11
+
+
+fc-list : family style
+
+schemes:
+  # Afterglow
+  colors_afterglow: &afterglow # Default colors
+    primary:
+      background: "#2c2c2c"
+      foreground: "#d6d6d6"
+
+      dim_foreground: "#dbdbdb"
+      bright_foreground: "#d9d9d9"
+      dim_background: "#202020" # not sure
+      bright_background: "#3a3a3a" # not sure
+
+    # Cursor colors
+    cursor:
+      text: "#2c2c2c"
+      cursor: "#d9d9d9"
+
+    # Normal colors
+    normal:
+      black: "#1c1c1c"
+      red: "#bc5653"
+      green: "#909d63"
+      yellow: "#ebc17a"
+      blue: "#7eaac7"
+      magenta: "#aa6292"
+      cyan: "#86d3ce"
+      white: "#cacaca"
+
+    # Bright colors
+    bright:
+      black: "#636363"
+      red: "#bc5653"
+      green: "#909d63"
+      yellow: "#ebc17a"
+      blue: "#7eaac7"
+      magenta: "#aa6292"
+      cyan: "#86d3ce"
+      white: "#f7f7f7"
+
+    # Dim colors
+    dim:
+      black: "#232323"
+      red: "#74423f"
+      green: "#5e6547"
+      yellow: "#8b7653"
+      blue: "#556b79"
+      magenta: "#6e4962"
+      cyan: "#5c8482"
+      white: "#828282"
+
+  # Argonaut
+  colors_argonaut: &argonaut # Default colors
+    primary:
+      background: "#292C3E"
+      foreground: "#EBEBEB"
+
+    # Cursor colors
+    cursor:
+      text: "#FF261E"
+      cursor: "#FF261E"
+
+    # Normal colors
+    normal:
+      black: "#0d0d0d"
+      red: "#FF301B"
+      green: "#A0E521"
+      yellow: "#FFC620"
+      blue: "#1BA6FA"
+      magenta: "#8763B8"
+      cyan: "#21DEEF"
+      white: "#EBEBEB"
+
+    # Bright colors
+    bright:
+      black: "#6D7070"
+      red: "#FF4352"
+      green: "#B8E466"
+      yellow: "#FFD750"
+      blue: "#1BA6FA"
+      magenta: "#A578EA"
+      cyan: "#73FBF1"
+      white: "#FEFEF8"
+
+  # Colors (Ayu Dark)
+  colors_ayu_dark: &ayu_dark # Default colors
+    primary:
+      background: "#0A0E14"
+      foreground: "#B3B1AD"
+
+    # Normal colors
+    normal:
+      black: "#01060E"
+      red: "#EA6C73"
+      green: "#91B362"
+      yellow: "#F9AF4F"
+      blue: "#53BDFA"
+      magenta: "#FAE994"
+      cyan: "#90E1C6"
+      white: "#C7C7C7"
+
+    # Bright colors
+    bright:
+      black: "#686868"
+      red: "#F07178"
+      green: "#C2D94C"
+      yellow: "#FFB454"
+      blue: "#59C2FF"
+      magenta: "#FFEE99"
+      cyan: "#95E6CB"
+      white: "#FFFFFF"
+
+  # Colors (Base16 Default Dark)
+  colors_dark16: &dark16 # Default colors
+    primary:
+      background: "#181818"
+      foreground: "#d8d8d8"
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: "#d8d8d8"
+      cursor: "#d8d8d8"
+
+    # Normal colors
+    normal:
+      black: "#181818"
+      red: "#ab4642"
+      green: "#a1b56c"
+      yellow: "#f7ca88"
+      blue: "#7cafc2"
+      magenta: "#ba8baf"
+      cyan: "#86c1b9"
+      white: "#d8d8d8"
+
+    # Bright colors
+    bright:
+      black: "#585858"
+      red: "#ab4642"
+      green: "#a1b56c"
+      yellow: "#f7ca88"
+      blue: "#7cafc2"
+      magenta: "#ba8baf"
+      cyan: "#86c1b9"
+      white: "#f8f8f8"
+
+  # Colors (Blood Moon)
+  colors_blood_moon: &blood_moon # Modify
+    primary:
+      background: "#1f1f1f"
+      foreground: "#C6C6C4"
+
+    # Normal colors
+    normal:
+      black: "#000000"
+      red: "#B202FF"
+      green: "#00FF6B"
+      yellow: "#FFD700"
+      blue: "#0087BD"
+      magenta: "#9A4EAE"
+      cyan: "#20B2AA"
+      white: "#C8C8C8"
+
+    # Bright colors
+    bright:
+      black: "#0f0f0f"
+      red: "#FF24ff"
+      green: "#03C03C"
+      yellow: "#FDFF00"
+      blue: "#008FFF"
+      magenta: "#FF1493"
+      cyan: "#00CCCC"
+      white: "#FFFAFA"
+
+  # KDE Breeze (Ported from Konsole)
+  colors_breeze: &breeze # Default colors
+    primary:
+      background: "#232627"
+      foreground: "#fcfcfc"
+
+      dim_foreground: "#eff0f1"
+      bright_foreground: "#ffffff"
+      dim_background: "#31363b"
+      bright_background: "#000000"
+
+    # Normal colors
+    normal:
+      black: "#232627"
+      red: "#ed1515"
+      green: "#11d116"
+      yellow: "#f67400"
+      blue: "#1d99f3"
+      magenta: "#9b59b6"
+      cyan: "#1abc9c"
+      white: "#fcfcfc"
+
+    # Bright colors
+    bright:
+      black: "#7f8c8d"
+      red: "#c0392b"
+      green: "#1cdc9a"
+      yellow: "#fdbc4b"
+      blue: "#3daee9"
+      magenta: "#8e44ad"
+      cyan: "#16a085"
+      white: "#ffffff"
+
+    # Dim colors
+    dim:
+      black: "#31363b"
+      red: "#783228"
+      green: "#17a262"
+      yellow: "#b65619"
+      blue: "#1b668f"
+      magenta: "#614a73"
+      cyan: "#186c60"
+      white: "#63686d"
+
+  # Colors (Cobalt 2)
+  colors_cobalt2: &cobalt2
+    cursor:
+      text: "#fefff2"
+      cursor: "#f0cc09"
+
+    selection:
+      text: "#b5b5b5"
+      background: "#18354f"
+
+    primary:
+      background: "#132738"
+      foreground: "#ffffff"
+
+    normal:
+      black: "#000000"
+      red: "#ff0000"
+      green: "#38de21"
+      yellow: "#ffe50a"
+      blue: "#1460d2"
+      magenta: "#ff005d"
+      cyan: "#00bbbb"
+      white: "#bbbbbb"
+
+    bright:
+      black: "#555555"
+      red: "#f40e17"
+      green: "#3bd01d"
+      yellow: "#edc809"
+      blue: "#5555ff"
+      magenta: "#ff55ff"
+      cyan: "#6ae3fa"
+      white: "#ffffff"
+
+  # Colors (Darkside)
+  colors_darkside: &darkside
+    primary:
+      background: "#222324"
+      foreground: "#BABABA"
+
+    # Normal colors
+    normal:
+      black: "#000000"
+      red: "#E8341C"
+      green: "#68C256"
+      yellow: "#F2D42C"
+      blue: "#1C98E8"
+      magenta: "#8E69C9"
+      cyan: "#1C98E8"
+      white: "#BABABA"
+
+    # Bright colors
+    bright:
+      black: "#666666"
+      red: "#E05A4F"
+      green: "#77B869"
+      yellow: "#EFD64B"
+      blue: "#387CD3"
+      magenta: "#957BBE"
+      cyan: "#3D97E2"
+      white: "#BABABA"
+
+  # Colors (Hyper)
+  colors_hyper: &hyper # Default colors
+    primary:
+      background: "#000000"
+      foreground: "#ffffff"
+    cursor:
+      text: "#F81CE5"
+      cursor: "#ffffff"
+
+    # Normal colors
+    normal:
+      black: "#000000"
+      red: "#fe0100"
+      green: "#33ff00"
+      yellow: "#feff00"
+      blue: "#0066ff"
+      magenta: "#cc00ff"
+      cyan: "#00ffff"
+      white: "#d0d0d0"
+
+    # Bright colors
+    bright:
+      black: "#808080"
+      red: "#fe0100"
+      green: "#33ff00"
+      yellow: "#feff00"
+      blue: "#0066ff"
+      magenta: "#cc00ff"
+      cyan: "#00ffff"
+      white: "#FFFFFF"
+
+  # Colors (New Moon)
+  colors_new:moon: &new_moon # Default colors
+    primary:
+      background: "#2D2D2D"
+      foreground: "#B3B9C5"
+    # Normal colors
+    normal:
+      black: "#2D2D2D"
+      red: "#F2777A"
+      green: "#92D192"
+      yellow: "#FFD479"
+      blue: "#6AB0F3"
+      magenta: "#E1A6F2"
+      cyan: "#76D4D6"
+      white: "#B3B9C5"
+    # Bright colors
+    bright:
+      black: "#777C85"
+      red: "#F2777A"
+      green: "#76D4D6"
+      yellow: "#FFEEA6"
+      blue: "#6AB0F3"
+      magenta: "#E1A6F2"
+      cyan: "#76D4D6"
+      white: "#FFFFFF"
+
+  # Colors (Pencil Dark)
+  colors_pencial_dark: &pencil_dark # Default Colors
+    primary:
+      background: "#212121"
+      foreground: "#f1f1f1"
+    # Normal colors
+    normal:
+      black: "#212121"
+      red: "#c30771"
+      green: "#10a778"
+      yellow: "#a89c14"
+      blue: "#008ec4"
+      magenta: "#523c79"
+      cyan: "#20a5ba"
+      white: "#e0e0e0"
+    # Bright colors
+    bright:
+      black: "#212121"
+      red: "#fb007a"
+      green: "#5fd7af"
+      yellow: "#f3e430"
+      blue: "#20bbfc"
+      magenta: "#6855de"
+      cyan: "#4fb8cc"
+      white: "#f1f1f1"
+
+  # Colors (Taerminal)
+  colors_taerminal: &taerminal # Default colors
+    primary:
+      background: "#26282a"
+      foreground: "#f0f0f0"
+    cursor:
+      background: "#f0f0f0"
+      foreground: "#26282a"
+
+    # Normal colors
+    normal:
+      black: "#26282a"
+      red: "#ff8878"
+      green: "#b4fb73"
+      yellow: "#fffcb7"
+      blue: "#8bbce5"
+      magenta: "#ffb2fe"
+      cyan: "#a2e1f8"
+      white: "#f1f1f1"
+
+    # Bright colors
+    bright:
+      black: "#6f6f6f"
+      red: "#fe978b"
+      green: "#d6fcba"
+      yellow: "#fffed5"
+      blue: "#c2e3ff"
+      magenta: "#ffc6ff"
+      cyan: "#c0e9f8"
+      white: "#ffffff"
+
+  # Colors (Monokai Pro)
+  colors_monokai_pro: &monokai_pro # Default colors
+    primary:
+      background: "#2D2A2E"
+      foreground: "#FCFCFA"
+
+    # Normal colors
+    normal:
+      black: "#403E41"
+      red: "#FF6188"
+      green: "#A9DC76"
+      yellow: "#FFD866"
+      blue: "#FC9867"
+      magenta: "#AB9DF2"
+      cyan: "#78DCE8"
+      white: "#FCFCFA"
+
+    # Bright colors
+    bright:
+      black: "#727072"
+      red: "#FF6188"
+      green: "#A9DC76"
+      yellow: "#FFD866"
+      blue: "#FC9867"
+      magenta: "#AB9DF2"
+      cyan: "#78DCE8"
+      white: "#FCFCFA"
+
+colors: *blood_moon

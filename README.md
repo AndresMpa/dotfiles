@@ -14,9 +14,10 @@ My distro was built in Arch Linux using Linux zen kernel, if you have another ke
 | Window Manager  | [BSPWM](https://github.com/baskerville/bspwm)                                                                     |
 | Hotkey daemon   | [sxhkd](https://github.com/baskerville/sxhkd)                                                                     |
 | Status bars     | [Polybar](https://github.com/polybar/polybar)                                                                     |
-| Window Composer | [Compton](https://denovatoanovato.net/compton-instalacion-y-configuracion/)                                       |
-| Terminal        | [Tilix](https://gnunn1.github.io/tilix-web/)                                                                      |
+| Window Composer | [Picom](https://wiki.archlinux.org/title/Picom)                                                                   |
+| Terminal        | [Alacritty](https://github.com/alacritty/alacritty/wiki)                                                          |
 | Shell           | [zsh 5.8](https://ohmyz.sh/)                                                                                      |
+| Launcher        | [Rofi](https://wiki.archlinux.org/title/Rofi)                                                                     |
 | Session Manager | [LightDM](https://wiki.archlinux.org/title/LightDM)                                                               |
 | LightDM Theme   | [lightdm-webkit-theme-osmos](https://github.com/Exauthor/lightdm-webkit-theme-osmos)                              |
 
@@ -32,18 +33,16 @@ My distro was built in Arch Linux using Linux zen kernel, if you have another ke
 
 ## How the desktop Looks like
 
-###My terminal and shell
+### Last update
 
-![Desktop](examples/desktop_1.png)
+Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom and I'm loading a new color schema
 
-###BSPWM examples
-![Apps](examples/desktop_2.png)
+![Desktop](examples/desktop_8.png)
 
-###Resizing windows
-![resizing](examples/desktop_3.png)
+![Now it uses picom](examples/desktop_7.png)
 
-###We can also play
-![steam](examples/desktop_4.png)
+![New schema](examples/desktop_6.png)
 
-###Zeal for developer
-![zeal](examples/desktop_5.png)
+##To do:
+
+-[ ] Switching between color schemas. -[ ] Improve documentetion

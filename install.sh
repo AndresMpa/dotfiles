@@ -3,26 +3,6 @@
 echo "
 All you need to make this thing work is the next
 
-Utilities
-sudo pacman -S rofi
-sudo pacman -S tilix
-sudo pacman -S firefox
-Shell
-sudo pacman -S zsh
-yay -S powerline fonts-powerline
-sudo pacman -Sy zsh-theme-powerlevel9k zsh-syntax-highlighting
-echo 'source /usr/share/powerlevel9k/powerlevel9k.zsh-theme' >> ~/.zshrc
-echo 'source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-chsh -s `which zsh`
-
-echo 'add inside plugins colored-man-pages'
-
-Polybar
-sudo pacman -S polybar
-sudo pacman -S dbus libxinerama libxrandr libxft libxss libxdg-basedir glib2 pango    gtk3 libnotify
-yay -S dunst-git
-
 BSPWM
 sudo pacman -S libxcb xcb-util xcb-util-wm xcb-util-keysyms
 git clone https://github.com/baskerville/bspwm.git
@@ -38,4 +18,17 @@ chmod u+x ~/.config/bspwm/bspwmrc
 echo 'exec bspwm' > ~/.xinitrc
 echo 'exec sxhkd' > ~/.xinitrc
 
+Polybar
+sudo pacman -S dbus libxinerama libxrandr libxft libxss libxdg-basedir glib2 pango gtk3 libnotify
+sudo pacman -S polybar
+
+Utilities
+sudo pacman -S rofi
+sudo pacman -S alacritty
+sudo pacman -S firefox
+yay -S dunst-git
+
+Shell
+git clone https://github.com/AndresMpa/desl/ 
+cd desl && ./install.sh
 "
