@@ -1,5 +1,17 @@
 #!/bin/sh
 
+# I disable this thing
+#systemctl disable NetworkManager-wait-online.service
+
+# Using terminal to connect to wifi
+#nmcli device wifi connect $USER password <password>
+
+# To display avalible reds
+#nmcli device wifi list
+
+# GUI to connect to wired or wireless reds
+#nmtui-connect
+
 # kill nm-applet here to see the icon
 # this a process that is a nunnecessary
 # process on your PC so you can comment
