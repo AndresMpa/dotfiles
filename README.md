@@ -8,7 +8,8 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ## To do:
 
--[] Switching between color schemas. -[] Improve documentetion
+- Switching between color schemas.
+- Improve documentetion.
 
 ---
 
