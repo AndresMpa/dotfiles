@@ -46,7 +46,7 @@ alt + j
 	libreoffice --calc
 
 alt + k
-	libreoffice --draw
+	libreoffice --impress
 
 #
 # Images (Use feh to see on terminal)
@@ -75,9 +75,6 @@ alt + w
 #
 # Communications
 #
-
-alt + b
-	teams
 
 alt + n
 	discord
@@ -127,8 +124,8 @@ XF86AudioRaiseVolume
 #   
 
 Print
-	#sleep 0.2; \
-	flameshot gui
+	sleep 0.2; \
+	flameshot
 
 ctrl + Print
 	sleep 0.2; \

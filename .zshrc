@@ -53,7 +53,7 @@ CASE_SENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -71,7 +71,7 @@ CASE_SENSITIVE="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
- HIST_STAMPS="dd/mm/yyyy"
+#HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -83,7 +83,9 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	pip
 	npm
+	history
 	zsh-completions
 	colored-man-pages
 	zsh-autosuggestions
@@ -92,6 +94,16 @@ plugins=(
 # This is really cool but it make zsh work a slow so I will use it
 # whne I get a better Pc
 #zsh-autocomplete
+#
+#	This looks insteresting but I don't get it at all
+#common-aliases
+# 
+# Intersting options
+#docker
+#docker-compose
+#fzf
+#github
+#systemd
 
 autoload -U compinit && compinit
 
