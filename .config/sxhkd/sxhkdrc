@@ -55,6 +55,10 @@ alt + k
 alt + g
 	gimp
 
+
+alt + i
+	inkscape
+
 #
 # Postman Agent
 #
@@ -70,7 +74,7 @@ alt + q
 	tor-browser	
 	
 alt + w
-	firefox-developer-edition	
+	firefox	
   
 #
 # Communications
