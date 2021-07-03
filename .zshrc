@@ -41,7 +41,7 @@ CASE_SENSITIVE="true"
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
- export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -87,6 +87,7 @@ plugins=(
 	npm
 	history
 	zsh-completions
+	zsh-autocomplete
 	colored-man-pages
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -109,6 +110,9 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -116,6 +120,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=es_CO.UTF-8
  
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
@@ -125,25 +132,22 @@ fi
 
 # Preferences for ls and exa
 if [ -x "$(command -v exa)" ]; then
-    alias ls="exa"
-    alias la="exa --long --all --group"
+    alias ls="exa --icons"
+    alias la="exa --icons --long --all --group"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
+# Utilities
 alias v=nvim
-alias wifi=$HOME/.config/scripts/wifi.sh
-alias hdmi=$HOME/.config/scripts/hdmi.sh
+alias wifi="exec ~/.config/scripts/wifi.sh"
+alias hdmi="exec ~/.config/scripts/hdmi.sh"
+
+# Routes
+alias editor="cd ~/.config/nvim"
+alias cfbar="cd ~/.config/polybar"
+alias cfrofi="nvim ~/.config/rofi"
+alias cfcod="cd ~/.config/scripts"
+alias cfwm="nvim ~/.config/bspwm/bspwmrc"
+alias cfsxh="nvim ~/.config/sxhkd/sxhkdrc"
+alias cfpic="nvim ~/.config/picom/picom.conf"
+alias cfneo="nvim ~/.config/neofetch/config.conf"
+alias cfter="nvim ~/.config/alacritty/alacritty.yml"
