@@ -27,4 +27,4 @@ do
     fi
 done
 
-
+source ~/.config/polybar/launch.sh
