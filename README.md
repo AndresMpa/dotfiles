@@ -8,8 +8,7 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ## To do:
 
-- Switching between color schemas.
-- Improve documentetion.
+- Switch to another WM or something
 
 ---
 
@@ -47,3 +46,17 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 ![Now it uses picom](examples/desktop_7.png)
 
 ![New schema](examples/desktop_6.png)
+
+![Video](examples/desktop.mp4)
+
+## Installation
+
+If you want to do it yourself source "install.sh", if
+you also want the same configuration I'm using, source
+"use.sh"
+
+`$ git clone https://github.com/AndresMpa/dotfiles.git`
+
+`$ cd dotfiles`
+
+`$ source ./install.sh`
