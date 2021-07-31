@@ -55,8 +55,8 @@ If you want to do it yourself source "install.sh", if
 you also want the same configuration I'm using, source
 "use.sh"
 
-`$ git clone https://github.com/AndresMpa/dotfiles.git`
-
-`$ cd dotfiles`
-
-`$ source ./install.sh`
+```
+$ git clone https://github.com/AndresMpa/dotfiles.git
+$ cd dotfiles
+$ source ./install.sh
+```
