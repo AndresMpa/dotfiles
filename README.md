@@ -47,7 +47,7 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ![New schema](examples/desktop_6.png)
 
-![Video]("examples/desktop.gif")
+![Video](examples/desktop.gif)
 
 ## Installation
 
