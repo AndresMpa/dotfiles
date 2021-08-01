@@ -15,14 +15,17 @@ do
     if [[ $change -eq 1 && $(head -n 1 ~/.config/polybar/colors.ini) == ";${current:40}" ]];
     then
         change=0
-        echo "Theme changed to ${current:40:4}"
         if [[ $theme -eq $(($len-1)) ]];
         then
-            echo "Reload"
-            cat ${schemas[0]} > ~/.config/polybar/colors.ini
+            newSchema=${schemas[0]}
+            echo "Theme changed to ${newSchema:40:-4}"
+            cat $newSchema > ~/.config/polybar/colors.ini
+            feh --bg-fill ~/Imágenes/${newSchema:40:-4}* &
         else
-            echo "Change"
-            cat ${schemas[$(($theme+1))]} > ~/.config/polybar/colors.ini
+            newSchema=${schemas[$(($theme+1))]}
+            echo "Theme changed to ${newSchema:40:-4}"
+            cat $newSchema > ~/.config/polybar/colors.ini
+            feh --bg-fill ~/Imágenes/${newSchema:40:-4}* &
         fi
     fi
 done
