@@ -41,13 +41,13 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ### Last update
 
-![Desktop](examples/desktop_8.png)
+![Desktop](examples/example_1.png)
 
-![Now it uses picom](examples/desktop_7.png)
+![Now it uses picom](examples/example_2.png)
 
-![New schema](examples/desktop_6.png)
+![New schema](examples/example_3.png)
 
-![Video](examples/desktop.gif)
+[![Video](examples/desktop.gif)](https://youtu.be/Wpbno6cHpfY)
 
 ## Installation
 
