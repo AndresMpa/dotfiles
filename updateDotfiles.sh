@@ -2,6 +2,10 @@
 
 # Removing old files
 rm -rf brightness-permission.service .xinitrc .zshrc &&
+# Removing old wallpapers
+rm -rf wallpapers/*
+# Copying images
+cp -r ~/Imágenes/* ./Wallpapers
 # Copying the current files that I am using
 cp ~/.xinitrc ~/.zshrc $(pwd) &&
 # Copying OS fonts
