@@ -99,13 +99,13 @@ alt + m
 
 XF86MonBrightnessDown
 	sleep 0.2; \
-	#backlight -dec 20 \
-	source ./scripts/brightnessDown.sh
+	backlight -dec 20 \
+	exec ./scripts/brightnessDown.sh
 
 XF86MonBrightnessUp	
 	sleep 0.2; \
-	#backlight -inc 20
-	source ./scripts/brightnessUp.sh
+	backlight -inc 20 \
+	exec ./scripts/brightnessUp.sh
 
 #
 # Pulseaudio
