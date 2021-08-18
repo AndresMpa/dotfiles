@@ -25,7 +25,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # May consume too much energy
 picom --config $HOME/.config/picom/picom.conf &
 
-feh --bg-fill /home/andresmpa/Imágenes/wallpaper.png &
+feh --bg-fill /home/andresmpa/Imágenes/blue.png &
 
 #  __  __             _ _             
 #|  \/  | ___  _ __ (_) |_ ___  _ __ 
@@ -105,6 +105,8 @@ bspc rule -a postman desktop=^4 follow=on focus=on
 bspc rule -a Postman desktop=^4 follow=on focus=on
 bspc rule -a Gimp desktop=^4 follow=on focus=on state=fullscreen layer=below 
 bspc rule -a gimp desktop=^4 follow=on focus=on state=fullscreen layer=below 
+bspc rule -a inkscape desktop=^4 follow=on focus=on state=fullscreen layer=below
+bspc rule -a Inkscape desktop=^4 follow=on focus=on state=fullscreen layer=below
 
 #  ___   __  __ _
 # / _ \ / _|/ _(_) ___ ___

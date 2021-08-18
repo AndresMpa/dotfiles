@@ -4,6 +4,10 @@
 rm -rf brightness-permission.service .xinitrc .zshrc &&
 # Removing old wallpapers
 rm -rf wallpapers/*
+# Removing keyboard layout
+rm -rf ./AndresMpa/*
+# Adding keyboard layout
+cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/
 # Copying images
 cp -r ~/Imágenes/* ./Wallpapers
 # Copying the current files that I am using
