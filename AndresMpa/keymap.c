@@ -19,27 +19,39 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
+enum unicode_names {
+    LT_NU,
+    LT_N,
+    LT_Q
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+    [LT_NU]  = 0x00D1,  // Ñ
+    [LT_N]  = 0x00F1,  // ñ
+    [LT_Q] = 0x00BF,  // ¿
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                ,-----------------------------------------------------.
-    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
+    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    KC_LCTRL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+    KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                     KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
+    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                     KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RCTRL,
   //|--------+--------+--------+--------+--------+--------+------|  |------+--------+--------+--------+--------+--------+--------|
-                                         KC_LGUI,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RALT
-                                      //`--------------------------'  `--------------------------'
+                                         KC_LGUI,   MO(2),  KC_SPC,     KC_ENT,   MO(1), KC_RALT
+                                      //`--------------------------'   `--------------------------'
 
   ),
 
   [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                 ,-----------------------------------------------------.
-    KC_EQL,  KC_MINS,  KC_1,    KC_2,    KC_3,    KC_COMM,                   KC_PSCR, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, KC_BSPC,
+    KC_PLUS, KC_MINS,  KC_1,    KC_2,    KC_3,    KC_EQL,                    KC_PSCR, KC_VOLD,  KC_VOLU, KC_BRMU, KC_BRMD, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                 |--------+--------+--------+--------+--------+--------|
-    KC_ASTR, KC_SLSH,  KC_4,    KC_5,    KC_6,    KC_DOT,                    KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, KC_ESC,
+    KC_ASTR, KC_SLSH,  KC_4,    KC_5,    KC_6,    KC_DOT,                   KC_LEFT,KC_DOWN, KC_UP,KC_RIGHT,XP(LT_N, LT_NU),KC_ESC,
   //|--------+--------+--------+--------+--------+--------|                 |--------+--------+--------+--------+--------+--------|
-    KC_CIRC, KC_PERC,  KC_7,    KC_8,    KC_9,    KC_0,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_CIRC, KC_PERC,  KC_7,    KC_8,    KC_9,    KC_0,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, X(LT_Q), KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+------|  |-------+--------+--------+--------+--------+--------+--------|
                                         KC_LGUI,  _______, KC_SPC,   KC_ENT,  MO(3),  KC_RALT
                                       //`------------------------'  `--------------------------'
@@ -47,9 +59,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                ,-----------------------------------------------------.
-    KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
+    KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                   KC_CIRC, KC_AMPR, KC_LPRN, KC_RPRN, KC_ASTR, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
+    KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, KC_GRV,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
     KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+------|  |------+--------+--------+--------+--------+--------+--------|
@@ -59,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                 ,-----------------------------------------------------.
-    RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    RESET,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                 |--------+--------+--------+--------+--------+--------|
     RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                 |--------+--------+--------+--------+--------+--------|
