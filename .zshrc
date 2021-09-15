@@ -152,3 +152,5 @@ alias cfpic="nvim ~/.config/picom/picom.conf"
 alias cfneo="nvim ~/.config/neofetch/config.conf"
 alias cfter="nvim ~/.config/alacritty/alacritty.yml"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
