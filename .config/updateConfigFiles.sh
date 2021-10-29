@@ -2,9 +2,7 @@
 
 # Removing old configurations
 rm -rf alacritty/ bspwm/ nitrogen/ picom/ polybar/ rofi/ script/ sxhkd/ &&
-# Brigthness service
-rm -rf ./brightness-permission.service &&
-cp /etc/systemd/system/brightness-permission.service ./.config &&
+
 # Updating pacman configurations
 rm -rf ./pacman.conf
 cp /etc/pacman.conf ./.config
