@@ -8,8 +8,16 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ## To do:
 
-- Switch to another WM or something
-
+- [ ] Refactor this readme
+- [x] Set up Qtile
+- [ ] Basic Qtile configuration
+- [ ] Advance Qtile configuration
+- [ ] Configure Qtile
+- [ ] Create a custom config
+- [ ] Improve bar
+- [ ] Create color schemas
+- [ ] Create moduls
+- [ ] Create some IA to embed in Qtile
 ---
 
 ## Summary
