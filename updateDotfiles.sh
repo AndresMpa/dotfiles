@@ -18,6 +18,6 @@ cp ~/.xinitrc ~/.zshrc $(pwd) &&
 cp ~/.local/share/fonts/* $(pwd)/fonts &&
 # Copying custom services
 cp /etc/systemd/system/brightness-permission.service ./etc/systemd/system/ &&
-#Updating the config files (Polybar, BSPWM, etc)
-source .config/updateConfigFiles.sh
+#Updating the config files (Qtile, Kitty)
+source .config/updateQtile.sh
 
