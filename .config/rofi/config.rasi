@@ -1,102 +1,13 @@
 configuration {
-    display-drun: "  ";
+    theme: "AndresMpa";
     display-run: "   ";
-    icon-theme: "Fluent";
+    display-drun: "  ";
+
     show-icons:true;
+    icon-theme: "Fluent";
+
     modi: "combi";
     combi-modi: "window,drun";
 }
- 
-* {
-    lines: 4;
-    columns: 7;
-    background-color: #00000035;
-    border-color: #00000000;
-    text-color: #EFEFEF;
-    font: "ABeeZee 10";
-}
- 
-#window {
-    border: 0;
-    border-radius: 8px;
-    padding: 50;
-    width: 100%;
-    height: 100%;
-}
- 
-#mainbox {
-    background-color: #00000000;
-    children: [inputbar, listview];
-    spacing: 0px;
-    /*margin: 20%;*/
-    border-color: @base0D;
-}
- 
- 
-#listview {
-    background-color: #00000000;
-    fixed-height: 0;
-    border: 0px;
-    scrollbar: false;
-    padding: 50px 80px 0px;
-    layout: vertical;
-}
- 
-#element {
-    background-color: #00000000;
-    border: 0;
-    border-radius: 15px;
-    padding: 40px 0px  40px 0px ;
-    orientation: vertical;
-}
 
-element-icon { size: 10ch ; }
-
-element-text {
-    expand:                         true;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    margin:                         0.5% 0.5% -0.5% 0.5%;
-}
-
-#element selected {
-    background-color: #00BCD48C;
-    text-color: #FFFFFF;
-}
- 
- 
-#inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-    background-color: #FFFFFF20;
-    border-radius: 20px;
-    padding: 8px;
-    margin: 0% 35% 0% 35%;
-}
- 
-#case-indicator {
-    background-color: #00000000;
-    spacing:    0;
-}
-
-#entry {
-    background-color: #00000000;
-    spacing: 0;
-    expand: true;
-    horizontal-align: 0;
-    placeholder: " Search";
-    padding: 0.10% 0% 0% 0%;
-}
-
-#prompt {
-    background-color: #00000000;
-    spacing:    0;
-}
- 
-#textbox-prompt-colon {
-    enabled: false;
-    background-color: #00000000;
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em ;
-}
-
+ /* vim:ft=css
