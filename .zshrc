@@ -13,7 +13,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/andresmpa/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -28,7 +28,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -71,7 +71,7 @@ ENABLE_CORRECTION="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-#HIST_STAMPS="dd/mm/yyyy"
+# HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -86,7 +86,6 @@ plugins=(
 	pip
 	npm
 	history
-	zsh-completions
 	zsh-autocomplete
 	colored-man-pages
 	zsh-autosuggestions
@@ -94,24 +93,19 @@ plugins=(
 )
 # This is really cool but it make zsh work a slow so I will use it
 # whne I get a better Pc
+#zsh-syntax-highlighting
+#zsh-autosuggestions
 #zsh-autocomplete
-#
-#	This looks insteresting but I don't get it at all
-#common-aliases
-# 
-# Intersting options
-#docker
+#zsh-completions
 #docker-compose
-#fzf
-#github
 #systemd
+#github
+#docker
+#fzf
 
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # User configuration
 
@@ -120,9 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=es_CO.UTF-8
  
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
@@ -133,24 +124,23 @@ fi
 # Preferences for ls and exa
 if [ -x "$(command -v exa)" ]; then
     alias ls="exa --icons"
-    alias la="exa --icons --long --all --group"
+    alias la="exa --icons --long --all --group --binary"
 fi
 
-# Utilities
-alias v=nvim
-alias wifi="exec ~/.config/scripts/wifi.sh"
-alias hdmi="exec ~/.config/scripts/hdmi.sh"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Routes
-alias editor="cd ~/.config/nvim"
-alias cfbar="cd ~/.config/polybar"
-alias cfrofi="nvim ~/.config/rofi"
-alias cfcod="cd ~/.config/scripts"
-alias cfwm="nvim ~/.config/bspwm/bspwmrc"
-alias cfsxh="nvim ~/.config/sxhkd/sxhkdrc"
-alias cfpic="nvim ~/.config/picom/picom.conf"
-alias cfneo="nvim ~/.config/neofetch/config.conf"
-alias cfter="nvim ~/.config/alacritty/alacritty.yml"
-
-
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+alias v=nvim
+alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
+alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
