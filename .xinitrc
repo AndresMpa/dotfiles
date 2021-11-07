@@ -1,9 +1,11 @@
-#!/bin/sh
-
-# Start flameshot
-exec dbus-launch dwm &
-
-# Start bspwm
-sxhkd &
-exec bspwm
+# Composer
+picom &
+# Keyboard Layout
+setxkbmap latam &
+# Automount Devices
+udiskie -t &
+# Wallpaper
+nitrogen --restore &
+# Execute Qtile or DE
+exec qtile start
 
