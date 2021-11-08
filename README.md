@@ -75,9 +75,7 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ![Terminal](examples/bspwm_4.png)
 
-<img src="examples/bspwmDesktop.gif" alt="Multicolor" />
-
-[Ejemplo](https://www.youtube.com/watch?v=Wpbno6cHpfY)
+<iframe src="https://www.youtube.com/watch?v=Wpbno6cHpfY" alt="Multicolor" />
 
 ## Installation
 
