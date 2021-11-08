@@ -69,13 +69,13 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ![Desktop](examples/bspwm_1.png)
 
-![Now it uses picom](examples/example_2.png)
+![Now it uses picom](examples/bspwm_2.png)
 
-![New schema](examples/example_3.png)
+![New schema](examples/bspwm_3.png)
 
-![Terminal](examples/example_4.png)
+![Terminal](examples/bspwm_4.png)
 
-![Desktop](examples/desktop.gif)
+![Desktop](examples/bspwmDesktop.gif)
 
 [Ejemplo](https://www.youtube.com/watch?v=Wpbno6cHpfY)
 
