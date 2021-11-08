@@ -75,7 +75,7 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ![Terminal](examples/bspwm_4.png)
 
-![Desktop](examples/bspwmDesktop.gif)
+<img src="examples/bspwmDesktop.gif" alt="Multicolor" />
 
 [Ejemplo](https://www.youtube.com/watch?v=Wpbno6cHpfY)
 
