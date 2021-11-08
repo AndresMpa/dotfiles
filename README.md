@@ -10,9 +10,9 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 - [ ] Refactor this readme
 - [x] Set up Qtile
-- [ ] Basic Qtile configuration
+- [x] Basic Qtile configuration
 - [ ] Advance Qtile configuration
-- [ ] Configure Qtile
+- [x] Configure Qtile
 - [ ] Create a custom config
 - [ ] Improve bar
 - [ ] Create color schemas
@@ -31,7 +31,7 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 | Window Manager  | [Qtile](http://www.qtile.org/)                                                                                    |
 | Hotkey daemon   | [Qtile](http://docs.qtile.org/en/latest/manual/config/keys.html)                                                  |
 | Status bar      | [Qtile](http://docs.qtile.org/en/latest/manual/ref/commands.html?highlight=bar#bar)                               |
-| Window Composer | [Picom](https://wiki.archlinux.org/title/Picom)                                                                   |
+| Window Composer | [jonaburg/picom](https://github.com/jonaburg/picom)                                                               |
 | Terminal        | [Kitty](https://sw.kovidgoyal.net/kitty/)                                                                         |
 | Shell           | [zsh 5.8](https://ohmyz.sh/)                                                                                      |
 | Launcher        | [Rofi](https://wiki.archlinux.org/title/Rofi)                                                                     |
@@ -67,7 +67,7 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ### BSPWM (Last update)
 
-![Desktop](examples/example_1.png)
+![Desktop](examples/bspwm_1.png)
 
 ![Now it uses picom](examples/example_2.png)
 
@@ -75,7 +75,9 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ![Terminal](examples/example_4.png)
 
-[![Video](examples/desktop.gif)](https://youtu.be/Wpbno6cHpfY)
+![Desktop](examples/desktop.gif)
+
+[Ejemplo](https://www.youtube.com/watch?v=Wpbno6cHpfY)
 
 ## Installation
 
@@ -87,4 +89,18 @@ you also want the same configuration I'm using, source
 $ git clone https://github.com/AndresMpa/dotfiles.git
 $ cd dotfiles
 $ source ./install.sh
+```
+
+## Keyboard configuration
+
+### Installation & configuration of QMK
+
+```
+sudo pacman --needed --noconfirm -S git python-pip libffi
+sudo pacman -Syyu qmk
+qmk setup
+qmk config user.keyboard=crkbd/rev1
+qmk config user.keymap=AndresMpa
+qmk new-keymap
+qmk compile -kb crkbd -km AndresMpa
 ```
