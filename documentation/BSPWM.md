@@ -35,12 +35,12 @@ Note: I'm switch from Tilix to Alacritty I found it faster, I implemented picom 
 
 ### BSPWM (Last update)
 
-![Desktop](examples/bspwm_1.png)
+![Desktop](../examples/bspwm_1.png)
 
-![Now it uses picom](examples/bspwm_2.png)
+![Now it uses picom](../examples/bspwm_2.png)
 
-![New schema](examples/bspwm_3.png)
+![New schema](../examples/bspwm_3.png)
 
-![Terminal](examples/bspwm_4.png)
+![Terminal](../examples/bspwm_4.png)
 
 ![Multicolor](https://www.youtube.com/watch?v=Wpbno6cHpfY)
