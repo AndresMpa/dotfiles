@@ -15,6 +15,11 @@
 
 ---
 
+## Check my work
+
+![BSPWM](./examples/bspwm_1.png)
+![Qtile](./examples/qtile_1.png)
+
 ## Installation
 
 If you want to do it yourself source "install.sh", if
