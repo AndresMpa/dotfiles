@@ -17,8 +17,11 @@
 
 ## Check my work
 
-![BSPWM](./examples/bspwm_1.png)
+![BSPWM](./examples/bspwm_2.png)
+[BSPWM](./documentation/BSPWM.md)
+
 ![Qtile](./examples/qtile_1.png)
+[Qtile](./documentation/Qtile.md)
 
 ## Installation
 
