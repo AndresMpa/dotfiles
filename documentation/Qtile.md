@@ -14,3 +14,7 @@
 | Launcher        | [Rofi](https://wiki.archlinux.org/title/Rofi)                                                                     |
 | Session Manager | [LightDM](https://wiki.archlinux.org/title/LightDM)                                                               |
 | LightDM Theme   | [lightdm-webkit-theme-osmos](https://github.com/Exauthor/lightdm-webkit-theme-osmos)                              |
+
+### How it looks like
+
+![Desktop](../examples/qtile_1.png)
