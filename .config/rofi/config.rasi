@@ -7,7 +7,7 @@ configuration {
     icon-theme: "Fluent";
 
     modi: "combi";
-    combi-modi: "window,drun";
+    combi-modi: "window,drun,windowcd,run,ssh,keys,filebrowser";
 }
 
  /* vim:ft=css

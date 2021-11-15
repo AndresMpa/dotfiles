@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 100
 
 /* Use unicode */
-#define UNICODE_SELECTED_MODES UC_LNX
+//#define UNICODE_SELECTED_MODES UC_LNX
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
