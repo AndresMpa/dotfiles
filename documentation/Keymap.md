@@ -97,8 +97,8 @@ dir [AndresMpa](../AndresMpa) on its respective file, then
 ```
 qmk compile
 
-qmk flash -kb $USER -km default -bl dfu-split-left
-qmk flash -kb $USER -km default -bl dfu-split-right
+qmk flash -kb crkbd -km $USER -bl dfu-split-left
+qmk flash -kb crkbd -km $USER -bl dfu-split-right
 ```
 
 That's it, if you want to set your environment as mine I can
