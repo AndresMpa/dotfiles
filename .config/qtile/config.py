@@ -1,35 +1,9 @@
-# Copyright (c) 2010 Aldo Cortesi
-# Copyright (c) 2010, 2014 dequis
-# Copyright (c) 2012 Randall Ma
-# Copyright (c) 2012-2014 Tycho Andersen
-# Copyright (c) 2012 Craig Barnes
-# Copyright (c) 2013 horsik
-# Copyright (c) 2013 Tao Sauvage
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
-from typing import List  # noqa: F401
-
+from typing import List
 from libqtile import bar, layout, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from libqtile.lazy import lazy
+from libqtile.config import Click, Drag, Group, Match, Screen
 from libqtile.utils import guess_terminal
+from libqtile.config import Key
+from libqtile.lazy import lazy
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -98,35 +72,45 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(item) for item in [
+    "", "", "切", "", "", "", "", "ﴬ", "力"
+]]
 
-for i in groups:
+for i, group in enumerate(groups):
+    actual_key = str(i + 1)
     keys.extend([
-        # mod1 + letter of group = switch to group
-        Key([mod], i.name, lazy.group[i.name].toscreen(),
-            desc="Switch to group {}".format(i.name)),
-
-        # mod1 + shift + letter of group = switch to & move focused window to group
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-            desc="Switch to & move focused window to group {}".format(i.name)),
-        # Or, use below if you prefer not to switch to that group.
-        # # mod1 + shift + letter of group = move focused window to group
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-        #     desc="move focused window to group {}".format(i.name)),
+        # Switch to workspace N
+        Key([mod], actual_key, lazy.group[group.name].toscreen()),
+        # Send window to workspace N
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
 
 layouts = [
-    layout.Columns(border_focus_stack=['#0155ff', '#0000cf'], border_width=4),
+    layout.Columns(
+
+        border_focus="#ffffff",
+        border_focus_stack='#69676c',
+        border_normal="#49474f",
+        border_normal_stack="#49474f",
+        border_width=2,
+        margin=4,
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    layout.MonadTall(),
-    layout.MonadWide(),
+    layout.Bsp(
+        border_focus="#ffffff",
+        border_normal="#49474f",
+        margin=4,
+    ),
+    layout.Matrix(
+        margin=4,
+    ),
+    # layout.MonadTall(),
+    # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
-    layout.TreeTab(),
+    # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -134,34 +118,163 @@ layouts = [
 widget_defaults = dict(
     font='sans',
     fontsize=12,
-    padding=3,
+    padding=0,
+    margin=0,
 )
+
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#0155ff", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
+                widget.TextBox(
+                    "",
+                    background="#363537",
+                    foreground="#ffffff",
+                    fontsize=32,
+                    margin=-2,
+                    padding=4
                 ),
-                widget.TextBox("AndresMpa", name="AndresMpa"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#0155ff"),
-                widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
+                widget.TextBox(
+                    "",
+                    background="#69676c",
+                    foreground="#363537",
+                    fontsize=24,
+                    padding=-2
+                ),
+                widget.GroupBox(
+                    padding=3,
+                    fontsize=16,
+                    active="#ffffff",
+                    inactive="#49474f",
+                    background="#69676c",
+                    this_current_screen_border="#ffffff",
+                ),
+                widget.Moc(
+                    background="#69676c",
+                ),
+                widget.TextBox(
+                    "",
+                    foreground="#69676c",
+                    fontsize=24,
+                    padding=-2
+                ),
+
+                widget.Spacer(),
+
+                widget.TextBox(
+                    " ",
+                    foreground="#69676c",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.Backlight(
+                    fmt=" {}",
+                    background="#69676c",
+                    backlight_name="amdgpu_bl0",
+                    change_command="brightnessctl set -{0}%",
+                    brightness_file="/sys/class/backlight/amdgpu_bl0/brightness",
+                    max_brightness_file="/sys/class/backlight/amdgpu_bl0/max_brightness",
+                ),
+                widget.TextBox(
+                    "",
+                    background="#69676c",
+                    foreground="#69676c",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.Volume(
+                    fmt=" {}",
+                    background="#69676c",
+                ),
+                widget.TextBox(
+                    "",
+                    background="#69676c",
+                    foreground="#69676c",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.ThermalSensor(
+                    background="#69676c",
+                    fmt=" {}",
+                ),
+                widget.TextBox(
+                    "",
+                    foreground="#69676c",
+                    fontsize=24,
+                    margin=0,
+                    padding=-2
+                ),
+                widget.Spacer(),
+                widget.TextBox(
+                    " ",
+                    foreground="#69676c",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.Clipboard(
+                    background="#69676c",
+                ),
+                widget.Systray(
+                    background="#69676c",
+                    padding=3,
+                    margin=0,
+                ),
+                widget.TextBox(
+                    " ",
+                    background="#69676c",
+                    foreground="#69676c",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.CheckUpdates(
+                    background="#69676c",
+                    colour_have_updates="#ffffff",
+                    restart_indicator="",
+                    no_update_string="﫟",
+                    display_format="",
+                    fontsize=23,
+                ),
+                widget.CurrentLayoutIcon(
+                    background="#69676c",
+                    padding=9,
+                ),
+                #widget.CurrentLayout(
+                # background="#69676c",
+                # padding=8,
+                # ),
+                widget.Clock(
+                    background="#69676c",
+                    format='%a %d/%m/%Y  %I:%M %p'
+                ),
+                widget.TextBox(
+                    " ",
+                    background="#69676c",
+                    foreground="#363537",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.QuickExit(
+                    background="#363537",
+                    countdown_format="{}",
+                    default_text="  ",
+                    fontsize=20
+                ),
             ],
             24,
+            margin=5,
+            opacity=1,
+            background='#363537',
         ),
     ),
 ]
+# widget.Prompt(),
+# widget.WindowName(),
+# widget.ThermalSensor(),
+
+# widget.Battery(),
+# widget.BatteryIcon(),
 
 # Drag floating layouts.
 mouse = [
@@ -170,13 +283,10 @@ mouse = [
     Drag([mod], "Button3", lazy.window.set_size_floating(),
          start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front())
+    # Click([mod, "control"], "Button2", lazy.windows.toggle_floating())
+
 ]
 
-dgroups_key_binder = None
-dgroups_app_rules = []  # type: List
-follow_mouse_focus = True
-bring_front_click = False
-cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
     *layout.Floating.default_float_rules,
@@ -187,6 +297,13 @@ floating_layout = layout.Floating(float_rules=[
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
 ])
+
+dgroups_key_binder = None
+dgroups_app_rules = []  # type: List
+follow_mouse_focus = True
+bring_front_click = True
+cursor_warp = False
+
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
@@ -194,13 +311,4 @@ reconfigure_screens = True
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = True
-
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "LG3D"
