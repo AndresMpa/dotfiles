@@ -1,5 +1,4 @@
 configuration {
-    theme: "AndresMpa";
     display-run: "   ";
     display-drun: "  ";
 
@@ -9,5 +8,7 @@ configuration {
     modi: "combi";
     combi-modi: "window,drun,windowcd,run,ssh,keys,filebrowser";
 }
+
+@theme "AndresMpa"
 
  /* vim:ft=css
