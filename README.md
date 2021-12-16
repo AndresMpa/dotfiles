@@ -8,7 +8,7 @@
 - [ ] Advance Qtile configuration
 - [x] Configure Qtile
 - [ ] Create a custom config
-- [ ] Improve bar
+- [x] Improve bar
 - [ ] Create color schemas
 - [ ] Create moduls
 - [ ] Create some IA to embed in Qtile
@@ -36,6 +36,10 @@ $ source ./install.sh
 ```
 
 ## Keyboard configuration
+
+![Corne keyboard](./examples/corne.jpg)
+![keymap](./examples/keymap.png)
+[Corne](./documentation/Keymap.md)
 
 ### Installation & configuration of QMK
 
