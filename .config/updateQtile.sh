@@ -7,4 +7,4 @@ rm -rf kitty/ qtile/ nitrogen/ picom/ rofi/ script/
 rm -rf ./pacman.conf
 cp /etc/pacman.conf ./.config
 # Configuration folders
-cp -r ~/.config/kitty ~/.config/nitrogen/ ~/.config/picom ~/.config/rofi ~/.config/scripts ./.config
+cp -r ~/.config/qtile ~/.config/kitty ~/.config/nitrogen/ ~/.config/picom ~/.config/rofi ~/.config/scripts ./.config
