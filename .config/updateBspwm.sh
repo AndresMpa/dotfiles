@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Removing old configurations
-rm -rf alacritty/ bspwm/ nitrogen/ picom/ polybar/ rofi/ script/ sxhkd/ &&
+rm -rf alacritty/ bspwm/ nitrogen/ picom/ polybar/ rofi/ script/ sxhkd/
 
 # Updating pacman configurations
 rm -rf ./pacman.conf
