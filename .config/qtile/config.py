@@ -1,6 +1,8 @@
 from typing import List
-from libqtile import bar, layout, widget
+from libqtile import layout
+from libqtile import bar, widget
 from libqtile.config import Click, Drag, Group, Match, Screen
+from libqtile.config import Group
 from libqtile.utils import guess_terminal
 from libqtile.config import Key
 from libqtile.lazy import lazy
@@ -103,9 +105,7 @@ layouts = [
         border_normal="#49474f",
         margin=4,
     ),
-    layout.Matrix(
-        margin=4,
-    ),
+    # layout.Matrix(margin=4),
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
@@ -219,14 +219,6 @@ screens = [
                 widget.Systray(
                     background="#69676c",
                     padding=3,
-                    margin=0,
-                ),
-                widget.TextBox(
-                    " ",
-                    background="#69676c",
-                    foreground="#69676c",
-                    fontsize=24,
-                    padding=-10
                 ),
                 widget.CheckUpdates(
                     background="#69676c",
@@ -235,15 +227,12 @@ screens = [
                     no_update_string="﫟",
                     display_format="",
                     fontsize=23,
+                    padding=4,
                 ),
                 widget.CurrentLayoutIcon(
                     background="#69676c",
                     padding=9,
                 ),
-                #widget.CurrentLayout(
-                # background="#69676c",
-                # padding=8,
-                # ),
                 widget.Clock(
                     background="#69676c",
                     format='%a %d/%m/%Y  %I:%M %p'
