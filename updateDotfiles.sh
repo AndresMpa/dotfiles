@@ -28,8 +28,4 @@ cp ~/.local/share/fonts/* $(pwd)/fonts
 cp /etc/systemd/system/brightness-permission.service ./etc/systemd/system/
 
 #Updating the config files
-if [[ $DESKTOP_SESSION -eq "qtile" ]]; then
-	source ./.config/updateQtile.sh
-else
-	echo ./.config/updateBspwm.sh
-fi
+source "./.config/${DESKTOP_SESSION}Update.sh"
