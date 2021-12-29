@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Removing old configurations
-rm -rf kitty/ qtile/ nitrogen/ picom/ rofi/ script/ &&
+rm -rf kitty/ qtile/ nitrogen/ picom/ rofi/ script/
 
 # Updating pacman configurations
 rm -rf ./pacman.conf
