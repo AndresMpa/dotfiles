@@ -82,14 +82,19 @@ for i, group in enumerate(groups):
     actual_key = str(i + 1)
     keys.extend([
         # Switch to workspace N
-        Key([mod], actual_key, lazy.group[group.name].toscreen()),
+        Key([mod], actual_key, lazy.group[group.name].toscreen(toggle=True)),
         # Send window to workspace N
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
 
 layouts = [
+    layout.Max(),
+    layout.Bsp(
+        border_focus="#ffffff",
+        border_normal="#49474f",
+        margin=4,
+    ),
     layout.Columns(
-
         border_focus="#ffffff",
         border_focus_stack='#69676c',
         border_normal="#49474f",
@@ -97,14 +102,7 @@ layouts = [
         border_width=2,
         margin=4,
     ),
-    layout.Max(),
-    # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    layout.Bsp(
-        border_focus="#ffffff",
-        border_normal="#49474f",
-        margin=4,
-    ),
     # layout.Matrix(margin=4),
     # layout.MonadTall(),
     # layout.MonadWide(),
