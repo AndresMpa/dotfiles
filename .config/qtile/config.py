@@ -128,33 +128,33 @@ screens = [
             [
                 widget.TextBox(
                     "",
-                    background="#363537",
-                    foreground="#ffffff",
+                    background="#360054",
+                    foreground="#ffac34",
                     fontsize=32,
                     margin=-2,
                     padding=4
                 ),
                 widget.TextBox(
                     "",
-                    background="#69676c",
-                    foreground="#363537",
+                    background="#16003e",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-2
                 ),
                 widget.GroupBox(
                     padding=3,
                     fontsize=16,
-                    active="#ffffff",
-                    inactive="#49474f",
-                    background="#69676c",
-                    this_current_screen_border="#ffffff",
+                    active="#ffac34",
+                    inactive="#0ebefe",
+                    background="#16003e",
+                    this_current_screen_border="#155089",
                 ),
                 widget.Moc(
-                    background="#69676c",
+                    background="#16003e",
                 ),
                 widget.TextBox(
                     "",
-                    foreground="#69676c",
+                    foreground="#16003e",
                     fontsize=24,
                     padding=-2
                 ),
@@ -163,13 +163,14 @@ screens = [
 
                 widget.TextBox(
                     " ",
-                    foreground="#69676c",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Backlight(
                     fmt=" {}",
-                    background="#69676c",
+                    background="#360054",
+                    foreground="#0ebefe",
                     backlight_name="amdgpu_bl0",
                     change_command="brightnessctl set -{0}%",
                     brightness_file="/sys/class/backlight/amdgpu_bl0/brightness",
@@ -177,29 +178,31 @@ screens = [
                 ),
                 widget.TextBox(
                     "",
-                    background="#69676c",
-                    foreground="#69676c",
+                    background="#360054",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Volume(
                     fmt=" {}",
-                    background="#69676c",
+                    background="#360054",
+                    foreground="#0ebefe",
                 ),
                 widget.TextBox(
                     "",
-                    background="#69676c",
-                    foreground="#69676c",
+                    background="#360054",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.ThermalSensor(
-                    background="#69676c",
+                    background="#360054",
+                    foreground="#0ebefe",
                     fmt=" {}",
                 ),
                 widget.TextBox(
                     "",
-                    foreground="#69676c",
+                    foreground="#360054",
                     fontsize=24,
                     margin=0,
                     padding=-2
@@ -207,20 +210,23 @@ screens = [
                 widget.Spacer(),
                 widget.TextBox(
                     " ",
-                    foreground="#69676c",
+                    foreground="#16003e",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Clipboard(
-                    background="#69676c",
+                    background="#16003e",
+                    foreground="#0ebefe",
                 ),
                 widget.Systray(
-                    background="#69676c",
+                    background="#16003e",
+                    foreground="#0ebefe",
                     padding=3,
                 ),
                 widget.CheckUpdates(
-                    background="#69676c",
-                    colour_have_updates="#ffffff",
+                    background="#16003e",
+                    foreground="#0ebefe",
+                    colour_have_updates="#0ebefe",
                     restart_indicator="",
                     no_update_string="﫟",
                     display_format="",
@@ -228,22 +234,25 @@ screens = [
                     padding=4,
                 ),
                 widget.CurrentLayoutIcon(
-                    background="#69676c",
+                    background="#16003e",
+                    foreground="#0ebefe",
                     padding=9,
                 ),
                 widget.Clock(
-                    background="#69676c",
+                    background="#16003e",
+                    foreground="#0ebefe",
                     format='%a %d/%m/%Y  %I:%M %p'
                 ),
                 widget.TextBox(
                     " ",
-                    background="#69676c",
-                    foreground="#363537",
+                    background="#16003e",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.QuickExit(
-                    background="#363537",
+                    background="#360054",
+                    foreground="#0ebefe",
                     countdown_format="{}",
                     default_text="  ",
                     fontsize=20
@@ -252,7 +261,7 @@ screens = [
             24,
             margin=5,
             opacity=1,
-            background='#363537',
+            background='#16003e',
         ),
     ),
 ]
