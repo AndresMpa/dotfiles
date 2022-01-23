@@ -1,0 +1,14 @@
+[Unit]
+Description=Update dotfiles service to last version
+After=network.target
+
+[Service]
+Type=simple
+RestartSec=1
+Restart=always
+User=andresmpa
+ExecStart=/usr/bin/env bash /home/andresmpa/Escritorio/dotfiles/updateDotfiles.sh 2> /dev/null
+
+[Install]
+WantedBy=multi-user.target
+Alias=dotfiles.service

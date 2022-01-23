@@ -1,31 +1,44 @@
 #!/bin/bash
 
-# Removing old files
-rm -rf brightness-permission.service .xinitrc .zshrc
+# Moving into script dir
+cd /home/andresmpa/Escritorio/dotfiles
 
-# Removing old wallpapers
-rm -rf wallpapers/*
+{
+	# Removing old files
+	rm -rf .xinitrc .zshrc
 
-# Removing keyboard layout
-rm -rf ./AndresMpa/*
+	# Copying the current files that I am using
+	cp ~/.xinitrc ~/.zshrc $(pwd)
+} || {
+	echo "Error on config files"
+}
 
-# Removing services
-rm -rf ./*.service
+{
+	# Removing old wallpapers
+	rm -rf Wallpapers/*
+	# Copying images
+	cp -r ~/Wallpapers/* ./Wallpapers
+} || {
+	echo "Error updating wallpapers"
+}
 
-# Adding keyboard layout
-cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/
+{
+	# Copying OS fonts
+	cp ~/.local/share/fonts/* ${PWD}/fonts
+} || {
+	echo "Error updating fonts"
+}
 
-# Copying images
-cp -r ~/Imágenes/* ./Wallpapers
+{
+	# Removing keyboard layout
+	rm -rf ./AndresMpa/*
 
-# Copying the current files that I am using
-cp ~/.xinitrc ~/.zshrc $(pwd)
-
-# Copying OS fonts
-cp ~/.local/share/fonts/* $(pwd)/fonts
-
-# Copying custom services
-cp /etc/systemd/system/brightness-permission.service ./etc/systemd/system/
+	# Adding keyboard layout
+	cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/
+} || {
+	echo "Error on Keyboard updating"
+}
 
 #Updating the config files
-source "./.config/${DESKTOP_SESSION}Update.sh"
+source "${PWD}/.config/$(cat ./.DS.txt)Update.sh" ||
+	source "${PWD}/.config/${DESKTOP_SESSION}Update.sh"

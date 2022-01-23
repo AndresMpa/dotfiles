@@ -3,8 +3,8 @@ Description=Set ligth writable for every user, place this file at /etc/systemd/s
 Before=nodered.service
 
 [Service]
-Type=oneshot
 User=root
+Type=oneshot
 ExecStart=/bin/bash -c "/bin/chmod a+w /sys/class/backlight/amdgpu_bl0/brightness"
 
 [Install]
