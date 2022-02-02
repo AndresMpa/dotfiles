@@ -172,7 +172,7 @@ screens = [
                     background="#360054",
                     foreground="#0ebefe",
                     backlight_name="amdgpu_bl0",
-                    change_command="brightnessctl set -{0}%",
+                    change_command="brightnessctl set {0}%",
                     brightness_file="/sys/class/backlight/amdgpu_bl0/brightness",
                     max_brightness_file="/sys/class/backlight/amdgpu_bl0/max_brightness",
                 ),
@@ -187,6 +187,19 @@ screens = [
                     fmt=" {}",
                     background="#360054",
                     foreground="#0ebefe",
+                ),
+                widget.TextBox(
+                    "",
+                    background="#360054",
+                    foreground="#360054",
+                    fontsize=24,
+                    padding=-10
+                ),
+                widget.Battery(
+                    background="#360054",
+                    foreground="#0ebefe",
+                    low_foreground="#ffac34",
+                    format=" {percent:2.0%}"
                 ),
                 widget.TextBox(
                     "",
@@ -269,8 +282,7 @@ screens = [
 # widget.WindowName(),
 # widget.ThermalSensor(),
 
-# widget.Battery(),
-# widget.BatteryIcon(),
+
 
 # Drag floating layouts.
 mouse = [
