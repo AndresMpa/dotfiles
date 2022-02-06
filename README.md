@@ -5,13 +5,12 @@
 - [x] Refactor this readme
 - [x] Set up Qtile
 - [x] Basic Qtile configuration
-- [ ] Advance Qtile configuration
+- [x] Advance Qtile configuration
 - [x] Configure Qtile
-- [ ] Create a custom config
+- [x] Create a custom config
 - [x] Improve bar
 - [x] Create color schemas
 - [x] Create moduls
-- [ ] Create some IA to embed in Qtile
 
 ---
 
