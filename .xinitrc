@@ -11,8 +11,8 @@ xset -b
 echo "udiskie"
 udiskie -t &
 # Wallpaper
-echo "Nitrogen"
-nitrogen --restore &
+echo "Feh"
+bash ~/.config/scripts/wallpaperRecover.sh &
 # Execute Qtile or DE
 echo "Qtile"
 exec qtile start
