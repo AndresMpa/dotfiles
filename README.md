@@ -9,8 +9,8 @@
 - [x] Configure Qtile
 - [ ] Create a custom config
 - [x] Improve bar
-- [ ] Create color schemas
-- [ ] Create moduls
+- [x] Create color schemas
+- [x] Create moduls
 - [ ] Create some IA to embed in Qtile
 
 ---
@@ -18,7 +18,6 @@
 ## Check my work
 
 ![BSPWM](./examples/bspwm_2.png)
-
 
 ![Open source](https://img.shields.io/badge/-Open%20source-black?style=for-the-badge&logo=Open%20Source%20Initiative)
 ![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
@@ -28,9 +27,7 @@
 
 [BSPWM](./documentation/BSPWM.md)
 
-
 ![Qtile](./examples/qtile_1.png)
-
 
 ![Open source](https://img.shields.io/badge/-Open%20source-black?style=for-the-badge&logo=Open%20Source%20Initiative)
 ![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
