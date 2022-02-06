@@ -1,22 +1,32 @@
+from libqtile import hook
+
+# from typing import List
+
 from libqtile.utils import guess_terminal
 from libqtile.config import Key
 from libqtile.lazy import lazy
 
 from libqtile.config import Click, Drag
+# from libqtile.lazy import lazy
+# from setting.mouse.py import mouse
 
 from libqtile.config import Group
+# from libqtile.config import Key
+# from libqtile.lazy import lazy
+# from keys import mod, keys
 
-from libqtile.config import Match
 from libqtile import layout
+from libqtile.config import Match
 
-from libqtile.config import Screen
-from libqtile import widget
 from libqtile import bar
+from libqtile import widget
+from libqtile.config import Screen
 
-from util.color import getTheme
 
-terminal = guess_terminal()
+# @hook.subscribe.startup_once
+
 mod = "mod4"
+terminal = guess_terminal()
 
 keys = [
     # Switch between windows
@@ -90,6 +100,7 @@ mouse = [
          start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front())
     # Click([mod, "control"], "Button2", lazy.windows.toggle_floating())
+
 ]
 
 groups = [Group(item) for item in [
@@ -113,22 +124,19 @@ for i, group in enumerate(groups):
         )
     ])
 
-theme = getTheme()
-
-
 layouts = [
     layout.Max(),
     layout.Bsp(
-        border_focus=theme["layout"][0],
-        border_normal=theme["layout"][1],
+        border_focus="#ffffff",
+        border_normal="#49474f",
         margin=4,
     ),
     layout.Columns(
-        border_focus=theme["layout"][0],
-        border_focus_stack=theme["layout"][0],
-        border_normal=theme["layout"][1],
-        border_normal_stack=theme["layout"][1],
-        border_width=4,
+        border_focus="#ffffff",
+        border_focus_stack='#69676c',
+        border_normal="#49474f",
+        border_normal_stack="#49474f",
+        border_width=2,
         margin=4,
     ),
     # layout.Stack(num_stacks=2),
@@ -167,40 +175,35 @@ screens = [
     Screen(
         bottom=bar.Bar(
             [
-                # Icon
                 widget.TextBox(
                     "",
-                    background=theme["icon"][0],
-                    foreground=theme["icon"][1],
+                    background="#360054",
+                    foreground="#ffac34",
                     fontsize=32,
                     margin=-2,
                     padding=4
                 ),
                 widget.TextBox(
                     "",
-                    background=theme["icon"][2],
-                    foreground=theme["icon"][3],
+                    background="#16003e",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-2
                 ),
-
-
-                # Desk
                 widget.GroupBox(
                     padding=3,
                     fontsize=16,
-                    active=theme["desk"][0],
-                    inactive=theme["desk"][1],
-                    background=theme["desk"][2],
-                    this_current_screen_border=theme["desk"][3],
+                    active="#ffac34",
+                    inactive="#0ebefe",
+                    background="#16003e",
+                    this_current_screen_border="#155089",
                 ),
                 widget.Moc(
-                    background=theme["desk"][4],
+                    background="#16003e",
                 ),
                 widget.TextBox(
                     "",
-                    foreground=theme["desk"][2],
-                    background=theme["desk"][4],
+                    foreground="#16003e",
                     fontsize=24,
                     padding=-2
                 ),
@@ -209,14 +212,14 @@ screens = [
 
                 widget.TextBox(
                     " ",
-                    foreground=theme["manager"][0],
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Backlight(
-                    fmt=" {}",
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][1],
+                    fmt=" {}",
+                    background="#360054",
+                    foreground="#0ebefe",
                     backlight_name="amdgpu_bl0",
                     change_command="brightnessctl set {0}%",
                     brightness_file="/sys/class/backlight/amdgpu_bl0/brightness",
@@ -224,76 +227,68 @@ screens = [
                 ),
                 widget.TextBox(
                     "",
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][0],
+                    background="#360054",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Volume(
                     fmt=" {}",
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][1],
+                    background="#360054",
+                    foreground="#0ebefe",
                 ),
                 widget.TextBox(
                     "",
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][0],
+                    background="#360054",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Battery(
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][1],
-                    low_foreground=theme["manager"][2],
-                    full_char="",
-                    empty_char="",
-                    charge_char="",
-                    discharge_char="",
-                    # hide_threshold=0.9,
-                    show_short_text=False,
-                    format="{char} {percent:2.0%}",
+                    background="#360054",
+                    foreground="#0ebefe",
+                    low_foreground="#ffac34",
+                    format=" {percent:2.0%}",
                 ),
                 widget.TextBox(
                     "",
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][0],
+                    background="#360054",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.ThermalSensor(
-                    background=theme["manager"][0],
-                    foreground=theme["manager"][1],
+                    background="#360054",
+                    foreground="#0ebefe",
                     fmt=" {}",
                 ),
                 widget.TextBox(
                     "",
-                    foreground=theme["manager"][0],
+                    foreground="#360054",
                     fontsize=24,
                     padding=-2,
                     margin=0
                 ),
-
                 widget.Spacer(),
-
                 widget.TextBox(
                     " ",
-                    foreground=theme["util"][0],
+                    foreground="#16003e",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.Clipboard(
-                    background=theme["util"][0],
-                    foreground=theme["util"][1],
+                    background="#16003e",
+                    foreground="#0ebefe",
                 ),
                 widget.Systray(
-                    background=theme["util"][0],
-                    foreground=theme["util"][1],
+                    background="#16003e",
+                    foreground="#0ebefe",
                     padding=3,
                 ),
                 widget.CheckUpdates(
-                    background=theme["util"][0],
-                    foreground=theme["util"][1],
-                    colour_have_updates=theme["util"][1],
+                    background="#16003e",
+                    foreground="#0ebefe",
+                    colour_have_updates="#0ebefe",
                     restart_indicator="",
                     no_update_string="﫟",
                     display_format="",
@@ -301,34 +296,34 @@ screens = [
                     padding=4,
                 ),
                 widget.CurrentLayoutIcon(
-                    background=theme["util"][0],
-                    foreground=theme["util"][1],
+                    background="#16003e",
+                    foreground="#0ebefe",
                     padding=9,
                 ),
                 widget.Clock(
-                    background=theme["util"][0],
-                    foreground=theme["util"][1],
+                    background="#16003e",
+                    foreground="#0ebefe",
                     format='%a %d/%m/%Y  %I:%M %p'
                 ),
                 widget.TextBox(
                     " ",
-                    background=theme["icon"][2],
-                    foreground=theme["icon"][0],
+                    background="#16003e",
+                    foreground="#360054",
                     fontsize=24,
                     padding=-10
                 ),
                 widget.QuickExit(
-                    background=theme["icon"][0],
-                    foreground=theme["icon"][1],
+                    background="#360054",
+                    foreground="#0ebefe",
                     countdown_format="{}",
-                    default_text=" ",
+                    default_text="  ",
                     fontsize=20
                 ),
             ],
             24,
             margin=5,
             opacity=1,
-            background=theme["bar"],
+            background='#16003e',
         ),
     ),
 ]
@@ -336,18 +331,18 @@ screens = [
 # widget.WindowName(),
 # widget.ThermalSensor(),
 
-#    
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
-
-focus_on_window_activation = "smart"
 follow_mouse_focus = True
 bring_front_click = True
 cursor_warp = False
 
-reconfigure_screens = True
 auto_fullscreen = True
-auto_minimize = True
+focus_on_window_activation = "smart"
+reconfigure_screens = True
 
+# If things like steam games want to auto-minimize themselves when losing
+# focus, should we respect this or not?
+auto_minimize = True
 wmname = "LG3D"
