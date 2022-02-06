@@ -56,6 +56,7 @@ def getScreen():
                         padding=3,
                         fontsize=16,
                         active=theme["desk"][0],
+                        urgent_border=theme["desk"][0],
                         inactive=theme["desk"][1],
                         background=theme["desk"][2],
                         this_current_screen_border=theme["desk"][3],
