@@ -1,10 +1,10 @@
 #!/bin/bash
 
-current=$(cat ../qtile/current.txt)
+current=$(cat ~/.config/qtile/current.txt)
 len="${#theme[@]}"
 
 for ((option = 0; option < $len; option++)); do
 	if [[ ${theme[$option]%%.*} == $current ]]; then
-		feh --bg-scale ~/Wallpapers/${theme[0]}
+		feh --bg-scale ~/Wallpapers/${theme[$option]}
 	fi
 done
