@@ -44,8 +44,8 @@ def getScreen():
                     ),
                     widget.TextBox(
                         "",
-                        background=theme["icon"][2],
-                        foreground=theme["icon"][3],
+                        background=theme["desk"][2],
+                        foreground=theme["icon"][2],
                         fontsize=24,
                         padding=-2
                     ),
@@ -179,7 +179,7 @@ def getScreen():
                     ),
                     widget.TextBox(
                         " ",
-                        background=theme["icon"][2],
+                        background=theme["util"][0],
                         foreground=theme["icon"][0],
                         fontsize=24,
                         padding=-10
