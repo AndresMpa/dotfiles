@@ -12,7 +12,7 @@ echo "udiskie"
 udiskie -t &
 # Wallpaper
 echo "Feh"
-bash ~/.config/scripts/wallpaperRecover.sh &
+feh --bg-scale ~/Wallpapers/current/*
 # Execute Qtile or DE
 echo "Qtile"
 exec qtile start

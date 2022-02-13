@@ -1,5 +1,6 @@
 #!/bin/bash
 
+theme=($(ls --hide="more" /home/andresmpa/Wallpapers/))
 current=$(cat ~/.config/qtile/current.txt)
 len="${#theme[@]}"
 

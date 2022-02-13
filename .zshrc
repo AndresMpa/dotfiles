@@ -144,5 +144,6 @@ fi
 alias v=nvim
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
+alias cbg="bash ~/.config/qtile/util/change_theme.sh"
 
 export QSYS_ROOTDIR="/home/andresmpa/.cache/yay/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
