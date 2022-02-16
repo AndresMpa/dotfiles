@@ -1,5 +1,6 @@
 #!/bin/bash
 
+T_BASE=("https://translate.google.com/?sl=en&tl=es&text=" "&op=translate")
 Y_BASE="https://www.youtube.com/results?search_query="
 S_BASE="https://stackoverflow.com/search?q="
 G_BASE="https://www.google.com/search?q="
@@ -11,10 +12,11 @@ displayHelp() {
 	echo "
 USAGE
 
-  open {flag | argument}
+  open <flag> query
 		
 FLAG	DESCRIPTION
 
+  -t	Translate your query		
   -y	Search your query on YouTube		
   -s	Search your query on StackOverFlow
   -g	Search your query on Google
@@ -23,14 +25,18 @@ FLAG	DESCRIPTION
 		
 EXAMPLES
 
-  open -y -p Beat it
+  open -y -p "Beat it"
+	open -t "Show must go on"
 "
 }
 
-while getopts "hpy:s:g:" opt; do
+while getopts "hpt:y:s:g:" opt; do
 	case $opt in
 	h)
 		displayHelp
+		;;
+	t)
+		QUERY="${T_BASE[0]}${OPTARG// /%20}${T_BASE[1]}"
 		;;
 	y)
 		QUERY="$Y_BASE${OPTARG// /%20}"
@@ -45,6 +51,7 @@ while getopts "hpy:s:g:" opt; do
 		PRIVATE_SEARCH=1
 		;;
 	*)
+		QUERY="$G_BASE${OPTARG// /%20}"
 		exit 1
 		;;
 	esac
