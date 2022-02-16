@@ -122,9 +122,10 @@ else
 fi
 
 # Preferences for ls and exa
-if [ -x "$(command -v exa)" ]; then
-    alias ls="exa --icons"
-    alias la="exa --icons --long --all --group --binary"
+if [ -x "$(command -v exa)" ]; 
+then
+	alias ls="exa --icons"
+  alias la="exa --icons --long --all --group --binary"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -145,5 +146,4 @@ alias v=nvim
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
 alias cbg="bash ~/.config/qtile/util/change_theme.sh"
-
-export QSYS_ROOTDIR="/home/andresmpa/.cache/yay/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
+alias open="~/.config/scripts/openDataBaseAsFile.sh"

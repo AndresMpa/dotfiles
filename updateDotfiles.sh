@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Moving into script dir
-cd /home/andresmpa/Escritorio/dotfiles
+cd /home/$USER/Escritorio/dotfiles
 
 {
 	# Removing old files
@@ -10,7 +10,13 @@ cd /home/andresmpa/Escritorio/dotfiles
 	# Copying the current files that I am using
 	cp ~/.xinitrc ~/.zshrc $(pwd)
 } || {
-	echo "Error on config files"
+	echo "Error on config files" >>failures.log
+}
+
+{
+	cp ~/.config/scripts/* ./.config/scripts/
+} || {
+	echo "Error on custom scripts" >>failures.log
 }
 
 {
@@ -19,14 +25,14 @@ cd /home/andresmpa/Escritorio/dotfiles
 	# Copying images
 	cp -r ~/Wallpapers/* ./Wallpapers
 } || {
-	echo "Error updating wallpapers"
+	echo "Error updating wallpapers" >>failures.log
 }
 
 {
 	# Copying OS fonts
 	cp ~/.local/share/fonts/* ${PWD}/fonts
 } || {
-	echo "Error updating fonts"
+	echo "Error updating fonts" >>failures.log
 }
 
 {
@@ -36,7 +42,7 @@ cd /home/andresmpa/Escritorio/dotfiles
 	# Adding keyboard layout
 	cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/
 } || {
-	echo "Error on Keyboard updating"
+	echo "Error on Keyboard updating" >>failures.log
 }
 
 #Updating the config files
