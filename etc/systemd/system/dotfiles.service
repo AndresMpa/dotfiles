@@ -3,7 +3,7 @@ Description=Update dotfiles service to last version
 
 [Service]
 Type=simple
-RestartSec=10s
+RestartSec=5s
 Restart=always
 User=andresmpa
 ExecStart=/usr/bin/env bash /home/andresmpa/Escritorio/dotfiles/updateDotfiles.sh 2> /dev/null
