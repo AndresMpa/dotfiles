@@ -1,16 +1,8 @@
 # Dotfiles
 
-## To do:
+To do
 
-- [x] Refactor this readme
-- [x] Set up Qtile
-- [x] Basic Qtile configuration
-- [x] Advance Qtile configuration
-- [x] Configure Qtile
-- [x] Create a custom config
-- [x] Improve bar
-- [x] Create color schemas
-- [x] Create moduls
+- [ ] Find something new to create
 
 ---
 
