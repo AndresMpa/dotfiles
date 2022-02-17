@@ -145,7 +145,7 @@ fi
 alias v=nvim
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
-alias cbg="bash ~/.config/qtile/util/change_theme.sh"
-alias open="~/.config/scripts/openDataBaseAsFile.sh"
-alias fix="~/.config/scripts/daemonFixer.sh"
+alias open="bash ~/.config/scripts/openDataBaseAsFile.sh"
+alias fix="bash ~/.config/scripts/daemonFixer.sh"
+alias cbg="bash ~/.config/scripts/changeTheme.sh"
 alias clean="sudo paccache -r"
