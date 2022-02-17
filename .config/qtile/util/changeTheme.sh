@@ -1,0 +1,1 @@
+/home/andresmpa/.config/scripts/changeTheme.sh

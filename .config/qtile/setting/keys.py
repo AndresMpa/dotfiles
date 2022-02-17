@@ -7,7 +7,7 @@ import subprocess
 
 @lazy.function
 def changeTheme(qtile):
-    subprocess.call("/home/andresmpa/.config/qtile/util/change_theme.sh", shell=True)
+    subprocess.call("/home/andresmpa/.config/qtile/util/changeTheme.sh", shell=True)
 
 terminal = guess_terminal()
 mod = "mod4"
