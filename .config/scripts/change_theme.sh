@@ -1,6 +1,6 @@
 #!/bin/bash
 
-oldWallpaper=($(ls --hide="more" /home/andresmpa/Wallpapers/current/))
+oldWallpaper=($(ls --hide="current" --hide="more" /home/andresmpa/Wallpapers/current/))
 theme=($(ls --hide="more" /home/andresmpa/Wallpapers/))
 current=$(cat /home/andresmpa/.config/qtile/current.txt)
 len="${#theme[@]}"
