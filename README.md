@@ -1,10 +1,14 @@
 # Dotfiles
 
-To do
+## To do
 
 - [ ] Find something new to create
 
 ---
+
+## Time programming this week
+
+[![wakatime](https://wakatime.com/badge/github/AndresMpa/dotfiles.svg)](https://wakatime.com/badge/github/AndresMpa/dotfiles)
 
 ## Check my work
 
