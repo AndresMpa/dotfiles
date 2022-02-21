@@ -14,6 +14,12 @@ cd /home/$USER/Escritorio/dotfiles
 }
 
 {
+	cat ~/.gitconfig >./.gitconfig
+} || {
+	echo "Error on gitconfig"
+}
+
+{
 	cp ~/.config/scripts/* ./.config/scripts/
 } || {
 	echo "Error on custom scripts" >>failures.log
