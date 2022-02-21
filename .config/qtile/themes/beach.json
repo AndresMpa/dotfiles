@@ -3,6 +3,6 @@
   "layout": ["#ffc09d", "#624b2b"],
   "icon": ["#404e7a", "#ffc09d", "#404e7a"],
   "desk": ["#f3b093", "#2c80a4", "#2e3d5a", "#52dffe", "#3fbbd3"],
-  "manager": ["#2e3d5a", "#f3b093", "#2e3d5a"],
+  "manager": ["#2e3d5a", "#f3b093", "#52dffe"],
   "util": ["#2e3d5a", "#f3b093", "#2e3d5a"]
 }
