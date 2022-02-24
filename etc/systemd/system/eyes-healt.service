@@ -1,0 +1,12 @@
+[Unit]
+Description=Init software to take care about my eyes
+Before=nodered.service
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/usr/bin/env bash /home/andresmpa/.config/scripts/careAboutMyself.sh 2> /dev/null
+
+[Install]
+WantedBy=multi-user.target
+Alias=eyes-healt.service
