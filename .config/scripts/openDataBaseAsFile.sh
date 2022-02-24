@@ -11,11 +11,9 @@ QUERY=""
 displayHelp() {
 	echo "
 USAGE
-
   open <flag> query
 		
 FLAG	DESCRIPTION
-
   -t	Translate your query		
   -y	Search your query on YouTube		
   -s	Search your query on StackOverFlow
@@ -24,7 +22,6 @@ FLAG	DESCRIPTION
 	
 		
 EXAMPLES
-
   open -y -p "Beat it"
 	open -t "Show must go on"
 "
