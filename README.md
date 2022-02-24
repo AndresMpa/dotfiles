@@ -66,3 +66,12 @@ qmk config user.keymap=AndresMpa
 qmk new-keymap
 qmk compile -kb crkbd -km AndresMpa
 ```
+
+### Util
+
+[SafeEyes](https://github.com/slgobinath/SafeEyes)
+I use glasses so I don't want to use bigger ones, it helps me to rest
+
+[Redshift](https://wiki.archlinux.org/title/redshift)
+This util change the color or my screen for me, it makes easier to use
+the computer
