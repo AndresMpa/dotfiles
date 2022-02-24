@@ -52,5 +52,5 @@ cd /home/$USER/Escritorio/dotfiles
 }
 
 #Updating the config files
-source "${PWD}/.config/$(cat ./.DS.txt)Update.sh" ||
-	source "${PWD}/.config/${DESKTOP_SESSION}Update.sh"
+source "${PWD}/.config/$(cat ./.DS.txt)Update.sh" 2>/dev/null ||
+	source "${PWD}/.config/${DESKTOP_SESSION}Update.sh" 2>/dev/null
