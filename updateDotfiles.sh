@@ -16,7 +16,7 @@ cd /home/$USER/Escritorio/dotfiles
 {
 	cat ~/.gitconfig >./.gitconfig
 } || {
-	echo "Error on gitconfig"
+	echo "Error on gitconfig" >>failures.log
 }
 
 {
