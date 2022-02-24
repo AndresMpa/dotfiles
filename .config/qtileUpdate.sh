@@ -14,11 +14,6 @@ BASE="/home/$USER/Escritorio/dotfiles/.config"
 	echo "Error removing" >>failures.log
 }
 {
-	rm -rf $BASE/nitrogen/
-} || {
-	echo "Error removing" >>failures.log
-}
-{
 	rm -rf $BASE/picom/
 } || {
 	echo "Error removing" >>failures.log
@@ -43,11 +38,6 @@ cat /etc/pacman.conf >$BASE/pacman.conf
 	cp -r ~/.config/kitty $BASE/
 } || {
 	echo "Error updating kitty" >>failures.log
-}
-{
-	cp -r ~/.config/nitrogen/ $BASE/
-} || {
-	echo "Error updating nitrogen" >>failures.log
 }
 {
 	cp -r ~/.config/picom $BASE/
