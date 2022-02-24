@@ -142,7 +142,6 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias v=nvim
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
 alias open="bash ~/.config/scripts/openDataBaseAsFile.sh"
@@ -155,3 +154,4 @@ alias twt="timew tag"
 alias twj="timew join"
 alias tws="timew stop"
 alias tw="timew start"
+alias v=nvim
