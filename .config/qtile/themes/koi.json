@@ -1,8 +1,8 @@
 {
   "bar": "#ffffff",
-  "layout": ["#ffffff", "#ffffff"],
-  "icon": ["#ffffff", "#11120a", "#ffffff"],
-  "desk": ["#756e69", "#302722", "#ffffff", "#756e69", "#ffffff"],
-  "manager": ["#ffffff", "#302722", "#ffffff"],
-  "util": ["#ffffff", "#302722", "#ffffff"]
+  "layout": ["#11120a", "#ffffff"],
+  "icon": ["#11120a", "#ffffff"],
+  "desk": ["#302722", "#ffffff", "#756e69", "#756e69", "#ffffff"],
+  "manager": ["#302722", "#ffffff", "#302722"],
+  "util": ["#302722", "#ffffff", "#302722"]
 }

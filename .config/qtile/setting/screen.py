@@ -44,8 +44,8 @@ def getScreen():
                     ),
                     widget.TextBox(
                         "",
-                        background=theme["desk"][2],
-                        foreground=theme["icon"][2],
+                        background=theme["desk"][0],
+                        foreground=theme["icon"][0],
                         fontsize=24,
                         padding=-2
                     ),
@@ -55,10 +55,10 @@ def getScreen():
                     widget.GroupBox(
                         padding=3,
                         fontsize=16,
-                        active=theme["desk"][0],
-                        urgent_border=theme["desk"][0],
-                        inactive=theme["desk"][1],
-                        background=theme["desk"][2],
+                        background=theme["desk"][0],
+                        active=theme["desk"][1],
+                        inactive=theme["desk"][2],
+                        urgent_border=theme["desk"][3],
                         this_current_screen_border=theme["desk"][3],
                     ),
                     widget.Moc(
@@ -66,7 +66,7 @@ def getScreen():
                     ),
                     widget.TextBox(
                         "",
-                        foreground=theme["desk"][2],
+                        foreground=theme["desk"][0],
                         background=theme["desk"][4],
                         fontsize=24,
                         padding=-2
