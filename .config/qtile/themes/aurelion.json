@@ -1,0 +1,8 @@
+{
+  "bar": "#07050c",
+  "layout": ["#4ad8df", "#fdfcd2"],
+  "icon": ["#2ca8d0", "#f5ebcf"],
+  "desk": ["#242fa0", "#ffc8a8", "#4ad8df", "#d18185", "#07050c"],
+  "manager": ["#4f1ed5", "#adb3da", "#4ad8df"],
+  "util": ["#242fa0", "#4ad8df", "#fdfcd2"]
+}

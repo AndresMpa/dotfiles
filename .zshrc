@@ -149,10 +149,18 @@ alias care="bash ~/.config/scripts/careAboutMyself.sh"
 alias fix="bash ~/.config/scripts/daemonFixer.sh"
 alias cbg="bash ~/.config/scripts/changeTheme.sh"
 alias clean="sudo paccache -r"
+
+# Slaves
+alias pertager="bash ~/.config/scripts/pertager.sh"
+alias foxilow="bash ~/.config/scripts/foxilow.sh"
+alias foxram="bash ~/.config/scripts/foxram.sh"
+
+# Time warrior
 alias twi="timew summary :ids"
 alias twu="timew untag"
 alias twt="timew tag"
 alias twj="timew join"
 alias tws="timew stop"
 alias tw="timew start"
-alias v=nvim
+
+alias v="nvim"

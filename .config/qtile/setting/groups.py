@@ -6,10 +6,10 @@ from libqtile.lazy import lazy
 
 mod = "mod4"
 
-# "", "", "", "", "ﴬ", 
+#  "", "", "", "", "ﴬ", "力"
 def groupGenerator(keys):
     groups = [Group(item) for item in [
-        "", "", "切", "力"
+        "", "", "切", ""
     ]]
 
     for i, group in enumerate(groups):
