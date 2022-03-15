@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                 ,-----------------------------------------------------.
-    KC_PPLS, KC_PMNS,  ES_1,    ES_2,    ES_3,    ES_EQL,                    KC_VOLD, KC_VOLU, KC_MUTE, KC_BRIU, KC_BRID, KC_DEL,
+    KC_PPLS, KC_PMNS,  ES_1,    ES_2,    ES_3,    KC_PEQL,                    KC_VOLD, KC_VOLU, KC_MUTE, KC_BRIU, KC_BRID, KC_DEL,
   //|--------+--------+--------+--------+--------+--------|                 |--------+--------+--------+--------+--------+--------|
     KC_PAST, KC_PSLS,  ES_4,    ES_5,    ES_6,    ES_LCBR,                   KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_PSCR, KC_ESC,
   //|--------+--------+--------+--------+--------+--------|                 |--------+--------+--------+--------+--------+--------|
@@ -45,11 +45,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`------------------------'  `--------------------------'
   ),
 
+  // \\ ~~~
+  // KC_LCBR = ¨
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                ,-----------------------------------------------------.
     KC_TAB,  ES_AT,   KC_HASH, ES_DLR,  ES_AMPR, ES_PIPE,                   ES_QUOT, KC_ASTR, KC_LPRN, ES_GRV,  XXXXXXX, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ES_IEXL, ES_QUES,                   ES_DQUO, KC_QUOT, KC_BSLS, ES_RCBR, XXXXXXX, XXXXXXX,
+    KC_PERC, ES_BSLS, ES_TILD, KC_TILD, ES_IEXL, ES_QUES,                   ES_DQUO, KC_QUOT, KC_BSLS, ES_RCBR, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ES_IQUE, ES_EXLM,                   XXXXXXX, ES_DIAE, KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+------|  |------+--------+--------+--------+--------+--------+--------|
