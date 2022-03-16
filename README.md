@@ -1,5 +1,11 @@
 # Dotfiles
 
+"Dotfiles" are configuration files, scripts and documentation about an operative system; this repositorie
+contains my configuration files including scripts, my shell config, some setting for those tools that I
+use; also some recomendations and guides such as "Corne" which contain all the necessary materials for
+building your own Corne keyboard such as mine. I high recommend to check some of my daemons if you use
+systemctl and AMD GPU like Radeon or something like that
+
 ## To do
 
 - [ ] Find something new to create
@@ -8,12 +14,7 @@
 
 ## Last created feature
 
-
-
 [Change theme feature](https://youtu.be/i6-JxMmvesE)
-
-
-
 
 ## Time programming this week
 
