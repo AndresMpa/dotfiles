@@ -42,6 +42,14 @@ systemctl and AMD GPU like Radeon or something like that
 
 [Qtile](./documentation/Qtile.md)
 
+![Windows](./examples/win_1.png)
+
+![Windowss](https://img.shields.io/badge/windows-blue?style=for-the-badge&logo=windows)
+![Bash](https://img.shields.io/badge/-PowerShell-black?style=for-the-badge&logo=powershell)
+![Win Terminal](https://img.shields.io/badge/-Win%20Terminal-black?style=for-the-badge&logo=iTerm2)
+
+[Windows](./documentation/Windows.md)
+
 ## Installation
 
 If you want to do it yourself source "install.sh", if
