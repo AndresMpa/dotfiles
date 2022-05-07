@@ -19,10 +19,6 @@ systemctl and AMD GPU like Radeon or something like that
 
 [Change theme feature](https://youtu.be/i6-JxMmvesE)
 
-## Time programming this week
-
-[![wakatime](https://wakatime.com/badge/github/AndresMpa/dotfiles.svg)](https://wakatime.com/badge/github/AndresMpa/dotfiles)
-
 ## Check my work
 
 ![BSPWM](./examples/bspwm_2.png)
