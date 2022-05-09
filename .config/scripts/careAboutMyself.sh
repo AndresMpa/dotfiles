@@ -2,9 +2,9 @@
 
 pkill safeeyes
 
-#pkill redshift
+pkill redshift
 
 safeeyes &
 2>/dev/null
-#redshift &
-#2>/dev/null
+redshift -P -O 3000 &
+2>/dev/null
