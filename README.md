@@ -8,17 +8,16 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## To do
 
-- [ ] Find something new to create
+- [ ] Try i3
+- [ ] Try Awesome
+- [ ] Go back to BSPWM
+- [ ] Look for something else
 
 ---
 
 ## Last created feature
 
 [Change theme feature](https://youtu.be/i6-JxMmvesE)
-
-## Time programming this week
-
-[![wakatime](https://wakatime.com/badge/github/AndresMpa/dotfiles.svg)](https://wakatime.com/badge/github/AndresMpa/dotfiles)
 
 ## Check my work
 
@@ -41,6 +40,14 @@ systemctl and AMD GPU like Radeon or something like that
 ![Kitty](https://img.shields.io/badge/-Kitty-brown?style=for-the-badge&logo=iTerm2)
 
 [Qtile](./documentation/Qtile.md)
+
+![Windows](./examples/win_1.png)
+
+![Windowss](https://img.shields.io/badge/windows-blue?style=for-the-badge&logo=windows)
+![Bash](https://img.shields.io/badge/-PowerShell-black?style=for-the-badge&logo=powershell)
+![Win Terminal](https://img.shields.io/badge/-Win%20Terminal-black?style=for-the-badge&logo=iTerm2)
+
+[Windows](./documentation/Windows.md)
 
 ## Installation
 
