@@ -163,4 +163,6 @@ alias twj="timew join"
 alias tws="timew stop"
 alias tw="timew start"
 
+# Utilities
+alias cat="bat"
 alias v="nvim"
