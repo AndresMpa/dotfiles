@@ -64,7 +64,7 @@ def keysMapping():
         ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 
         # Print Screen
-        ([], "Print", lazy.spawn("flameshot")),
+        ([], "Print", lazy.spawn("flameshot gui")),
 
         # Terminal
         ([mod], "t", lazy.spawn(terminal)),
