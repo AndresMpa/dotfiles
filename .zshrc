@@ -4,6 +4,7 @@
 
 clear
 neofetch
+setxkbmap latam
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -164,5 +165,6 @@ alias tws="timew stop"
 alias tw="timew start"
 
 # Utilities
+alias dc="docker-compose"
 alias cat="bat"
 alias v="nvim"
