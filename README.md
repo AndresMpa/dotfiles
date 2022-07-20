@@ -8,6 +8,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## To do
 
+- [ ] Fix and complete install scripts
 - [ ] Try i3
 - [ ] Try Awesome
 - [ ] Go back to BSPWM
