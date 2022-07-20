@@ -4,13 +4,24 @@
 cd /home/$USER/Escritorio/dotfiles
 
 {
-	# Removing old files
-	rm -rf .xinitrc .zshrc
+	if [[ cat ~/.xinitrc ]];
+	then
+		# Removing old files
+		rm -rf .xinitrc 
 
-	# Copying the current files that I am using
-	cp ~/.xinitrc ~/.zshrc $(pwd)
+		# Copying the current files that I am using
+		cp ~/.xinitrc  $(pwd)
+	else
+		echo "Currently not using X server"
+	fi
 } || {
 	echo "Error on config files" >>failures.log
+}
+
+{
+	cat ~/.zshrc >./.zshrc
+} || {
+	echo "Error on zshrc" >>failures.log
 }
 
 {
@@ -42,11 +53,18 @@ cd /home/$USER/Escritorio/dotfiles
 }
 
 {
-	# Removing keyboard layout
-	rm -rf ./AndresMpa/*
+	if [[ ls ~/qmk_firmware ]];
+	then
+		# Removing keyboard layout
+		rm -rf ./AndresMpa/*
 
-	# Adding keyboard layout
-	cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/
+		# Adding keyboard layout
+		cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/	
+	else
+		echo "QMK is not installed"
+		
+	fi
+	
 } || {
 	echo "Error on Keyboard updating" >>failures.log
 }
