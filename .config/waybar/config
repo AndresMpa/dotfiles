@@ -1,0 +1,180 @@
+{
+  "layer": "top",
+  "width": 1250,
+  "spacing": 0,
+  "height": 8,
+
+  "modules-left": [
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "cpu",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+    "custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "memory",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+    "custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "temperature",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+
+    "custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "battery",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+  ],
+  
+  "modules-center": [
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "sway/workspaces",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark"
+  ],
+
+  "modules-right": [
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "sway/mode",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "pulseaudio", 
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "backlight",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "clock",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
+
+		"custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "tray",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark"
+    ],
+
+  "custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+
+  "sway/workspaces": {
+    "format": "{name}: {icon}",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""],
+    "critical-threshold": 70,
+  },
+  "backlight": {
+    "device": "amdgpu_bl0",
+		"smooth-scrolling-threshold": 1.0,
+		"format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-good": "",
+    "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "network": {
+    "tooltip-format": "{ifname} via {gwaddr} ",
+
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-linked": "{ifname} (No IP) ",
+
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{: %I:%M %p   %d/%m/%Y}",
+    "format-alt": "{:%Y-%m-%d}"
+  }
+}
