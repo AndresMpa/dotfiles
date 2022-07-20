@@ -60,6 +60,8 @@ systemctl and AMD GPU like Radeon or something like that
 ![CSS](https://img.shields.io/badge/-css-blue?style=for-the-badge&logo=CSS3)
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 
+[Sway](./documentation/Sway.md)
+
 ## Installation
 
 If you want to do it yourself source "install.sh", if
