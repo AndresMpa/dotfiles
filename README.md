@@ -11,7 +11,7 @@ systemctl and AMD GPU like Radeon or something like that
 - [ ] Try i3
 - [ ] Try Awesome
 - [ ] Go back to BSPWM
-- [ ] Look for something else
+- [x] Look for something else
 
 ---
 
@@ -25,6 +25,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 ![Open source](https://img.shields.io/badge/-Open%20source-black?style=for-the-badge&logo=Open%20Source%20Initiative)
 ![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
+![Xorg](https://img.shields.io/badge/-Xorg-gray?style=for-the-badge&logo=X.Org)
 ![C/C++](https://img.shields.io/badge/-C/C++-darkblue?style=for-the-badge&logo=Cplusplus)
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Alacritty](https://img.shields.io/badge/-alacritty-blue?style=for-the-badge&logo=Alacritty)
@@ -35,6 +36,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 ![Open source](https://img.shields.io/badge/-Open%20source-black?style=for-the-badge&logo=Open%20Source%20Initiative)
 ![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
+![Xorg](https://img.shields.io/badge/-Xorg-gray?style=for-the-badge&logo=X.Org)
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Python](https://img.shields.io/badge/-python-yellow?style=for-the-badge&logo=python)
 ![Kitty](https://img.shields.io/badge/-Kitty-brown?style=for-the-badge&logo=iTerm2)
@@ -44,10 +46,19 @@ systemctl and AMD GPU like Radeon or something like that
 ![Windows](./examples/win_1.png)
 
 ![Windowss](https://img.shields.io/badge/windows-blue?style=for-the-badge&logo=windows)
-![Bash](https://img.shields.io/badge/-PowerShell-black?style=for-the-badge&logo=powershell)
+![PowerShell](https://img.shields.io/badge/-PowerShell-black?style=for-the-badge&logo=powershell)
 ![Win Terminal](https://img.shields.io/badge/-Win%20Terminal-black?style=for-the-badge&logo=iTerm2)
 
 [Windows](./documentation/Windows.md)
+
+![Sway](./examples/sway_1.jpg)
+
+![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
+![Wezterminal](https://img.shields.io/badge/-Wezterminal-black?style=for-the-badge&logo=powershell)
+![C/C++](https://img.shields.io/badge/-C/C++-darkblue?style=for-the-badge&logo=Cplusplus)
+![JSON](https://img.shields.io/badge/-JSON-gray?style=for-the-badge&logo=json)
+![CSS](https://img.shields.io/badge/-css-blue?style=for-the-badge&logo=CSS3)
+![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 
 ## Installation
 
