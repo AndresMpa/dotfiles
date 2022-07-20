@@ -24,6 +24,16 @@ then
 			source ./desktops/installQtile.sh
 		fi
 	fi
+
+	if [[ $1 == "sway" ]];
+	then
+		if [[ "$myConfig" == "y" ]];
+		then
+			source ./desktops/useSway.sh
+		else
+			source ./desktops/installSway.sh
+		fi
+	fi
 else
-	echo "Please user './install.sh <desktop>' avalible desktops are bspwm and qtile"
+	echo "Please user './install.sh <desktop>' avalible desktops are bspwm, qtile and sway"
 fi
