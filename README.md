@@ -8,11 +8,18 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## To do
 
-- [ ] Fix and complete install scripts
 - [ ] Try i3
 - [ ] Try Awesome
 - [ ] Go back to BSPWM
 - [x] Look for something else
+- [ ] Fix and complete install scripts
+
+  - [ ] Test BSPWM minimal
+  - [ ] Complete Qtile minimal
+  - [x] Complete Sway minimal
+  - [ ] Test BSPWM custom config
+  - [ ] Complete Qtile custom config
+  - [ ] Complete Sway custom config
 
 ---
 
