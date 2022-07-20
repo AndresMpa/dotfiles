@@ -4,7 +4,10 @@
 
 clear
 neofetch
-setxkbmap latam
+
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -87,7 +90,6 @@ plugins=(
 	pip
 	npm
 	history
-	zsh-autocomplete
 	colored-man-pages
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -145,24 +147,7 @@ fi
 
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
-alias open="bash ~/.config/scripts/openDataBaseAsFile.sh"
-alias care="bash ~/.config/scripts/careAboutMyself.sh"
-alias fix="bash ~/.config/scripts/daemonFixer.sh"
-alias cbg="bash ~/.config/scripts/changeTheme.sh"
 alias clean="sudo paccache -r"
-
-# Slaves
-alias pertager="bash ~/.config/scripts/pertager.sh"
-alias foxilow="bash ~/.config/scripts/foxilow.sh"
-alias foxram="bash ~/.config/scripts/foxram.sh"
-
-# Time warrior
-alias twi="timew summary :ids"
-alias twu="timew untag"
-alias twt="timew tag"
-alias twj="timew join"
-alias tws="timew stop"
-alias tw="timew start"
 
 # Utilities
 alias dc="docker-compose"
