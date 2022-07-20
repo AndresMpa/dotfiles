@@ -4,7 +4,7 @@
 cd /home/$USER/Escritorio/dotfiles
 
 {
-	if [[ cat ~/.xinitrc ]];
+	if [[ -f ~/.xinitrc ]];
 	then
 		# Removing old files
 		rm -rf .xinitrc 
@@ -53,7 +53,7 @@ cd /home/$USER/Escritorio/dotfiles
 }
 
 {
-	if [[ ls ~/qmk_firmware ]];
+	if [[ -f ~/qmk_firmware ]];
 	then
 		# Removing keyboard layout
 		rm -rf ./AndresMpa/*
