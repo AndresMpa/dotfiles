@@ -23,11 +23,9 @@ systemctl and AMD GPU like Radeon or something like that
 
 ---
 
-## Last created feature
+## Desktop environments
 
-[Change theme feature](https://youtu.be/i6-JxMmvesE)
-
-## Check my work
+<h2><a href="./documentati/BSPWM.md">BSPWM</a></h2>
 
 ![BSPWM](./examples/bspwm_2.png)
 
@@ -38,7 +36,7 @@ systemctl and AMD GPU like Radeon or something like that
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Alacritty](https://img.shields.io/badge/-alacritty-blue?style=for-the-badge&logo=Alacritty)
 
-[BSPWM](./documentation/BSPWM.md)
+<h2><a href="./documentati/Qtile.md">Qtile</a></h2>
 
 ![Qtile](./examples/qtile_1.png)
 
@@ -49,7 +47,9 @@ systemctl and AMD GPU like Radeon or something like that
 ![Python](https://img.shields.io/badge/-python-yellow?style=for-the-badge&logo=python)
 ![Kitty](https://img.shields.io/badge/-Kitty-brown?style=for-the-badge&logo=iTerm2)
 
-[Qtile](./documentation/Qtile.md)
+[Change theme feature](https://youtu.be/i6-JxMmvesE)
+
+<h2><a href="./documentation/Windows.md">Windows</a></h2>
 
 ![Windows](./examples/win_1.png)
 
@@ -57,7 +57,7 @@ systemctl and AMD GPU like Radeon or something like that
 ![PowerShell](https://img.shields.io/badge/-PowerShell-black?style=for-the-badge&logo=powershell)
 ![Win Terminal](https://img.shields.io/badge/-Win%20Terminal-black?style=for-the-badge&logo=iTerm2)
 
-[Windows](./documentation/Windows.md)
+<h2><a href="./documentati/Sway.md">Sway</a></h2>
 
 ![Sway](./examples/sway_1.jpg)
 
@@ -67,8 +67,6 @@ systemctl and AMD GPU like Radeon or something like that
 ![JSON](https://img.shields.io/badge/-JSON-gray?style=for-the-badge&logo=json)
 ![CSS](https://img.shields.io/badge/-css-blue?style=for-the-badge&logo=CSS3)
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
-
-[Sway](./documentation/Sway.md)
 
 ## Installation
 
