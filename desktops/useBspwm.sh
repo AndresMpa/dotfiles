@@ -53,16 +53,15 @@ then
 
 	cp ./.zshrc > ~/.zshrc
 
-	cp $(pwd)/fonts/* ~/.local/share/fonts &&
-
+	cp $(pwd)/fonts/* ~/.local/share/fonts
 fi
 
 cp ./.xinitrc > ~/.xinitrc
 
-echo -n "Do you want to install oh-my-zsh? [y/n]: "
-read zsh
+echo -n "Do you use amdgpu_bl0? [y/n]: "
+read brightness
 
-if [[ $zsh == "y" ]];
+if [[ $brightness == "y" ]];
 then
 	cp ./.config/brightness-permission.service > /etc/systemd/system/brightness-permission.service
 fi
