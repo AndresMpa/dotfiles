@@ -72,13 +72,20 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## Installation
 
-If you want to do it yourself source "install.sh", if
-you also want the same configuration I'm using, source
-"use.sh"
+If you want to do it yourself source "install.sh <desktop>", them choose "y" if
+you want the same configuration, type "n" if you want it from scratch.
+
+NOTE: If you see error please add and issue, I'll try yo solve it ^-^
 
 ```
 $ git clone https://github.com/AndresMpa/dotfiles.git
 $ cd dotfiles
+$ source ./install.sh
+```
+
+If you are using AMD GPU, try "postInstall", it could help you; also if you want
+to change your shell source "postInstall" too
+```
 $ source ./install.sh
 ```
 
