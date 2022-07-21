@@ -15,18 +15,28 @@ cp /usr/local/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
 cp /usr/local/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
 chmod u+x ~/.config/bspwm/bspwmrc
 
-echo 'exec bspwm' > ~/.xinitrc
-echo 'exec sxhkd' > ~/.xinitrc
-
 echo "Polybar"
 sudo pacman --noconfirm -S dbus libxinerama libxrandr libxft libxss libxdg-basedir glib2 pango gtk3 libnotify
 sudo pacman --noconfirm -S polybar
 
 # Utilities
-sudo pacman --noconfirm -S rofi
-sudo pacman --noconfirm -S alacritty
-sudo pacman --noconfirm -S firefox
-yay --noconfirm -S dunst-git
+sudo pacman --noconfirm -S alacritty firefox rofi feh
+
+# Hardware
+echo -n "Do you use amdgpu_bl0? [y/n]: "
+read brightness
+
+if [[ $brightness == "y" ]];
+then
+	cp ./.config/brightness-permission.service > /etc/systemd/system/brightness-permission.service
+fi
+
+cp ../Wallpapers ~/
+
+cat ../.xinitrc > ~/.xinitrc
+echo "feh --bg-scale /home/$USER/Wallpapers/"
+echo "exec bspwm" >> ~/.xinitrc
+echo "exec sxhkd" >> ~/.xinitrc
 
 # Shell
 git clone https://github.com/AndresMpa/desl/ 

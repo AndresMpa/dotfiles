@@ -2,11 +2,8 @@
 xset -b
 # Keyboard Layout
 setxkbmap latam
-# Network
-nm-applet & 
+# Network // May want to install nm-applet also avalible nmtui
+#nm-applet & 
 # Composer
 picom & 2> /dev/null
 # Wallpaper
-feh --bg-scale /home/$USER/Wallpapers/current/*
-# Execute Qtile or DE
-exec qtile start
