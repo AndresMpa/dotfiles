@@ -1,31 +1,30 @@
 #!/bin/bash
 
-echo "Installing Sway - Wayland"
-
+echo "Sway from scratch"
 sudo pacman --noconfirm -Syu
-sudo pacman --noconfirm -S wget
+sudo pacman --noconfirm -S wayland sway swaybg swaylock swayidle seatd wlroots
+sudo pacman --noconfirm -S wezterm waybar wofi
 
-sudo pacman --noconfirm -S wayland
+# Generating dirs
+mkdir -p ~/.config/{sway,waybar,wezterm,wofi}
 
-sudo pacman --noconfirm -S sway swaybg swaylock swayidle seatd wlroots
-mkdir ~/.config/sway/
-cat /etc/sway/config > ~/.config/sway/config
+# Default config for Sway
+cp /etc/sway/config ~/.config/sway/config
 
-sudo pacman --noconfirm -S waybar
+# Waybar
+touch ~/.config/waybar/style.css
+touch ~/.config/waybar/config
+
+# Default config for Waybar
 wget https://raw.githubusercontent.com/Alexays/Waybar/master/resources/config
-md ~/.config/waybar/
-mv config ~/.config/waybar/
+mv config ~/.config/waybar/config
 
-sudo pacman --noconfirm -S wofi
-md ~/.config/wofi
+# Wezterm
+touch ~/.config/wezterm/wezterm.lua
+# Wofi
 touch ~/.config/wofi/style.css
 
-sudo pacman --noconfirm -S wezterm
-md ~/.config/wezterm
-touch ~/.config/wezterm/wezterm.lua
-
+# Utilities
 sudo pacman --noconfirm -S firefox
-
-yay --noconfirm -S mako
-yay --noconfirm -S greetd greetd-tuigreet
+yay --noconfirm -S mako greetd greetd-tuigreet
 sudo cat ../etc/greetd/config.toml >> /etc/greetd/config.toml
