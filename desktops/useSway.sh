@@ -1,4 +1,3 @@
 #!/bin/bash
 
-echo 
-
+echo "Working on it"
