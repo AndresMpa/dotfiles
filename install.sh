@@ -3,15 +3,20 @@
 echo "Do you want my configuration? [y/n]"
 read myConfig
 
-if [[ -z $1 ]];
+if [ -z $1 ];
 then
+
+	echo "Please user './install.sh <desktop>' avalible desktops are bspwm, qtile and sway"
+else
 	if [[ $1 == "bspwm" ]];
 	then
 		if [[ "$myConfig" == "y" ]];
 		then
-			source ./desktops/useBspwm.sh
+			echo "Using my bspwm config"
+			#source ./desktops/useBspwm.sh
 		else
-			source ./desktops/installBspwm.sh
+			echo "Using bspwm default config"
+			#source ./desktops/installBspwm.sh
 		fi
 	fi
 
@@ -19,9 +24,11 @@ then
 	then
 		if [[ "$myConfig" == "y" ]];
 		then
-			source ./desktops/useQtile.sh
+			echo "Using my qtile config"
+			#source ./desktops/useQtile.sh
 		else
-			source ./desktops/installQtile.sh
+			echo "Using qtile default config"
+			#source ./desktops/installQtile.sh
 		fi
 	fi
 
@@ -29,11 +36,11 @@ then
 	then
 		if [[ "$myConfig" == "y" ]];
 		then
-			source ./desktops/useSway.sh
+			echo "Using my sway config"
+			#source ./desktops/useSway.sh
 		else
-			source ./desktops/installSway.sh
+			echo "Using sway default config"
+			#source ./desktops/installSway.sh
 		fi
 	fi
-else
-	echo "Please user './install.sh <desktop>' avalible desktops are bspwm, qtile and sway"
 fi

@@ -4,14 +4,20 @@ echo "Updating"
 sudo pacman -Syyu --noconfirm
 echo "Installers"
 sudo pacman -S wget curl --noconfirm
-
-echo -m "Did you source install.sh? [y / n]"
-read requirements
-
-if [[ $requirements == "n" ]];
-then
-	source ./install.sh
-fi
+echo "Installing dependencies"
+sudo pacman -S --noconfirm alacritty bspwm nitrogen picom polybar rofi sxhkd
+{
+	cp -r ./.config/alacritty > ~/.config/alacritty 
+	cp -r ./.config/nitrogen > ~/.config/nitrogen
+	cp -r ./.config/scripts > ~/.config/scripts
+	cp -r ./.config/polybar > ~/.config/polybar
+	cp -r ./.config/sxhkd > ~/.config/sxhkd
+	cp -r ./.config/bspwm > ~/.config/bspwm
+	cp -r ./.config/picom > ~/.config/picom
+	cp -r ./.config/rofi > ~/.config/rofi
+} || {
+	echo "Error moving files"
+}
 
 echo -n "Do you want to install oh-my-zsh? [y/n]: "
 read zsh
@@ -56,7 +62,9 @@ then
 	cp $(pwd)/fonts/* ~/.local/share/fonts
 fi
 
-cp ./.xinitrc > ~/.xinitrc
+cat ./.xinitrc > ~/.xinitrc
+
+sudo cat ./.config/pacman.conf > /etc/pacman.conf
 
 echo -n "Do you use amdgpu_bl0? [y/n]: "
 read brightness
@@ -65,5 +73,3 @@ if [[ $brightness == "y" ]];
 then
 	cp ./.config/brightness-permission.service > /etc/systemd/system/brightness-permission.service
 fi
-
-sudo cp ./.config/pacman.conf > /etc/pacman.conf
