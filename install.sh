@@ -13,11 +13,17 @@ else
 		if [[ "$myConfig" == "y" ]];
 		then
 			echo "Using my bspwm config"
-			#source ./desktops/useBspwm.sh
+			source ./desktops/useBspwm.sh
 		else
 			echo "Using bspwm default config"
-			#source ./desktops/installBspwm.sh
+			source ./desktops/installBspwm.sh
 		fi
+		cp ./Wallpapers ~/
+
+		cat ./.xinitrc > ~/.xinitrc
+		echo "feh --bg-scale /home/$USER/Wallpapers/"
+		echo "exec bspwm" >> ~/.xinitrc
+		echo "exec sxhkd" >> ~/.xinitrc
 	fi
 
 	if [[ $1 == "qtile" ]];
@@ -25,10 +31,10 @@ else
 		if [[ "$myConfig" == "y" ]];
 		then
 			echo "Using my qtile config"
-			#source ./desktops/useQtile.sh
+			source ./desktops/useQtile.sh
 		else
 			echo "Using qtile default config"
-			#source ./desktops/installQtile.sh
+			source ./desktops/installQtile.sh
 		fi
 	fi
 
