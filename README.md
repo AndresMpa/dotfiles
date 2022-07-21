@@ -14,13 +14,13 @@ systemctl and AMD GPU like Radeon or something like that
 - [x] Look for something else
 - [ ] Fix and complete install scripts
 
-  - [ ] Test BSPWM custom config
   - [ ] Test BSPWM minimal
+  - [ ] Test BSPWM custom config
   - [x] Complete BSPWM minimal
-  - [ ] Complete Qtile minimal
-  - [x] Complete Sway minimal
+  - [x] Complete Qtile minimal
+  - [ ] Complete Sway minimal
   - [x] Complete BSPWM custom config
-  - [ ] Complete Qtile custom config
+  - [x] Complete Qtile custom config
   - [ ] Complete Sway custom config
 
 ---
