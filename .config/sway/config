@@ -13,7 +13,7 @@ set $mod Mod4
 set $term wezterm
 
 # App launcher
-set $menu wofi --show=drun --lines=5 --prompt=""
+set $menu wofi --show=drun --lines=10 -I --location=0 --prompt="Arch" 
 
 ### OUTPUT CONFIGURATION
 
@@ -26,9 +26,9 @@ output * bg ~/Imágenes/sway.jpg fill
 ### IDLE CONFIGURATION
 
 exec swayidle -w \
-        timeout 300 'swaylock -f -c 000000' \
-        timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000'
+    timeout 300 'swaylock -f -c 000000' \
+    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 000000'
 
 # GAPS
 
@@ -36,6 +36,7 @@ default_border pixel 1
 gaps inner 2
 
 ### INPUT CONFIGURATION
+
 
 input "type:keyboard" {
     xkb_layout "latam"
@@ -47,6 +48,8 @@ input "type:touchpad" {
     pointer_accel 0
     tap enabled
 }
+
+input * xkb_numlock enable
 
 ### KEY BINDINGS
 
