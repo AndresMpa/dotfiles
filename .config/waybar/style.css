@@ -19,16 +19,16 @@ window#waybar {
   color: #292b2e;
 }
 
-#workspaces,
-#pulseaudio,
-#memory,
 #cpu,
+#memory,
 #network,
 #battery,
+#workspaces,
+#pulseaudio,
 #temperature,
-#disk,
 #backlight,
 #clock,
+#mode,
 #tray {
   background: #292b2e;
 }
@@ -41,13 +41,13 @@ window#waybar {
   color: #268bd2;
 }
 #workspaces button:hover {
-  box-shadow: inherit;
   text-shadow: inherit;
+  box-shadow: inherit;
 }
 #workspaces button:hover {
   background: #1a1a1a;
   border: #1a1a1a;
-  padding: 0 3px;
+  padding: 0 5px;
 }
 
 #pulseaudio {
@@ -62,15 +62,19 @@ window#waybar {
 #battery {
   color: #859900;
 }
-#disk {
+#temperature {
   color: #b58900;
 }
 
-#clock,
-#pulseaudio,
-#memory,
 #cpu,
+#mode,
+#memory,
+#network,
 #battery,
-#disk {
+#temperature,
+#pulseaudio,
+#backlight,
+#clock,
+#tray {
   padding: 0 10px;
 }

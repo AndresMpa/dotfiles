@@ -23,6 +23,11 @@
 		"custom/right-arrow-light",
 		"custom/right-arrow-dark",
 
+    "custom/left-arrow-dark",
+		"custom/left-arrow-light",
+    "network",
+		"custom/right-arrow-light",
+		"custom/right-arrow-dark",
 
     "custom/left-arrow-dark",
 		"custom/left-arrow-light",
@@ -68,8 +73,8 @@
 		"custom/left-arrow-light",
     "tray",
 		"custom/right-arrow-light",
-		"custom/right-arrow-dark"
-    ],
+		"custom/right-arrow-dark",
+  ],
 
   "custom/left-arrow-dark": {
 		"format": "",
@@ -87,52 +92,37 @@
 		"format": "",
 		"tooltip": false
 	},
-
-  "sway/workspaces": {
-    "format": "{name}: {icon}",
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "urgent": "",
-      "focused": "",
-      "default": ""
-    }
-  },
-
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-
+    
   "cpu": {
     "format": "{usage}% ",
-    "tooltip": false
+    "tooltip": true,
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% ",
+    "tooltip": true,
   },
   "temperature": {
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
+    "format-icons": ["", "", ""],
     "critical-threshold": 70,
   },
-  "backlight": {
-    "device": "amdgpu_bl0",
-		"smooth-scrolling-threshold": 1.0,
-		"format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  "network": {
+    "tooltip-format": "{ifname} via {gwaddr}/{cidr}  ",
+    "format-wifi": "({signalStrength}%) ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "⚠",
+    "format-ethernet": "",
+    "format-alt": "{ifname}"
   },
   "battery": {
     "states": {
-      "good": 95,
+      "critical": 15,
       "warning": 30,
-      "critical": 15
+      "good": 95,
     },
+    "tooltip": true,
+    "tooltip-format": "{timeTo}",
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
@@ -144,37 +134,53 @@
   "battery#bat2": {
     "bat": "BAT2"
   },
-  "network": {
-    "tooltip-format": "{ifname} via {gwaddr} ",
 
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-linked": "{ifname} (No IP) ",
+  "sway/workspaces": {
+    "format": "{name}: {icon}",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
 
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
   },
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
-      "headphone": "",
       "hands-free": "",
-      "headset": "",
-      "phone": "",
+      "headphone": "",
+      "headset": "",
       "portable": "",
+      "phone": "",
       "car": "",
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
   },
-  "tray": {
-    "spacing": 10
+  "backlight": {
+    "device": "amdgpu_bl0",
+		"smooth-scrolling-threshold": 1.0,
+		"format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{: %I:%M %p   %d/%m/%Y}",
     "format-alt": "{:%Y-%m-%d}"
-  }
+  },
+  "tray": {
+    "spacing": 10,
+  },
 }
