@@ -43,10 +43,10 @@ else
 		if [[ "$myConfig" == "y" ]];
 		then
 			echo "Using my sway config"
-			#source ./desktops/useSway.sh
+			source ./desktops/useSway.sh
 		else
 			echo "Using sway default config"
-			#source ./desktops/installSway.sh
+			source ./desktops/installSway.sh
 		fi
 	fi
 fi
