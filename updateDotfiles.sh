@@ -62,9 +62,7 @@ cd /home/$USER/Escritorio/dotfiles
 		cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/	
 	else
 		echo "QMK is not installed"
-		
 	fi
-	
 } || {
 	echo "Error on Keyboard updating" >>failures.log
 }
