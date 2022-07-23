@@ -31,7 +31,11 @@ cd /home/$USER/Escritorio/dotfiles
 }
 
 {
-	cp ~/.config/scripts/* ./.config/scripts/
+	newScripts=$(ls  ~/.config/scripts/)
+	if [[ -s newScripts ]];
+	then
+		cp ~/.config/scripts/* ./.config/scripts/
+	fi
 } || {
 	echo "Error on custom scripts" >>failures.log
 }
