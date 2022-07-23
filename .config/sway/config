@@ -63,8 +63,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
-
+bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
 # I don't have these keys
 #bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
