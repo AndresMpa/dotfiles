@@ -13,7 +13,7 @@ set $mod Mod4
 set $term wezterm
 
 # App launcher
-set $menu wofi --show=drun --lines=10 -I --location=0 --prompt="Arch" 
+set $menu wofi --show=drun --lines=10 -I --location=0 --prompt="Arch Linux" 
 
 ### OUTPUT CONFIGURATION
 
@@ -210,6 +210,19 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+#
+# Execute comands:
+#
+mode "Custom" {
+    #Open telegam
+    bindsym m exec telegam
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+c mode "Custom"
 
 #
 # Status Bar:
