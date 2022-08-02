@@ -1,6 +1,6 @@
-local wezterm = require 'wezterm';
-local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
+local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
+local wezterm = require 'wezterm';
 return {
   font = wezterm.font("JetBrains Mono"),
   font_size = 10.0,
