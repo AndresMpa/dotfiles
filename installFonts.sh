@@ -4,9 +4,9 @@ cp ./fonts/* ~/.local/share/fonts/
 
 wget https://github.com/google/fonts/archive/main.zip
 
-unzip fonts-main.zip
+unzip main.zip
 
-mv $0 fonts-main
+mv $0 main
 
 ttfFile="$(find ./ -type f -name '*.ttf')"
 
