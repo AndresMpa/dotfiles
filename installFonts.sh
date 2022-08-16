@@ -10,9 +10,8 @@ mv $0 main
 
 ttfFile="$(find ./ -type f -name '*.ttf')"
 
-for file in $ttfFile;
-do
-  mv $file ~/.local/share/fonts/
+for file in $ttfFile; do
+	mv $file ~/.local/share/fonts/
 done
 
 fc-cache -f -v
