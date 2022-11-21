@@ -23,6 +23,11 @@ BASE="/home/$USER/Escritorio/dotfiles/.config"
 } || {
 	echo "Error removing wezterm" >>failures.log
 }
+{
+	rm -rf $BASE/mako
+} || {
+	echo "Error removing mako" >>failures.log
+}
 
 # Updating pacman configurations
 rm -rf $BASE/pacman.conf
@@ -48,4 +53,9 @@ cat /etc/pacman.conf >$BASE/pacman.conf
 	cp -r ~/.config/wezterm $BASE/
 } || {
 	echo "Error updating wezterm" >>failures.log
+}
+{
+	cp -r ~/.config/mako $BASE/
+} || {
+	echo "Error updating mako" >>failures.log
 }
