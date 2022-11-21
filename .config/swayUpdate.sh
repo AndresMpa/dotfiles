@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE="/home/$USER/Escritorio/dotfiles/.config"
+BASE="/$(pwd)/.config"
 
 # Removing old configurations
 {

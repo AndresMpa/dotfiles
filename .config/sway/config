@@ -1,3 +1,8 @@
+### WINDOW
+
+default_border none
+default_floating_border none
+
 ### VARIABLES
 
 # Map like vim
@@ -21,7 +26,7 @@ set $menu wofi --show=drun --lines=10 -I --location=0 --prompt="Arch Linux"
 #output eDP-1 resolution 1366x768 position 1366,0
 
 # Wallpaper
-output * bg ~/Imágenes/sway.jpg fill
+output * bg ~/Wallpapers/sway.jpg fill
 
 ### IDLE CONFIGURATION
 
@@ -56,6 +61,7 @@ input * xkb_numlock enable
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -66,8 +72,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
 # I don't have these keys
-#bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-#bindsym XF86Search exec bemenu-run
+bindsym XF86Search exec wofi
 
 
 #

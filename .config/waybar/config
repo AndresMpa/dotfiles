@@ -5,93 +5,24 @@
   "height": 8,
 
   "modules-left": [
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "cpu",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-    "custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "memory",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-    "custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "temperature",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-    "custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "network",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-    "custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "battery",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
   ],
   
   "modules-center": [
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "sway/workspaces",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark"
   ],
 
   "modules-right": [
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "sway/mode",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "pulseaudio", 
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "backlight",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "clock",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
-
-		"custom/left-arrow-dark",
-		"custom/left-arrow-light",
     "tray",
-		"custom/right-arrow-light",
-		"custom/right-arrow-dark",
   ],
-
-  "custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
     
   "cpu": {
     "format": "{usage}% ",
