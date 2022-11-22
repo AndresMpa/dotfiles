@@ -18,7 +18,7 @@ set $mod Mod4
 set $term wezterm
 
 # App launcher
-set $menu wofi --show=drun --lines=10 -I --location=0 --prompt="Arch Linux" 
+set $menu wofi --show=drun --term=wezterm --lines=10 --columns=2 -b -a -i -m -I -G --location=0 --prompt="Arch Linux" 
 
 ### OUTPUT CONFIGURATION
 
@@ -26,7 +26,7 @@ set $menu wofi --show=drun --lines=10 -I --location=0 --prompt="Arch Linux"
 #output eDP-1 resolution 1366x768 position 1366,0
 
 # Wallpaper
-output * bg ~/Wallpapers/sway.jpg fill
+output * bg ~/Wallpapers/current/sway.jpg fill
 
 ### IDLE CONFIGURATION
 
