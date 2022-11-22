@@ -1,31 +1,42 @@
 local wezterm = require "wezterm"
-local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
-local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
+local SOLID_LEFT_ARROW = utf8.char(0xe0b6)
+local SOLID_RIGHT_ARROW = utf8.char(0xe0b4)
+
+local colors = {
+  background_gradient_1 = "#1a1c25",
+  background_gradient_2 = "#071532",
+  background_gradient_3 = "#0c0e15",
+
+  tab_edge_background = "#0f111a",
+  tab_edge_foreground = "#6484c7",
+  tab_background = "#6484c7",
+  tab_foreground = "#081633",
+
+
+  active_titlebar_bg = "#0f111a",
+  inactive_titlebar_bg = "#0f111a",
+  active_titlebar_border_bottom = "#0f111a",
+  inactive_titlebar_border_bottom = "#0f111a",
+}
 
 wezterm.on(
   "format-tab-title",
   function(tab, tabs, panes, config, hover, max_width)
-    local edge_foreground = "#1b1032"
-    local edge_background = "#0b0022"
-    local background = "#1b1032"
-    local foreground = "#808080"
-
     local title = wezterm.truncate_right(tab.active_pane.title, max_width - 2)
 
     return {
-      { Background = { Color = edge_background } },
-      { Foreground = { Color = edge_foreground } },
+      { Background = { Color = colors.tab_edge_background } },
+      { Foreground = { Color = colors.tab_edge_foreground } },
       { Text = SOLID_LEFT_ARROW },
-      { Background = { Color = background } },
-      { Foreground = { Color = foreground } },
+      { Background = { Color = colors.tab_background } },
+      { Foreground = { Color = colors.tab_foreground } },
       { Text = title },
-      { Background = { Color = edge_background } },
-      { Foreground = { Color = edge_foreground } },
+      { Background = { Color = colors.tab_edge_background } },
+      { Foreground = { Color = colors.tab_edge_foreground } },
       { Text = SOLID_RIGHT_ARROW },
     }
   end
 )
-
 
 return {
   --Debug
@@ -38,25 +49,32 @@ return {
   -- Scroll bar
   enable_scroll_bar = false,
 
-  -- Tab Bar 
-  enable_tab_bar = true, 
+  -- Tab Bar
+  enable_tab_bar = true,
   tab_bar_at_bottom = true,
-  show_tab_index_in_tab_bar = true,
+  show_tabs_in_tab_bar = true,
+  show_tab_index_in_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
+  show_new_tab_button_in_tab_bar = false,
 
   -- Window
   window_decorations = "NONE",
 
   window_frame = {
-    active_titlebar_bg = "rgba(45,43,78,0.8)",
-    inactive_titlebar_bg = "rgba(45,43,78,0.8)",
-    inactive_titlebar_border_bottom = "#0f0c29",
-    active_titlebar_border_bottom = "#0f0c29",
+    button_fg = colors.background,
+    button_bg = colors.background,
+    button_hover_fg = colors.background,
+    button_hover_bg = colors.background,
 
-    button_fg = "#302b63",
-    button_bg = "#0f0c29",
-    button_hover_fg = "#302b63",
-    button_hover_bg = "#3b3052",
+    active_titlebar_bg = colors.active_titlebar_bg,
+    inactive_titlebar_bg = colors.inactive_titlebar_bg,
+    active_titlebar_border_bottom = colors.active_titlebar_border_bottom,
+    inactive_titlebar_border_bottom = colors.inactive_titlebar_border_bottom,
+
+    border_left_width = '0cell',
+    border_right_width = '0cell',
+    border_top_height = '0.25cell',
+    border_bottom_height = '0cell',
   },
 
   window_padding = {
@@ -69,17 +87,13 @@ return {
   window_close_confirmation = "AlwaysPrompt",
   window_background_opacity = 0.5,
   window_background_gradient = {
-     colors = {
-      "#0f0c29",
-      "#302b63",
-      "#24243e"
+    colors = {
+      colors.background_gradient_1,
+      colors.background_gradient_2,
+      colors.background_gradient_3,
     },
-     orientation = {
-       Radial = {
-         cx = 0.75,
-         cy = 0.75,
-         radius = 1.25,
-       }
-     },
+    orientation = {
+      Linear = { angle = -40.0 }
+    },
   },
 }
