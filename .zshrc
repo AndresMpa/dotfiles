@@ -143,9 +143,11 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
 alias clean="sudo paccache -r"
+
 alias dc="docker-compose"
 alias cat="bat"
 alias v="nvim"
