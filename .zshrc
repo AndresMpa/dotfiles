@@ -147,6 +147,7 @@ alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
 alias clean="sudo paccache -r"
 
+alias up="sudo pacman -Syyu --noconfirm"
 alias dc="docker-compose"
 alias cat="bat"
 alias v="nvim"
