@@ -5,7 +5,7 @@ ignore-timeout=0
 default-timeout=0
 
 height=80
-width=330
+width=280
 font=monospace 10
 background-color=#2e3440
 
