@@ -10,6 +10,11 @@ mv $0 main
 
 ttfFile="$(find ./ -type f -name '*.ttf')"
 
+if [ -z ~/.local/share/fonts ];
+then
+	mkdir ~/.local/share/fonts
+fi
+
 for file in $ttfFile; do
 	mv $file ~/.local/share/fonts/
 done
