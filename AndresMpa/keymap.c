@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
     KC_LSFT, ES_A,    ES_S,    ES_D,    ES_F,    ES_G,                      ES_H,    ES_J,    ES_K,    ES_L,    ES_NTIL, KC_ESC,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    KC_LCTL, ES_Z,    ES_X,    ES_C,    ES_V,    ES_B,                      ES_N,    ES_M,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
+    KC_LCTL, ES_Z,    ES_X,    ES_C,    ES_V,    ES_B,                      ES_N,    ES_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+------|  |------+--------+--------+--------+--------+--------+--------|
                                          KC_LGUI,   MO(2), KC_SPC,   KC_ENT,   MO(1), KC_RALT
                                       //`------------------------'  `--------------------------'
@@ -46,14 +46,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   // KC_LCBR = ¨
-  // ES_GRV, = ´
+  // , = ´
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                ,-----------------------------------------------------.
-    KC_TAB,  KC_HASH, ES_AT,   ES_DLR,  XXXXXXX, XXXXXXX,                   ES_DQUO, KC_ASTR, KC_LPRN, ES_AMPR, ES_PIPE, KC_BSPC,
+    KC_TAB,  XXXXXXX, ES_GRV,  ES_CIRC, ES_AT,    KC_HASH,                 ES_DQUO, KC_ASTR, KC_LPRN, ES_AMPR, ES_PIPE, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    ES_CIRC, KC_PERC, KC_TILD, ES_TILD, XXXXXXX, XXXXXXX,                   ES_QUOT, KC_QUOT, KC_BSLS, ES_IEXL, ES_QUES, KC_CAPS,
+    KC_ESC,  KC_PERC, KC_TILD, XXXXXXX, ES_DLR,   ES_TILD,                 ES_QUOT, KC_QUOT, KC_BSLS, ES_IEXL, ES_QUES, KC_CAPS,
   //|--------+--------+--------+--------+--------+--------|                |--------+--------+--------+--------+--------+--------|
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   ES_RCBR, ES_DIAE, KC_PIPE, ES_IQUE, ES_EXLM, KC_RSFT,
+    KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  ES_RCBR, ES_DIAE, KC_PIPE, ES_IQUE, ES_EXLM, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+------|  |------+--------+--------+--------+--------+--------+--------|
                                         KC_LGUI,   MO(3),  KC_SPC,   KC_ENT, _______, KC_RALT
                                       //`------------------------'  `--------------------------'
