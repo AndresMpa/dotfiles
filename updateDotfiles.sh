@@ -1,7 +1,15 @@
 #!/bin/bash
 
+DESKTOP=Desktop
+
+
+if [[ -f ~/Escritorio ]];
+then
+	DESKTOP=Escritorio
+fi
+
 # Moving into script dir
-cd /home/$USER/Escritorio/dotfiles
+cd /home/$USER/$DESKTOP/dotfiles
 
 {
 	if [[ -f ~/.xinitrc ]];
