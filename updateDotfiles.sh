@@ -65,7 +65,7 @@ cd /home/$USER/$DESKTOP/dotfiles
 }
 
 {
-	if [[ -f ~/qmk_firmware ]];
+	if [[ -d ~/qmk_firmware ]];
 	then
 		# Removing keyboard layout
 		rm -rf ./AndresMpa/*
