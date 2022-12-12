@@ -15,7 +15,7 @@ set $right l
 set $mod Mod4
 
 # Terminal emulator
-set $term wezterm
+set $term kitty
 
 # App launcher
 set $menu wofi --show=drun --term=wezterm --lines=10 --columns=2 -b -a -i -m -I -G --location=0 --prompt="Arch Linux" 
@@ -31,7 +31,7 @@ output * bg ~/Wallpapers/current/sway.jpg fill
 ### IDLE CONFIGURATION
 
 exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
+    timeout 800 'swaylock -f -c 000000' \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 000000'
 
@@ -45,6 +45,7 @@ gaps inner 2
 
 input "type:keyboard" {
     xkb_layout "latam"
+    xkb_variant "deadtilde"
 }
 
 input "type:touchpad" {
@@ -236,5 +237,7 @@ bindsym $mod+c mode "Custom"
 bar {
 	swaybar_command waybar
 }
+
+xwayland enable
 
 include /etc/sway/config.d/*
