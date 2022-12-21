@@ -81,6 +81,7 @@ plugins=(
 	npm
 	history
 	colored-man-pages
+	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
 
