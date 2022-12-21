@@ -15,25 +15,30 @@ set $right l
 set $mod Mod4
 
 # Terminal emulator
-set $term kitty
+set $term wezterm
 
 # App launcher
-set $menu wofi --show=drun --term=wezterm --lines=10 --columns=2 -b -a -i -m -I -G --location=0 --prompt="Arch Linux" 
+set $menu wofi --show=drun --term=$term --lines=10 --columns=2 -b -a -i -m -I -G --location=0 --prompt="Arch Linux"
 
 ### OUTPUT CONFIGURATION
 
 # Screen resolution (swaymsg -t get_outputs)
-#output eDP-1 resolution 1366x768 position 1366,0
+output eDP-1 resolution 1366x768 position 1366,0
 
 # Wallpaper
 output * bg ~/Wallpapers/current/sway.jpg fill
 
 ### IDLE CONFIGURATION
 
-exec swayidle -w \
-    timeout 800 'swaylock -f -c 000000' \
-    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 000000'
+#exec swayidle -w \
+    #timeout 10000 'swaylock --screenshot --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 \
+            #--effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 \
+            #--separator-color 00000000 --grace 2 --fade-in 0.2' \
+    #timeout 10000 'swaymsg "output * dpms off"' \
+    #resume 'swaymsg "output * dpms on"' \
+    #before-sleep 'swaylock --screenshot --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 \
+            #--effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 \
+            #--separator-color 00000000 --grace 2 --fade-in 0.2' \
 
 # GAPS
 
@@ -95,6 +100,9 @@ bindsym XF86Search exec wofi
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    
+    # Lock screen 
+    bindsym $mod+p exec bash ~/.config/scripts/lock.sh
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -220,15 +228,33 @@ bindsym $mod+r mode "resize"
 #
 # Execute comands:
 #
-mode "Custom" {
-    #Open telegam
-    bindsym m exec telegam
+mode "Fast-Command-Trigger" {
+    # Switch to workspace
+    bindsym w workspace number 1
+    bindsym e workspace number 2
+    bindsym r workspace number 3
+    bindsym s workspace number 4
+    bindsym d workspace number 5
+    bindsym f workspace number 6
+    bindsym x workspace number 7
+    bindsym c workspace number 8
+    bindsym v workspace number 9
+    
+    # Quick open some apps
+    bindsym y exec grim -g "$(slurp)" - | swappy -f -
+    bindsym h exec krita
+    bindsym j exec $term
+    bindsym k exec telegram-desktop
+    bindsym l exec discord
+    bindsym u exec firefox
+    bindsym i exec $menu
+    bindsym o exec steam
 
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+c mode "Custom"
+bindsym $mod+c mode "Fast-Command-Trigger"
 
 #
 # Status Bar:
