@@ -85,7 +85,7 @@ return {
   },
 
   window_close_confirmation = "AlwaysPrompt",
-  window_background_opacity = 0.5,
+  window_background_opacity = 0.2,
   window_background_gradient = {
     colors = {
       colors.background_gradient_1,
