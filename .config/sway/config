@@ -100,8 +100,8 @@ bindsym XF86Search exec wofi
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    
-    # Lock screen 
+
+    # Lock screen
     bindsym $mod+p exec bash ~/.config/scripts/lock.sh
 
     # Reload the configuration file
@@ -181,25 +181,14 @@ bindsym XF86Search exec wofi
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+f floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+g focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
-#
-# Scratchpad:
-#
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
 
-    # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #
@@ -229,6 +218,29 @@ bindsym $mod+r mode "resize"
 # Execute comands:
 #
 mode "Fast-Command-Trigger" {
+    # Quick management
+    bindsym t kill
+    
+    #
+    # Scratchpad:
+    #
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym g move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym b scratchpad show
+
+    bindsym q fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym a floating toggle
+
+    bindsym z layout toggle split
+
     # Switch to workspace
     bindsym w workspace number 1
     bindsym e workspace number 2
@@ -239,7 +251,18 @@ mode "Fast-Command-Trigger" {
     bindsym x workspace number 7
     bindsym c workspace number 8
     bindsym v workspace number 9
-    
+
+    # Move workspaces
+    bindsym Shift+w move container to workspace number 1
+    bindsym Shift+e move container to workspace number 2
+    bindsym Shift+r move container to workspace number 3
+    bindsym Shift+s move container to workspace number 4
+    bindsym Shift+d move container to workspace number 5
+    bindsym Shift+f move container to workspace number 6
+    bindsym Shift+x move container to workspace number 7
+    bindsym Shift+c move container to workspace number 8
+    bindsym Shift+v move container to workspace number 9
+
     # Quick open some apps
     bindsym y exec grim -g "$(slurp)" - | swappy -f -
     bindsym h exec krita
