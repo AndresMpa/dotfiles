@@ -91,14 +91,14 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 }
 
 #define L_BASE 0
-#define L_PROG 2
-#define L_LOWER 4
-#define L_RAISE 8
-#define L_ADJUST 16
+#define L_PROG 1
+#define L_LOWER 2
+#define L_RAISE 3
+#define L_ADJUST 4
 
 void oled_render_layer_state(void) {
     oled_write_P(PSTR("Layer: "), false);
-    switch (layer_state) {
+    switch (get_highest_layer(layer_state)) {
         case L_BASE:
             oled_write_ln_P(PSTR("Human"), false);
             break;
