@@ -196,8 +196,6 @@ static void oled_render_logos(void) {
     switch (get_highest_layer(layer_state)) {
         case L_BASE:
             oled_write_raw_P(corne_logo, sizeof(corne_logo));
-            oled_write_raw_P(mask_logo, sizeof(mask_logo));
-            oled_write_raw_P(qmk_logo, sizeof(qmk_logo));
             break;
         case L_PROG:
             oled_write_raw_P(mask_logo, sizeof(mask_logo));
