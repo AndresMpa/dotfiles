@@ -30,6 +30,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL_PD2
 
+#define SPLIT_LAYER_STATE_ENABLE
+
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 100
 
