@@ -192,7 +192,7 @@ bindsym XF86Search exec wofi
 #
 # Resizing containers:
 #
-mode "resize" {
+mode "Resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
@@ -212,7 +212,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 #
 # Execute comands:
