@@ -26,7 +26,8 @@ set $menu wofi --show=drun --term=$term --lines=10 --columns=2 -b -a -i -m -I -G
 output eDP-1 resolution 1366x768 position 1366,0
 
 # Wallpaper
-output * bg ~/Wallpapers/current/sway.jpg fill
+#output * bg ~/Wallpapers/current/sway.jpg fill
+exec bash ~/.config/scripts/loadCurrent.sh
 
 ### IDLE CONFIGURATION
 
@@ -103,6 +104,9 @@ bindsym XF86Search exec wofi
 
     # Lock screen
     bindsym $mod+p exec bash ~/.config/scripts/lock.sh
+
+    # Change background
+    bindsym $mod+n exec bash ~/.config/scripts/changeBackground.sh
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
