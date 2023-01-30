@@ -2,9 +2,7 @@
 
 DESKTOP=Desktop
 
-
-if [[ -f ~/Escritorio ]];
-then
+if [[ -f ~/Escritorio ]]; then
 	DESKTOP=Escritorio
 fi
 
@@ -12,13 +10,12 @@ fi
 cd /home/$USER/$DESKTOP/dotfiles
 
 {
-	if [[ -f ~/.xinitrc ]];
-	then
+	if [[ -f ~/.xinitrc ]]; then
 		# Removing old files
-		rm -rf .xinitrc 
+		rm -rf .xinitrc
 
 		# Copying the current files that I am using
-		cp ~/.xinitrc  $(pwd)
+		cp ~/.xinitrc $(pwd)
 	else
 		echo "Currently not using X server"
 	fi
@@ -39,9 +36,8 @@ cd /home/$USER/$DESKTOP/dotfiles
 }
 
 {
-	newScripts=$(ls  ~/.config/scripts/)
-	if [[ -s newScripts ]];
-	then
+	newScripts=$(ls ~/.config/scripts/)
+	if [[ -n newScripts ]]; then
 		cp ~/.config/scripts/* ./.config/scripts/
 	fi
 } || {
@@ -65,13 +61,12 @@ cd /home/$USER/$DESKTOP/dotfiles
 }
 
 {
-	if [[ -d ~/qmk_firmware ]];
-	then
+	if [[ -d ~/qmk_firmware ]]; then
 		# Removing keyboard layout
 		rm -rf ./AndresMpa/*
 
 		# Adding keyboard layout
-		cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/	
+		cp ~/qmk_firmware/keyboards/crkbd/keymaps/AndresMpa/* ./AndresMpa/
 	else
 		echo "QMK is not installed"
 	fi
