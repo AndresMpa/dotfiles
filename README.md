@@ -22,7 +22,7 @@ systemctl and AMD GPU like Radeon or something like that
   - [ ] Complete Sway minimal
   - [x] Complete BSPWM custom config
   - [x] Complete Qtile custom config
-  - [ ] Complete Sway custom config
+  - [x] Complete Sway custom config
 
 ---
 
