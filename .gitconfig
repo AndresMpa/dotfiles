@@ -1,6 +1,6 @@
 [user]
-	username = AndresMpa
 	name = Andres M. Prieto
+	username = AndresMpa
 	email = andresprieto2703@gmail.com
 [init]
 	defaultBranch = main
@@ -32,9 +32,14 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[interactive]
+  diffFilter = delta --color-only --features=interactive
 [delta]
 	features = line-numbers decorations
+	side-by-side = true
 	line-numbers = true
+[delta "interactive"]
+  keep-plus-minus-markers = false
 [delta "decorations"]
 	minus-style = red bold normal
 	plus-style = green bold normal
