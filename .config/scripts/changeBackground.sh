@@ -23,5 +23,4 @@ for ((option = 0; option < $len; option++)); do
   fi
 done
 
-killall swaybg
-swaybg -i $WALLPAPERS_PATH/current/$newTheme -m fill
+swaymsg output "*" bg $WALLPAPERS_PATH/current/$newTheme fill
