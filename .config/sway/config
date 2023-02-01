@@ -31,15 +31,15 @@ exec bash ~/.config/scripts/loadCurrent.sh
 
 ### IDLE CONFIGURATION
 
-#exec swayidle -w \
-    #timeout 10000 'swaylock --screenshot --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 \
-            #--effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 \
-            #--separator-color 00000000 --grace 2 --fade-in 0.2' \
-    #timeout 10000 'swaymsg "output * dpms off"' \
-    #resume 'swaymsg "output * dpms on"' \
-    #before-sleep 'swaylock --screenshot --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 \
-            #--effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 \
-            #--separator-color 00000000 --grace 2 --fade-in 0.2' \
+exec swayidle -w \
+    timeout 1800 'swaylock --screenshot --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 \
+            --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 \
+            --separator-color 00000000 --grace 2 --fade-in 0.2' \
+    timeout 1805 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock --screenshot --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 \
+            --effect-vignette 0.5:0.5 --ring-color bb00cc --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 \
+            --separator-color 00000000 --grace 2 --fade-in 0.2' \
 
 # GAPS
 
@@ -224,7 +224,7 @@ bindsym $mod+r mode "Resize"
 mode "FCT QWERTY" {
     # Quick management
     bindsym t kill
-    
+
     #
     # Scratchpad:
     #
@@ -284,7 +284,7 @@ bindsym $mod+c mode "FCT QWERTY"
 mode "FCT-DVORAK" {
     # Quick management
     bindsym f kill
-    
+
     #
     # Scratchpad:
     #
