@@ -7,8 +7,6 @@ themes=($(ls --hide="current" --hide=".icons" $WALLPAPERS_PATH/))
 newTheme=$currentWallpaper
 len="${#themes[@]}"
 
-echo
-
 for ((option = 0; option < $len; option++)); do
   if [[ ${themes[$option]} == $currentWallpaper ]]; then
     rm $WALLPAPERS_PATH/current/$currentWallpaper
