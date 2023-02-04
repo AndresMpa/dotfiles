@@ -6,7 +6,7 @@ default-timeout=0
 
 height=80
 width=280
-font=monospace 10
+font=material 10
 background-color=#2e3440
 
 border-size=1
