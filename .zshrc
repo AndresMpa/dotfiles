@@ -80,6 +80,9 @@ plugins=(
 	pip
 	npm
 	history
+	copyfile
+	copypath
+	command-not-found
 	colored-man-pages
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -140,9 +143,11 @@ alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
 alias clean="sudo paccache -r"
 
+alias conda_deactivate="source /opt/anaconda/bin/deactivate root"
+alias up="sudo pacman -Syyu --noconfirm; yay -Syu --noconfirm"
+alias conda_activate="source /opt/anaconda/bin/activate root"
 alias lsdc="sudo lsof -i -P -n | grep docker"
 alias notify="~/.config/scripts/notifier.sh"
-alias up="sudo pacman -Syyu --noconfirm"
 alias dc="docker-compose"
 alias cat="bat"
 alias v="nvim"
