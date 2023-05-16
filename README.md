@@ -13,13 +13,13 @@ systemctl and AMD GPU like Radeon or something like that
 - [X] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
 - [ ] Go back to BSPWM
 - [x] Look for something else
-- [ ] Fix and complete install scripts
+- [x] Fix and complete install scripts
 
-  - [ ] Test BSPWM minimal
-  - [ ] Test BSPWM custom config
+  - [x] Test BSPWM minimal
+  - [x] Test BSPWM custom config
   - [x] Complete BSPWM minimal
   - [x] Complete Qtile minimal
-  - [ ] Complete Sway minimal
+  - [x] Complete Sway minimal
   - [x] Complete BSPWM custom config
   - [x] Complete Qtile custom config
   - [x] Complete Sway custom config
@@ -28,7 +28,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## Desktop environments
 
-<h2><a href="./documentati/BSPWM.md">BSPWM</a></h2>
+<h3><a href="./documentati/BSPWM.md">BSPWM</a></h3>
 
 ![BSPWM](./examples/bspwm_2.png)
 
@@ -39,7 +39,7 @@ systemctl and AMD GPU like Radeon or something like that
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Alacritty](https://img.shields.io/badge/-alacritty-blue?style=for-the-badge&logo=Alacritty)
 
-<h2><a href="./documentati/Qtile.md">Qtile</a></h2>
+<h3><a href="./documentati/Qtile.md">Qtile</a></h3>
 
 ![Qtile](./examples/qtile_1.png)
 
@@ -52,7 +52,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 [Change theme feature](https://youtu.be/i6-JxMmvesE)
 
-<h2><a href="./documentation/Windows.md">Windows</a></h2>
+<h3><a href="./documentation/Windows.md">Windows</a></h3>
 
 ![Windows](./examples/win_1.png)
 
@@ -60,7 +60,7 @@ systemctl and AMD GPU like Radeon or something like that
 ![PowerShell](https://img.shields.io/badge/-PowerShell-black?style=for-the-badge&logo=powershell)
 ![Win Terminal](https://img.shields.io/badge/-Win%20Terminal-black?style=for-the-badge&logo=iTerm2)
 
-<h2><a href="./documentati/Sway.md">Sway</a></h2>
+<h3><a href="./documentati/Sway.md">Sway</a></h3>
 
 ![Sway](./examples/sway_1.jpg)
 
