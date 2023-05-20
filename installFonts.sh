@@ -6,7 +6,7 @@ wget https://github.com/google/fonts/archive/main.zip
 
 unzip main.zip
 
-mv $0 main
+cp $0 main
 
 ttfFile="$(find ./ -type f -name '*.ttf')"
 
@@ -16,7 +16,7 @@ then
 fi
 
 for file in $ttfFile; do
-	mv $file ~/.local/share/fonts/
+	cp $file ~/.local/share/fonts/
 done
 
 fc-cache -f -v
