@@ -9,7 +9,7 @@ systemctl and AMD GPU like Radeon or something like that
 ## To do
 
 - [ ] Try i3
-- [x] Try Awesome
+- [x] Try Awesome (I hate it with all the stretch of my heart, which is sad since I love Lua)
 - [X] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
 - [ ] Go back to BSPWM
 - [x] Look for something else
