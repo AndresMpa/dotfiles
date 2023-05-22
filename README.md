@@ -11,7 +11,7 @@ systemctl and AMD GPU like Radeon or something like that
 - [ ] Try i3
 - [x] Try Awesome (I hate it with all the stretch of my heart, which is sad since I love Lua)
 - [X] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
-- [ ] Go back to BSPWM
+- [x] Go back to BSPWM
 - [x] Look for something else
 - [x] Fix and complete install scripts
 
@@ -70,6 +70,17 @@ systemctl and AMD GPU like Radeon or something like that
 ![JSON](https://img.shields.io/badge/-JSON-gray?style=for-the-badge&logo=json)
 ![CSS](https://img.shields.io/badge/-css-blue?style=for-the-badge&logo=CSS3)
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
+
+<h3><a href="./documentati/BSPWM.md">BSPWM track #2</a></h3>
+
+![BSPWM track 2](./examples/bspwm_track_2_1.png)
+
+![Open source](https://img.shields.io/badge/-Open%20source-black?style=for-the-badge&logo=Open%20Source%20Initiative)
+![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
+![Xorg](https://img.shields.io/badge/-Xorg-gray?style=for-the-badge&logo=X.Org)
+![C/C++](https://img.shields.io/badge/-C/C++-darkblue?style=for-the-badge&logo=Cplusplus)
+![Zsh](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
+![wezterm](https://img.shields.io/badge/-alacritty-blue?style=for-the-badge&logo=Alacritty)
 
 ## Installation
 
