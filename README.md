@@ -79,12 +79,13 @@ systemctl and AMD GPU like Radeon or something like that
 ![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
 ![Xorg](https://img.shields.io/badge/-Xorg-gray?style=for-the-badge&logo=X.Org)
 ![C/C++](https://img.shields.io/badge/-C/C++-darkblue?style=for-the-badge&logo=Cplusplus)
+![Lua](https://img.shields.io/badge/-Lua-purple?style=for-the-badge&logo=Lua)
 ![Zsh](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
-![wezterm](https://img.shields.io/badge/-alacritty-blue?style=for-the-badge&logo=Alacritty)
+![Wezterminal](https://img.shields.io/badge/-Wezterminal-black?style=for-the-badge&logo=powershell)
 
 ## Installation
 
-If you want to do it yourself source "install.sh <desktop>", them choose "y" if
+If you want to do it yourself source `$install.sh <desktop>`, them choose "y" if
 you want the same configuration, type "n" if you want it from scratch.
 
 NOTE: If you see error please add and issue, I'll try yo solve it ^-^
