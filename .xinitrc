@@ -1,9 +1,10 @@
-# Disable beep
+# Cursor
+xsetroot -cursor_name left_ptr
+# Beep
 xset -b
-# Keyboard Layout
-setxkbmap latam
-# Network // May want to install nm-applet also avalible nmtui
-#nm-applet & 
-# Composer
-picom & 2> /dev/null
-# Wallpaper
+xset b off
+# Commands
+sxhkd &
+# Window manager
+exec bspwm
+
