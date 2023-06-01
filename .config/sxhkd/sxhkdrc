@@ -1,204 +1,147 @@
-
 ##############################################################
-# ______  ___   _ _  ______  
-#/ ___\ \/ / | | | |/ /  _ \ 
+# ______  ___   _ _  ______
+#/ ___\ \/ / | | | |/ /  _ \
 #\___ \\  /| |_| | ' /| | | |
- #___) /  \|  _  | . \| |_| |
-#|____/_/\_\_| |_|_|\_\____/ 
+# ___) /  \|  _  | . \| |_| |
+#|____/_/\_\_| |_|_|\_\____/
 ##############################################################
-
-    #_    _   _____ 
-   #/ \  | | |_   _|
-  #/ _ \ | |   | |  
- #/ ___ \| |___| |  
-#/_/   \_\_____|_|
-##############################################################
-
-#
-# Launcher
-#
-
-alt + s
-	rofi -show drun
-
-#
-# Terminal
-#
-
-alt + t
-	alacritty
-
-#
-# Files
-#
-
-alt + f
-	pcmanfm
-
-#
-# Libre Office
-#
-
-alt + h
-	libreoffice --writer
-
-alt + j
-	libreoffice --calc
-
-alt + k
-	libreoffice --impress
-
-#
-# Images (Use feh to see on terminal)
-#
-
-alt + g
-	gimp
-
-
-alt + i
-	inkscape
-
-#
-# Postman Agent
-#
-
-alt + p	
-	postman
-
-#
-# Navigator
-#
-
-alt + q
-	tor-browser	
-	
-alt + w
-	firefox	
-  
-#
-# Communications
-#
-
-alt + n
-	discord
-
-alt + m
-	telegram-desktop
-
-# _  _________   ______   ___    _    ____  ____  
-#| |/ / ____\ \ / / __ ) / _ \  / \  |  _ \|  _ \ 
+# _  _________   ______   ___    _    ____  ____
+#| |/ / ____\ \ / / __ ) / _ \  / \  |  _ \|  _ \
 #| ' /|  _|  \ V /|  _ \| | | |/ _ \ | |_) | | | |
 #| . \| |___  | | | |_) | |_| / ___ \|  _ <| |_| |
-#|_|\_\_____| |_| |____/ \___/_/   \_\_| \_\____/ 
-##############################################################
+#|_|\_\_____| |_| |____/ \___/_/   \_\_| \_\____/
+#############################################################
+# 133 Super_L
+# 133 Super_L
+# 67  F1
+
+F1
+	rofi -show drun
 
 #
 # Brightness
 #
-
 XF86MonBrightnessDown
-	sleep 0.2; \
-	backlight -dec 20 \
-	exec ./scripts/brightnessDown.sh
+  brightnessctl -d amdgpu_bl0 s 10-
 
-XF86MonBrightnessUp	
-	sleep 0.2; \
-	backlight -inc 20 \
-	exec ./scripts/brightnessUp.sh
+XF86MonBrightnessUp
+  brightnessctl -d amdgpu_bl0 s 10+
 
 #
-# Pulseaudio
+# Monitors
 #
+F4
+	xrandr --auto --output $(xrandr | grep HDMI | cut -d ' ' -f 1) --mode 1366x768 # --right-of $primary # If mons not installed
 
+F5
+	mons -n right
+
+#
+# Audio
+#
 XF86AudioMute
-	sleep 0.2; \
-	amixer set Master toggle
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 XF86AudioLowerVolume
-	sleep 0.2; \
-	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo -5%
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 
 XF86AudioRaiseVolume
-	sleep 0.2; \
-	pactl set-sink-volume alsa_output.pci-0000_03_00.6.analog-stereo +5%
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 
 #
-# Screenshots
-#   
+# Player control
+#
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
+
+F12
+	xrandr --output $(xrandr | grep HDMI | cut -d ' ' -f 1) --off
 
 Print
-	sleep 0.2; \
 	flameshot
 
-ctrl + Print
-	sleep 0.2; \
-	import -window root ~/Escritorio/$(date '+%Y%m%d-%H%M%S').png
+#
+# Launcher
+#
+super + f
+	rofi -show drun
 
-#__        ___           _                                 _             _ 
-#\ \      / (_)_ __   __| | _____      __   ___ ___  _ __ | |_ _ __ ___ | |
- #\ \ /\ / /| | '_ \ / _` |/ _ \ \ /\ / /  / __/ _ \| '_ \| __| '__/ _ \| |
-  #\ V  V / | | | | | (_| | (_) \ V  V /  | (_| (_) | | | | |_| | | (_) | |
-   #\_/\_/  |_|_| |_|\__,_|\___/ \_/\_/    \___\___/|_| |_|\__|_|  \___/|_|
-##############################################################
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
 
 #
-# alternate between the tiled and monocle layout
-# 
+# bspwm hotkeys
+#
 
-super + m
+# quit/restart bspwm
+super + ctrl + {o,p}
+	bspc {quit,wm -r}
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+#
+# state/flags
+#
+
+# alternate between the tiled and monocle layout
+super + z
 	bspc desktop -l next
 
+# set the window state
+super + {m,x,c}
+	bspc node -t {tiled,pseudo_tiled,floating}
+
+# alternate fullscreen not fullscreen
+super + v
+	bspc node -t \~fullscreen
+
+# set the node flags
+super + alt + {z,x,c,v}
+	bspc node -g {marked,locked,sticky,private}
+
 #
-# send the newest marked node to the newest preselected node
+# focus/swap
 #
 
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
 
-#
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {a,s}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus the next/previous desktop in the current monitor
+super + ctrl + {a,s}
+	bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
 # swap the current node and the biggest window
-#
-
-super + g
+super + b
 	bspc node -s biggest.window
 
-#
-# Close current window
-#
-
-super + w
-	bspc node -c
-
-#
-# move/resize
-#
-
-# expand a window by moving one of its side outward
-super + alt + {h, j, k, l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-#__        ___           _               
-#\ \      / (_)_ __   __| | _____      __
- #\ \ /\ / /| | '_ \ / _` |/ _ \ \ /\ / /
-  #\ V  V / | | | | | (_| | (_) \ V  V / 
-#  #\_/\_/  |_|_| |_|\__,_|\___/ \_/\_/  
-#                                      
-#      #_     _           _   _             
- #_   _| |__ (_) ___ __ _| |_(_) ___  _ __  
-#| | | | '_ \| |/ __/ _` | __| |/ _ \| '_ \ 
-#| |_| | |_) | | (_| (_| | |_| | (_) | | | |
- #\__,_|_.__/|_|\___\__,_|\__|_|\___/|_| |_|
-#                                           
-##############################################################
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
 
 #
 # preselect
@@ -220,99 +163,29 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-# _____                                      _             _ 
-#|  ___|__   ___ _   _ ___    ___ ___  _ __ | |_ _ __ ___ | |
-#| |_ / _ \ / __| | | / __|  / __/ _ \| '_ \| __| '__/ _ \| |
-#|  _| (_) | (__| |_| \__ \ | (_| (_) | | | | |_| | | (_) | |
-#|_|  \___/ \___|\__,_|___/  \___\___/|_| |_|\__|_|  \___/|_|
-##############################################################
-
 #
-# state/flags
+# move/resize
 #
 
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+# contract a window by moving one of its side inward
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-#
-# focus/swap
-#
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+## Dunno how to use them
 
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+## focus the node for the given path jump
+#super + {p,b,comma,period}
+	#bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-
-
-# ____  _____ ____  _             _   
-#|  _ \| ____/ ___|| |_ __ _ _ __| |_ 
-#| |_) |  _| \___ \| __/ _` | '__| __|
-#|  _ <| |___ ___) | || (_| | |  | |_ 
-#|_| \_\_____|____/ \__\__,_|_|   \__|
-#                                     
- #____  _   _ ____                                   _ 
-#/ ___|| | | | __ ) _ __   ___  _ __ _ __ ___   __ _| |
-#\___ \| | | |  _ \| '_ \ / _ \| '__| '_ ` _ \ / _` | |
- #___) | |_| | |_) | | | | (_) | |  | | | | | | (_| | |
-#|____/ \___/|____/|_| |_|\___/|_|  |_| |_| |_|\__,_|_|
-##############################################################
-
-#
-# sxhkd hotkey
-#
-
-# make sxhkd reload its configuration files:
-super + ctrl + shift + alt + r
-	pkill -USR1 -x sxhkd
-
-#
-# ethernet hotkey
-#
-super + ctrl + shift + alt + e
-	~/.config/autostart/wifi.sh
-
-#
-# bspwm hotkeys
-#
-
-# close and kill node
-super + ctrl + shift + alt + w
-	bspc node -k
-# TIP:
-# this should be "s" but that should be
-# anoying so just fuck up
-
-# quit/restart bspwm
-super + ctrl + shift + alt + {u, b}
-	bspc {quit, wm -r}
+## focus the next/previous window in the current desktop
+#super + {_,shift + }c
+	#bspc node -f {next,prev}.local.!hidden.window
 
