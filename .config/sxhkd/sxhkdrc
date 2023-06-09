@@ -122,7 +122,7 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {a,s}
+super + {s,a}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
