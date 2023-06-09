@@ -82,4 +82,4 @@ bspc rule -a gimp desktop='^6' follow=on
 #|_|   \___/|_|\__, |_.__/ \__,_|_|
 #              |___/
 
-bscp rule -a polybar manage=off
+bspc rule -a polybar manage=off
