@@ -146,15 +146,19 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias notify="~/.config/scripts/notifier.sh"
+
 alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
-alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
-alias clean="sudo paccache -r"
 
 alias conda_deactivate="source /opt/anaconda/bin/deactivate root"
-alias up="sudo pacman -Syyu --noconfirm; yay -Syu --noconfirm"
 alias conda_activate="source /opt/anaconda/bin/activate root"
+
+alias up="sudo pacman -Syyu --noconfirm; yay -Syu --noconfirm"
+alias hut="sudo pacman -Qqd | sudo pacman -Rsu --print -"
+alias clean="sudo pacman -Qtdq |sudo  pacman -Rns -"
+
 alias lsdc="sudo lsof -i -P -n | grep docker"
-alias notify="~/.config/scripts/notifier.sh"
+alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
 alias dc="docker-compose"
 alias cat="bat"
 alias v="nvim"
