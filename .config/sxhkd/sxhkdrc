@@ -30,9 +30,11 @@ XF86MonBrightnessUp
 #
 # Monitors
 #
+# xrandr --auto --output $(xrandr | grep HDMI | cut -d ' ' -f 1) --mode 1366x768 --right-of $primary # If mons not installed
 F4
-	xrandr --auto --output $(xrandr | grep HDMI | cut -d ' ' -f 1) --mode 1366x768 # --right-of $primary # If mons not installed
-	&& feh --bg-scale $(find ~/Wallpapers/current -type f | shuf -n 1)
+	xrandr --auto --output $(xrandr | grep HDMI | cut -d ' ' -f 1) --mode $(xrandr | grep '*+' | awk '/[0-9]/ {print $1}' | cut -d ' ' -f 1) &&	feh --bg-scale $(find ~/Wallpapers/current -type f | shuf -n 1) &&	bash $(find ~/.config/polybar/*sh -type f | shuf -n 1); 
+
+
 
 F5
 	mons -n right
@@ -189,4 +191,3 @@ super + {Left,Down,Up,Right}
 ## focus the next/previous window in the current desktop
 #super + {_,shift + }c
 	#bspc node -f {next,prev}.local.!hidden.window
-
