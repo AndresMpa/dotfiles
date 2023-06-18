@@ -23,6 +23,7 @@ systemctl and AMD GPU like Radeon or something like that
   - [x] Complete BSPWM custom config
   - [x] Complete Qtile custom config
   - [x] Complete Sway custom config
+  - [ ] Fix sxhkdrc scrip 
 
 ---
 
