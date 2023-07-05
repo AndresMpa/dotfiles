@@ -79,6 +79,9 @@ bspc config presel_feedback_color "#5e81ac"
 #xprop | grep WM_CLASS
 
 bspc rule -a gimp desktop='^6' follow=on
+bspc rule -a Gimp desktop='^6' follow=on
+bspc rule -a "jitsi meet" desktop='^8' follow=off
+bspc rule -a "Jitsi Meet" desktop='^8' follow=off
 
 ########################################
 
