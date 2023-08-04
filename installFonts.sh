@@ -1,17 +1,14 @@
 #!/bin/bash
 
-if [ -z ~/.local/share/fonts ];
+if [ ! -d ~/.local/share/fonts ];
 then
+	echo "~/.local/share/fonts doesn't exists, creating path..."
 	mkdir ~/.local/share/fonts
 fi
 
-cp ./fonts/* ~/.local/share/fonts/
-
 wget https://github.com/google/fonts/archive/main.zip
 
-unzip main.zip
-
-cp $0 main
+unzip main.zip -d extra
 
 ttfFile="$(find ./ -type f -name '*.ttf')"
 
