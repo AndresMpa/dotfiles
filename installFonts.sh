@@ -1,18 +1,20 @@
 #!/bin/bash
 
+sudo pacman -S unzip
+
 if [ ! -d ~/.local/share/fonts ];
 then
 	echo "~/.local/share/fonts doesn't exists, creating path..."
 	mkdir ~/.local/share/fonts
 fi
 
-wget https://github.com/google/fonts/archive/main.zip
+if [ ! -d ./extra ];
+then
+	wget https://github.com/google/fonts/archive/main.zip
+	unzip main.zip -d extra
+fi
 
-unzip main.zip -d extra
-
-ttfFile="$(find ./ -type f -name '*.ttf')"
-
-for file in $ttfFile; do
+for file in "$(find ./ -type f -name '*.ttf')"; do
 	cp $file ~/.local/share/fonts/
 done
 
