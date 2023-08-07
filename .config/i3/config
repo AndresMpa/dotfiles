@@ -1,0 +1,16 @@
+# Should you change your keyboard layout some time, delete
+# this file and re-run i3-config-wizard(1).
+
+include $HOME/.config/i3/setting/setting.conf
+include $HOME/.config/i3/setting/autostartup.conf
+
+include $HOME/.config/i3/biding/system.conf
+include $HOME/.config/i3/biding/specific.conf
+
+include $HOME/.config/i3/window/movement.conf
+include $HOME/.config/i3/window/container.conf
+include $HOME/.config/i3/window/workspace.conf
+include $HOME/.config/i3/window/resize.conf
+include $HOME/.config/i3/window/mouse.conf
+
+include $HOME/.config/i3/bar/bar.conf
