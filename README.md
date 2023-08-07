@@ -84,6 +84,19 @@ systemctl and AMD GPU like Radeon or something like that
 ![Zsh](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Wezterminal](https://img.shields.io/badge/-Wezterminal-black?style=for-the-badge&logo=powershell)
 
+<h3><a href="./documentati/BSPWM.md">i3 - Vimium like</a></h3>
+
+![i3](./examples/i3.png)
+
+![Open source](https://img.shields.io/badge/-Open%20source-black?style=for-the-badge&logo=Open%20Source%20Initiative)
+![Arch Linux](https://img.shields.io/badge/-arch%20linux-white?style=for-the-badge&logo=Arch%20Linux)
+![Xorg](https://img.shields.io/badge/-Xorg-gray?style=for-the-badge&logo=X.Org)
+![C/C++](https://img.shields.io/badge/-C/C++-darkblue?style=for-the-badge&logo=Cplusplus)
+![Zsh](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
+![Wezterminal](https://img.shields.io/badge/-Wezterminal-black?style=for-the-badge&logo=powershell)
+
+
+
 ## Installation
 
 If you want to do it yourself source `$install.sh <desktop>`, them choose "y" if
