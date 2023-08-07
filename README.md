@@ -8,9 +8,9 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## To do
 
-- [ ] Try i3
+- [x] Try i3
 - [x] Try Awesome (I hate it with all the stretch of my heart, which is sad since I love Lua)
-- [X] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
+- [x] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
 - [x] Go back to BSPWM
 - [x] Look for something else
 - [x] Fix and complete install scripts
@@ -23,7 +23,7 @@ systemctl and AMD GPU like Radeon or something like that
   - [x] Complete BSPWM custom config
   - [x] Complete Qtile custom config
   - [x] Complete Sway custom config
-  - [ ] Fix sxhkdrc scrip 
+  - [ ] Fix sxhkdrc script
 
 ---
 
