@@ -43,7 +43,7 @@ return {
   debug_key_events = true,
 
   --Fonts
-  font = wezterm.font("JetBrains Mono"),
+  font = wezterm.font("MesloLGS NF"),
   font_size = 10.0,
 
   -- Scroll bar
