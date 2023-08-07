@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#sudo pacman -S playerctl brightnessctl feh flameshot
+
 echo "Do you want my configuration? [y/n]"
 read myConfig
 
