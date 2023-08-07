@@ -8,6 +8,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## To do
 
+- [ ] Update documentation
 - [x] Try i3
 - [x] Try Awesome (I hate it with all the stretch of my heart, which is sad since I love Lua)
 - [x] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
@@ -72,7 +73,7 @@ systemctl and AMD GPU like Radeon or something like that
 ![CSS](https://img.shields.io/badge/-css-blue?style=for-the-badge&logo=CSS3)
 ![Bash](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 
-<h3><a href="./documentati/BSPWM.md">BSPWM track #2</a></h3>
+<h3><a href="./documentation/BSPWM.md">BSPWM track #2</a></h3>
 
 ![BSPWM track 2](./examples/bspwm_track_2_1.png)
 
@@ -84,7 +85,7 @@ systemctl and AMD GPU like Radeon or something like that
 ![Zsh](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Wezterminal](https://img.shields.io/badge/-Wezterminal-black?style=for-the-badge&logo=powershell)
 
-<h3><a href="./documentati/BSPWM.md">i3 - Vimium like</a></h3>
+<h3><a href="./documentation/i3.md">i3 - Vimium like</a></h3>
 
 ![i3](./examples/i3.png)
 
