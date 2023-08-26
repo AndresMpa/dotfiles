@@ -19,3 +19,5 @@ for file in "$(find ./ -type f -name '*.ttf')"; do
 done
 
 fc-cache -f -v
+
+rm -rf ./extra/ main.zip
