@@ -4,7 +4,6 @@ fi
 
 set -B
 
-clear
 neofetch
 
 # If you come from bash you might have to change your $PATH.
@@ -151,8 +150,8 @@ alias conda_deactivate="source /opt/anaconda/bin/deactivate root"
 alias conda_activate="source /opt/anaconda/bin/activate root"
 
 alias up="sudo pacman -Syyu --noconfirm; yay -Syu --noconfirm"
-alias hut="sudo pacman -Qqd | sudo pacman -Rsu --print -"
-alias clean="sudo pacman -Qtdq |sudo  pacman -Rns -"
+alias hunt="sudo pacman -Qqd | sudo pacman -Rsu --print -"
+alias clean="sudo pacman -Qtdq | sudo  pacman -Rns -"
 
 alias lsdc="sudo lsof -i -P -n | grep docker"
 alias lsi="timg --grid=4 -U -F -C -Bnone -pk --threads=4 *.*"
