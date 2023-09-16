@@ -54,13 +54,6 @@ cd /home/$USER/$DESKTOP/dotfiles
 }
 
 {
-	# Copying OS fonts
-	cp ~/.local/share/fonts/* ${PWD}/fonts
-} || {
-	echo "Error updating fonts" >>failures.log
-}
-
-{
 	if [[ -d ~/qmk_firmware ]]; then
 		# Removing keyboard layout
 		rm -rf ./AndresMpa/*
