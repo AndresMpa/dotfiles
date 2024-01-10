@@ -149,6 +149,7 @@ alias lol="sudo sh -c 'sysctl -w abi.vsyscall32=0' && lutris"
 alias conda_deactivate="source /opt/anaconda/bin/deactivate root"
 alias conda_activate="source /opt/anaconda/bin/activate root"
 
+alias fix-up="sudo rm -r /etc/pacman.d/gnupg && sudo pacman-key --init && sudo pacman-key --populate archlinux"
 alias up="sudo pacman -Syyu --noconfirm; yay -Syu --noconfirm"
 alias hunt="sudo pacman -Qqd | sudo pacman -Rsu --print -"
 alias clean="sudo pacman -Qtdq | sudo  pacman -Rns -"
