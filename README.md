@@ -98,8 +98,6 @@ systemctl and AMD GPU like Radeon or something like that
 ![Zsh](https://img.shields.io/badge/-bash-black?style=for-the-badge&logo=GNU%20Bash)
 ![Wezterminal](https://img.shields.io/badge/-Wezterminal-black?style=for-the-badge&logo=powershell)
 
-
-
 ## Installation
 
 If you want to do it yourself source `$install.sh <desktop>`, them choose "y" if
@@ -115,6 +113,7 @@ $ source ./install.sh
 
 If you are using AMD GPU, try "postInstall", it could help you; also if you want
 to change your shell source "postInstall" too
+
 ```
 $ source ./install.sh
 ```
@@ -150,3 +149,7 @@ I use glasses so I don't want to use bigger ones, it helps me to rest
 [Redshift](https://wiki.archlinux.org/title/redshift)
 This util change the color or my screen for me, it makes easier to use
 the computer
+
+[Ollama](https://ollama.ai/)
+I'm using this with an extension for VSCodium call [CodeGPT](https://www.codegpt.co/)
+I'm using it to get my own GPT working on VSCodium, to install it I use [this](https://github.com/jmorganca/ollama/blob/main/docs/linux.md) following the instruction [here](https://docs.codegpt.co/es/docs/tutorial-ai-providers/ollama)
