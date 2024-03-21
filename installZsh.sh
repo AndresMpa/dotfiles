@@ -1,5 +1,5 @@
 # Zsh
-sudo pacman -S zsh curl git
+sudo pacman -S zsh zsh-completions curl git
 
 # Oh my Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
