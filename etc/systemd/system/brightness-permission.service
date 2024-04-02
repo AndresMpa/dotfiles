@@ -1,5 +1,5 @@
 [Unit]
-Description=Set ligth writable for every user, place this file at /etc/systemd/system
+Description=Set light writable for every user, place this file at /etc/systemd/system
 Before=nodered.service
 
 [Service]
