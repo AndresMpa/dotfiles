@@ -1,14 +1,9 @@
--- {{{ Required libraries
-local gears = require("gears")
 local awful = require("awful")
--- }}}
+local gears = require("gears")
 
-local _M = {}
+local modkey = require("util.variables").modkey
 
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-function _M.get()
-	-- Create a wibox for each screen and add it
+return function(s)
 	local taglist_buttons = gears.table.join(
 		awful.button({}, 1, function(t)
 			t:view_only()
@@ -32,13 +27,9 @@ function _M.get()
 		end)
 	)
 
-	return taglist_buttons
+	return awful.widget.taglist({
+		screen = s,
+		filter = awful.widget.taglist.filter.all,
+		buttons = taglist_buttons,
+	})
 end
-
--- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-return setmetatable({}, {
-	__call = function(_, ...)
-		return _M.get(...)
-	end,
-})
