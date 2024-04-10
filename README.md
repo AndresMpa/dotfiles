@@ -12,7 +12,7 @@ systemctl and AMD GPU like Radeon or something like that
 - [x] Try i3
 - [ ] Update i3 documentation
 - [ ] Add i3 minimal installation script
-- [x] Give Awesome WM a second change
+- [ ] Add Awesome WM config 
 - [x] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
 - [x] Go back to BSPWM
 - [x] Look for something else
