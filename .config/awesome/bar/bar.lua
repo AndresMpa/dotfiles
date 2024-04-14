@@ -3,7 +3,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 
 local clock = require("bar.widgets.clock")
---local spacer = require("bar.widgets.spacer")
 local layout = require("bar.widgets.layout")
 local systray = require("bar.widgets.systray")
 local taglist = require("bar.widgets.taglist")
