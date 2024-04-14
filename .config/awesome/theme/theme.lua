@@ -1,5 +1,7 @@
 local theme = {}
 
+local background = require("util.variables").wallpaper
+
 theme.background = "#"
 theme.foreground = "#bbc2cf"
 
@@ -72,8 +74,8 @@ theme.notification_icon_size = 100
 
 -- notitication
 
-theme.wallpaper = "~/Wallpapers/current/cute.jpg"
-theme.lockwall = "~/Wallpapers/current/cute.jpg"
+theme.wallpaper = background
+theme.lockwall = background
 
 theme.useless_gap = 5
 theme.gap_single_client = true
