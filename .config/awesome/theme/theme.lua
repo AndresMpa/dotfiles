@@ -50,7 +50,7 @@ theme.fg_minimize = theme.foreground
 
 -- taglist
 
-theme.taglist_bg_focus = theme.background
+theme.taglist_bg_focus = theme.foreground
 theme.taglist_bg_empty = theme.background
 theme.taglist_bg_occupied = theme.background
 theme.taglist_bg_urgent = theme.foreground
