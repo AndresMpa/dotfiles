@@ -74,6 +74,13 @@ theme.notification_icon_size = 100
 
 -- notitication
 
+-- systray
+
+theme.bg_systray = theme.foreground
+
+-- systray
+
+
 theme.wallpaper = background
 theme.lockwall = background
 
