@@ -9,6 +9,7 @@ systemctl and AMD GPU like Radeon or something like that
 ## To do
 
 - [ ] Update documentation
+- [ ] Reduce amount of wallapers
 - [x] Try i3
 - [ ] Update i3 documentation
 - [ ] Add i3 minimal installation script
