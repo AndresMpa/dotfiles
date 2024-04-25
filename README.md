@@ -9,10 +9,12 @@ systemctl and AMD GPU like Radeon or something like that
 ## To do
 
 - [ ] Update documentation
+- [ ] Reduce amount of wallapers
 - [x] Try i3
 - [ ] Update i3 documentation
 - [ ] Add i3 minimal installation script
-- [ ] Add Awesome WM config 
+- [ ] Add Awesome WM config
+- [ ] Fix wallpaper script from Awesome WN
 - [x] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
 - [x] Go back to BSPWM
 - [x] Look for something else
