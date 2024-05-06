@@ -15,6 +15,7 @@ systemctl and AMD GPU like Radeon or something like that
 - [ ] Add i3 minimal installation script
 - [ ] Add Awesome WM config
 - [ ] Fix wallpaper script from Awesome WN
+- [ ] Find a way to restore an OS
 - [x] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
 - [x] Go back to BSPWM
 - [x] Look for something else
