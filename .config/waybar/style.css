@@ -1,6 +1,6 @@
 * {
   font-size: 12px;
-  font-family: sans;
+  font-family: Iosevka, Iosevka Nerd Font, sans;
 }
 
 window#waybar {
@@ -13,6 +13,7 @@ window#waybar {
 #network,
 #battery,
 #workspaces,
+#wireplumber,
 #pulseaudio,
 #temperature,
 #backlight,
@@ -55,6 +56,7 @@ window#waybar {
   border-radius: 26px;
 }
 
+#wireplumber,
 #pulseaudio {
   color: #268bd2;
 }
@@ -77,6 +79,7 @@ window#waybar {
 #network,
 #battery,
 #temperature,
+#wireplumber,
 #pulseaudio,
 #backlight,
 #clock,

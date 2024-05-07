@@ -10,34 +10,43 @@
     "temperature",
     "network",
     "battery",
+    "gamemode"
   ],
-  
+
   "modules-center": [
     "sway/workspaces",
+    "hyprland/workspaces",
   ],
 
   "modules-right": [
-    "sway/mode",
-    "pulseaudio", 
+    "hyprland/submap",
+    "wireplumber",
     "backlight",
     "clock",
     "tray",
   ],
-    
+
+  "tray": {
+    "spacing": 10,
+  },
+
   "cpu": {
     "format": "{usage}% ",
     "tooltip": true,
   },
+
   "memory": {
     "format": "{}% ",
     "tooltip": true,
   },
+
   "temperature": {
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
     "format-icons": ["", "", ""],
     "critical-threshold": 70,
   },
+
   "network": {
     "tooltip-format": "{ifname} via {gwaddr}/{cidr}  ",
     "format-wifi": "({signalStrength}%) ",
@@ -46,6 +55,7 @@
     "format-ethernet": "",
     "format-alt": "{ifname}"
   },
+
   "battery": {
     "states": {
       "critical": 15,
@@ -62,8 +72,90 @@
     "format-full": "",
     "format-icons": ["", "", "", "", ""]
   },
+
   "battery#bat2": {
     "bat": "BAT2"
+  },
+
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "smooth-scrolling-threshold": 1.0,
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{: %I:%M %p   %d/%m/%Y}",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+
+  "gamemode": {
+    "format": "{glyph}",
+    "format-alt": "{glyph} {count}",
+    "glyph": "",
+    "hide-not-running": true,
+    "use-icon": true,
+    "icon-name": "input-gaming-symbolic",
+    "icon-spacing": 4,
+    "icon-size": 20,
+    "tooltip": true,
+    "tooltip-format": "Games running: {count}"
+  },
+
+  "cava": {
+    //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+    "framerate": 30,
+    "autosens": 1,
+    "sensitivity": 100,
+    "bars": 14,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": false,
+    "waves": false,
+    "noise_reduction": 0.77,
+    "input_delay": 2,
+    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    "actions": {
+      "on-click-right": "mode"
+    }
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "hands-free": "",
+      "headphone": "",
+      "headset": "",
+      "portable": "",
+      "phone": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "wireplumber": {
+    "scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "hands-free": "",
+      "headphone": "",
+      "headset": "",
+      "portable": "",
+      "phone": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "helvum",
   },
 
   "sway/workspaces": {
@@ -88,36 +180,37 @@
     }
   },
 
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-  "pulseaudio": {
-    "scroll-step": 1,
-    "format": "{volume}% {icon}",
-    "format-muted": "",
+  "hyprland/workspaces": {
+    "format": "{name}: {icon}",
+    "on-click": "activate",
+    "disable-scroll": true,
+    "all-outputs": true,
     "format-icons": {
-      "hands-free": "",
-      "headphone": "",
-      "headset": "",
-      "portable": "",
-      "phone": "",
-      "car": "",
-      "default": ["", "", ""]
+      "1": "",
+      "2": "",
+      "3": "",
+
+      "4": "",
+      "5": "",
+      "6": "",
+
+      "7": "",
+      "8": "",
+      "9": "",
+      "urgent": "",
+      "active": "",
+      "default": ""
     },
-    "on-click": "pavucontrol"
+    "sort-by-number": true
   },
-  "backlight": {
-    "device": "amdgpu_bl0",
-		"smooth-scrolling-threshold": 1.0,
-		"format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
   },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{: %I:%M %p   %d/%m/%Y}",
-    "format-alt": "{:%Y-%m-%d}"
-  },
-  "tray": {
-    "spacing": 10,
+
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>",
+    "max-length": 8,
+    "tooltip": false
   },
 }
