@@ -158,3 +158,5 @@ alias dc="docker-compose"
 alias code="vscodium"
 alias cat="bat"
 alias v="nvim"
+
+export GOPATH=$HOME/.config/go
