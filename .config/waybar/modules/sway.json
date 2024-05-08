@@ -1,0 +1,26 @@
+{
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "sway/workspaces": {
+    "format": "{name}: {icon}",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+
+      "4": "",
+      "5": "",
+      "6": "",
+
+      "7": "",
+      "8": "",
+      "9": "",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  }
+}

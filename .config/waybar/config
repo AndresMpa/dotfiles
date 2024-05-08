@@ -1,235 +1,40 @@
-{
-  "layer": "top",
-  "width": 1350,
-  "spacing": 0,
-  "height": 8,
+[
+  {
+    "output": ["eDP-1"],
 
-  "modules-left": [
-    "cpu",
-    "memory",
-    "temperature",
-    "network",
-    "battery",
-    "gamemode"
-  ],
+    "layer": "top",
+    "spacing": 0,
+    "height": 32,
+    "width": 1350,
+    "margin-top": 5,
+    "start_hidden": false,
 
-  "modules-center": [
-    "hyprland/workspaces",
-  ],
+    "include": [
+      "~/.config/waybar/modules/hyperland.json",
+      "~/.config/waybar/modules/generals.json",
+      "~/.config/waybar/modules/audio.json",
+      "~/.config/waybar/modules/clock.json",
+    ],
 
-  "modules-right": [
-    "clock",
-    "hyprland/submap",
-    "wireplumber",
-    "backlight",
-    "tray",
-  ],
+    "modules-left": [
+      "cpu",
+      "memory",
+      "temperature",
+      "network",
+      "battery",
+      "gamemode"
+    ],
 
-  "tray": {
-    "spacing": 10,
-  },
+    "modules-center": [
+      "hyprland/workspaces",
+    ],
 
-  "cpu": {
-    "format": "{usage}% ",
-    "tooltip": true,
-  },
-
-  "memory": {
-    "format": "{}% ",
-    "tooltip": true,
-  },
-
-  "temperature": {
-    "format-critical": "{temperatureC}°C {icon}",
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
-    "critical-threshold": 70,
-  },
-
-  "network": {
-    "tooltip-format": "{ifname} via {gwaddr}/{cidr}  ",
-    "format-wifi": "({signalStrength}%) ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "⚠",
-    "format-ethernet": "",
-    "format-alt": "{ifname}"
-  },
-
-  "battery": {
-    "states": {
-      "critical": 15,
-      "warning": 30,
-      "good": 95,
-    },
-    "tooltip": true,
-    "tooltip-format": "{timeTo}",
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    "format-good": "",
-    "format-full": "",
-    "format-icons": ["", "", "", "", ""]
-  },
-
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-
-  "backlight": {
-    "device": "amdgpu_bl0",
-    "smooth-scrolling-threshold": 1.0,
-    "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-
-  "clock": {
-    "format": "{:%I:%M %p}  ",
-    "format-alt": "{:%A, %B %d, %Y - %I:%M %p}  ",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 2,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months":   "<span color='#ffead3'><b>{}</b></span>",
-        "days":     "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    },
-    "actions":  {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
-  },
-
-  "gamemode": {
-    "format": "{glyph}",
-    "format-alt": "{glyph} {count}",
-    "glyph": "",
-    "hide-not-running": true,
-    "use-icon": true,
-    "icon-name": "input-gaming-symbolic",
-    "icon-spacing": 4,
-    "icon-size": 20,
-    "tooltip": true,
-    "tooltip-format": "Games running: {count}"
-  },
-
-  "cava": {
-    //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-    "framerate": 30,
-    "autosens": 1,
-    "sensitivity": 100,
-    "bars": 14,
-    "lower_cutoff_freq": 50,
-    "higher_cutoff_freq": 10000,
-    "method": "pulse",
-    "source": "auto",
-    "stereo": true,
-    "reverse": false,
-    "bar_delimiter": 0,
-    "monstercat": false,
-    "waves": false,
-    "noise_reduction": 0.77,
-    "input_delay": 2,
-    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-    "actions": {
-      "on-click-right": "mode"
-    }
-  },
-
-  "pulseaudio": {
-    "scroll-step": 1,
-    "format": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-      "hands-free": "",
-      "headphone": "",
-      "headset": "",
-      "portable": "",
-      "phone": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
-  },
-
-  "wireplumber": {
-    "scroll-step": 1,
-    "format": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-      "hands-free": "",
-      "headphone": "",
-      "headset": "",
-      "portable": "",
-      "phone": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "on-click": "helvum",
-  },
-
-  "sway/workspaces": {
-    "format": "{name}: {icon}",
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-
-      "4": "",
-      "5": "",
-      "6": "",
-
-      "7": "",
-      "8": "",
-      "9": "",
-      "urgent": "",
-      "focused": "",
-      "default": ""
-    }
-  },
-
-  "hyprland/workspaces": {
-    "format": "{name}: {icon}",
-    "on-click": "activate",
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-
-      "4": "",
-      "5": "",
-      "6": "",
-
-      "7": "",
-      "8": "",
-      "9": "",
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
-    "sort-by-number": true
-  },
-
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>",
-  },
-
-  "hyprland/submap": {
-    "format": "<span style=\"italic\">{}</span>",
-    "max-length": 8,
-    "tooltip": false
-  },
-}
+    "modules-right": [
+      "clock",
+      "hyprland/submap",
+      "wireplumber",
+      "backlight",
+      "tray",
+    ],
+  }
+]
