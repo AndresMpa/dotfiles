@@ -1,0 +1,54 @@
+{
+  "tray": {
+    "spacing": 10
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": "{}% ",
+    "tooltip": true
+  },
+
+  "backlight": {
+    "device": "amdgpu_bl0",
+    "smooth-scrolling-threshold": 1.0,
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "temperature": {
+    "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""],
+    "critical-threshold": 70
+  },
+
+  "network": {
+    "tooltip-format": "{ifname} via {gwaddr}/{cidr}  ",
+    "format-wifi": "({signalStrength}%) ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "⚠",
+    "format-ethernet": "",
+    "format-alt": "{ifname}"
+  },
+
+  "battery": {
+    "states": {
+      "critical": 15,
+      "warning": 30,
+      "good": 95
+    },
+    "tooltip": true,
+    "tooltip-format": "{timeTo}",
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-good": "",
+    "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  }
+}
