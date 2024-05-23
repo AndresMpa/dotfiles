@@ -10,26 +10,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 - [ ] Update documentation
 - [ ] Reduce amount of wallapers
-- [x] Try i3
-- [ ] Update i3 documentation
-- [ ] Add i3 minimal installation script
-- [ ] Add Awesome WM config
-- [ ] Fix wallpaper script from Awesome WN
-- [ ] Find a way to restore an OS
-- [x] Try Hyprland (I did not like it), waiting for a more complete "ecosystem"
-- [x] Go back to BSPWM
-- [x] Look for something else
-- [x] Fix and complete install scripts
-
-  - [x] Test BSPWM minimal
-  - [x] Test BSPWM custom config
-  - [x] Complete BSPWM minimal
-  - [x] Complete Qtile minimal
-  - [x] Complete Sway minimal
-  - [x] Complete BSPWM custom config
-  - [x] Complete Qtile custom config
-  - [x] Complete Sway custom config
-  - [ ] Fix sxhkdrc script
+- [ ] Add a better way to install fonts 
 
 ---
 
