@@ -1,6 +1,5 @@
 window {
   margin: 0px;
-  width: 100%;
   border: 1px solid #6686c9;
   background-color: #0c0e15;
 }
@@ -8,7 +7,7 @@ window {
 #input {
   margin: 5px;
   border: none;
-  color: #89a55e;
+  color: #ffffff;
   background-color: #07090d;
 }
 
@@ -33,6 +32,10 @@ window {
   margin: 5px;
   border: none;
   color: #f8f8f2;
+}
+
+#entry {
+  display: flex;
 }
 
 #entry:selected {
