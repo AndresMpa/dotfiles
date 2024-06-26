@@ -1,0 +1,11 @@
+run-always_parse_args=true
+mode=drun,run
+term=wezterm
+location=0
+prompt=
+insensitive=true
+hide_scroll=true
+allow_images=true
+height=50%
+width=80%
+columns=7
