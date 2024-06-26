@@ -10,6 +10,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 - [ ] Update documentation
 - [ ] Reduce amount of wallapers
+- [ ] Make a better wallpaper switcher
 - [ ] Add a better way to install fonts 
 
 ---
