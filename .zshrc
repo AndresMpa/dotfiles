@@ -107,7 +107,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export GOPATH=$HOME/.config/go
+
+# pnpm
+export PNPM_HOME="/home/andresmpa/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -120,10 +128,10 @@ else
 fi
 
 # Preferences for ls and exa
-if [ -x "$(command -v exa)" ];
+if [ -x "$(command -v eza)" ];
 then
-	alias ls="exa --icons"
-  alias la="exa --icons --long --all --group --binary"
+	alias ls="eza --icons"
+  alias la="eza --icons --long --all --group --binary"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -158,13 +166,3 @@ alias dc="docker-compose"
 alias code="vscodium"
 alias cat="bat"
 alias v="nvim"
-
-export GOPATH=$HOME/.config/go
-
-# pnpm
-export PNPM_HOME="/home/andresmpa/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
