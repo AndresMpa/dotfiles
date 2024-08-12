@@ -12,7 +12,7 @@ systemctl and AMD GPU like Radeon or something like that
 - [x] Reduce amount of wallpapers
 - [ ] Use generic strategy for wallpapers
 - [ ] Add a better way to install fonts
-- [ ] Update instalation script to Sway config
+- [ ] Update instalation script to SwayWM config
 
 ---
 
