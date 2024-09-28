@@ -13,6 +13,7 @@ systemctl and AMD GPU like Radeon or something like that
 - [ ] Use generic strategy for wallpapers
 - [ ] Fix fonts installation scripts
 - [ ] Update instalation script to SwayWM config
+- [ ] Fix waybar
 
 ---
 
