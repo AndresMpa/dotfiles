@@ -1,6 +1,9 @@
 local wezterm = require "wezterm"
-local SOLID_LEFT_ARROW = utf8.char(0xe0b6)
-local SOLID_RIGHT_ARROW = utf8.char(0xe0b4)
+
+local config = wezterm.config_builder()
+
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 
 local colors = {
   background_gradient_1 = "#1a1c25",
@@ -11,7 +14,6 @@ local colors = {
   tab_edge_foreground = "#6484c7",
   tab_background = "#6484c7",
   tab_foreground = "#081633",
-
 
   active_titlebar_bg = "#0f111a",
   inactive_titlebar_bg = "#0f111a",
