@@ -1,5 +1,7 @@
 # Dotfiles
 
+Marry Xmas
+
 "Dotfiles" are configuration files, scripts and documentation about an operative system; this repositorie
 contains my configuration files including scripts, my shell config, some setting for those tools that I
 use; also some recomendations and guides such as "Corne" which contain all the necessary materials for
