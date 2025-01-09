@@ -146,3 +146,4 @@ I'm using it to get my own GPT working on VSCodium, to install it I use [this](h
 [Watchdog did not stop](https://unix.stackexchange.com/questions/249654/message-at-shutdown-watchdog-did-not-stop)
 [Bad orphan inode](https://search.brave.com/search?q=bad+orphan+inode&source=android&summary=1&conversation=929622c8bb8063ac8d3b27)
 [Acpi bios error (bug) failure creating named object](https://forum.manjaro.org/t/acpi-bios-error-on-every-startup-creative-x-ae5/152541/21)
+[To silent the upper parameter](https://wiki.archlinux.org/title/Kernel_parameters#systemd-boot)
