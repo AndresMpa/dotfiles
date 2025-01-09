@@ -144,3 +144,4 @@ I'm using it to get my own GPT working on VSCodium, to install it I use [this](h
 ### Solved issues
 
 [Watchdog did not stop](https://unix.stackexchange.com/questions/249654/message-at-shutdown-watchdog-did-not-stop)
+[Bad orphan inode](https://search.brave.com/search?q=bad+orphan+inode&source=android&summary=1&conversation=929622c8bb8063ac8d3b27)
