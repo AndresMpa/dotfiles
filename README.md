@@ -141,6 +141,9 @@ the computer
 I'm using this with an extension for VSCodium call [CodeGPT](https://www.codegpt.co/)
 I'm using it to get my own GPT working on VSCodium, to install it I use [this](https://github.com/jmorganca/ollama/blob/main/docs/linux.md) following the instruction [here](https://docs.codegpt.co/es/docs/tutorial-ai-providers/ollama)
 
+[Plymouth](https://wiki.archlinux.org/title/Plymouth)
+Grapich boot with different simple animations
+
 ### Solved issues
 
 - [Watchdog did not stop](https://unix.stackexchange.com/questions/249654/message-at-shutdown-watchdog-did-not-stop)
