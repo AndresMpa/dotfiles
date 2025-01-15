@@ -155,3 +155,4 @@ Grapich boot with different simple animations
 https://www.reddit.com/r/bspwm/comments/vsq6gy/remove_the_x_pointer_outside_of_focused_windows/
 https://h30434.www3.hp.com/t5/Notebook-Boot-and-Lockup/How-to-remove-HP-battery-alert-on-startup/td-p/8657488
 https://mail.google.com/mail/u/3/#inbox)
+- [Icon theme for cursor](https://stackoverflow.com/questions/70944428/how-to-make-it-to-set-the-lxappearance-cursor-with-the-start-of-qtile)
