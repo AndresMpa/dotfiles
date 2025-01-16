@@ -151,8 +151,5 @@ Grapich boot with different simple animations
 - [Acpi bios error (bug) failure creating named object](https://forum.manjaro.org/t/acpi-bios-error-on-every-startup-creative-x-ae5/152541/21)
 - [To silent the upper parameter](https://wiki.archlinux.org/title/Kernel_parameters#systemd-boot)
 - [Random freezing](https://bbs.archlinux.org/viewtopic.php?pid=1783437#p1783437)
-- [X on screen](https://wiki.archlinux.org/title/Silent_boot#startx
-https://www.reddit.com/r/bspwm/comments/vsq6gy/remove_the_x_pointer_outside_of_focused_windows/
-https://h30434.www3.hp.com/t5/Notebook-Boot-and-Lockup/How-to-remove-HP-battery-alert-on-startup/td-p/8657488
-https://mail.google.com/mail/u/3/#inbox)
+- [X on screen](https://www.reddit.com/r/bspwm/comments/vsq6gy/remove_the_x_pointer_outside_of_focused_windows/)
 - [Icon theme for cursor](https://stackoverflow.com/questions/70944428/how-to-make-it-to-set-the-lxappearance-cursor-with-the-start-of-qtile)
