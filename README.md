@@ -8,12 +8,11 @@ systemctl and AMD GPU like Radeon or something like that
 
 ## To do
 
-- [ ] Update documentation
+- [x] Update documentation
 - [x] Fix fonts installation scripts
-- [ ] Update instalation script to SwayWM config
-- [ ] Update used software
+- [x] Update used software
 - [x] Find solution to disk issue
-- [ ] Write documentation about disk error
+- [x] Write documentation about disk error
 
 ---
 
