@@ -6,14 +6,6 @@ use; also some recomendations and guides such as "Corne" which contain all the n
 building your own Corne keyboard such as mine. I high recommend to check some of my daemons if you use
 systemctl and AMD GPU like Radeon or something like that
 
-## To do
-
-- [x] Update documentation
-- [x] Fix fonts installation scripts
-- [x] Update used software
-- [x] Find solution to disk issue
-- [x] Write documentation about disk error
-
 ---
 
 ## Desktop environments
