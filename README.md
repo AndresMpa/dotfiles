@@ -8,10 +8,6 @@ systemctl and AMD GPU like Radeon or something like that
 
 ---
 
-## ⚠️ Stopped due to disk end of life, retaking after getting a new disk ⚠️
-
----
-
 ## Desktop environments
 
 <h3><a href="./documentati/BSPWM.md">BSPWM</a></h3>
