@@ -4,7 +4,7 @@
 contains my configuration files including scripts, my shell config, some setting for those tools that I
 use; also some recomendations and guides such as "Corne" which contain all the necessary materials for
 building your own Corne keyboard such as mine. I high recommend to check some of my daemons if you use
-systemctl and AMD GPU like Radeon or something like that
+systemctl and AMD GPU like Radeon or something like that.
 
 ---
 
