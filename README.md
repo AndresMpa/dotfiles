@@ -6,8 +6,6 @@ use; also some recomendations and guides such as "Corne" which contain all the n
 building your own Corne keyboard such as mine. I high recommend to check some of my daemons if you use
 systemctl and AMD GPU like Radeon or something like that
 
-Currently stopped due to hardware needs 
-
 ---
 
 ## Desktop environments
