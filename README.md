@@ -8,7 +8,7 @@ systemctl and AMD GPU like Radeon or something like that
 
 ---
 
-## Desktop environments
+## Desktop environments.
 
 <h3><a href="./documentati/BSPWM.md">BSPWM</a></h3>
 
